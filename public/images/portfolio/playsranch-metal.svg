@@ -1,0 +1,71 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="138" y1="92" x2="1458" y2="832" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08090C"/>
+      <stop offset="0.52" stop-color="#111217"/>
+      <stop offset="1" stop-color="#050608"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="236" y1="126" x2="1366" y2="774" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B929A"/>
+      <stop offset="0.18" stop-color="#F4F7FB"/>
+      <stop offset="0.42" stop-color="#8C5B2E"/>
+      <stop offset="0.72" stop-color="#F7E1B3"/>
+      <stop offset="1" stop-color="#50565E"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="503" y1="184" x2="1094" y2="763" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D8DEE6"/>
+      <stop offset="0.19" stop-color="#FFFFFF"/>
+      <stop offset="0.38" stop-color="#9A6B37"/>
+      <stop offset="0.56" stop-color="#F4E0B0"/>
+      <stop offset="0.78" stop-color="#868D96"/>
+      <stop offset="1" stop-color="#E7EDF5"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="557" y1="277" x2="1020" y2="633" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD589"/>
+      <stop offset="0.58" stop-color="#D57C20"/>
+      <stop offset="1" stop-color="#6D3810"/>
+    </linearGradient>
+    <linearGradient id="text" x1="392" y1="592" x2="1190" y2="766" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F8FC"/>
+      <stop offset="0.22" stop-color="#B7BEC7"/>
+      <stop offset="0.45" stop-color="#FFF9E8"/>
+      <stop offset="0.72" stop-color="#8D949C"/>
+      <stop offset="1" stop-color="#E6EBF2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 474) rotate(90) scale(288 476)">
+      <stop stop-color="#FF9933" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#FF9933" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="205" y="106" width="1192" height="678" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <filter id="shine" x="441" y="170" width="718" height="540" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="48" fill="url(#bg)"/>
+  <ellipse cx="804" cy="742" rx="322" ry="74" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="242" y="138" width="1116" height="604" rx="42" fill="#0A0B0E" stroke="url(#frame)" stroke-width="3"/>
+    <rect x="276" y="172" width="1048" height="536" rx="32" fill="#0E0F13" stroke="#262A30"/>
+  </g>
+
+  <path d="M418 252C498 208 634 188 802 188C979 188 1114 209 1182 256" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="3"/>
+  <path d="M422 640C531 678 682 696 804 696C949 696 1086 676 1176 636" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="3"/>
+
+  <g>
+    <path d="M800 220L1006 326L973 590L800 680L624 590L592 326L800 220Z" fill="#080809" stroke="url(#metal)" stroke-width="10"/>
+    <path d="M800 264L958 344L933 553L800 621L664 553L642 344L800 264Z" fill="url(#warm)" fill-opacity="0.16" stroke="#F6D6A3" stroke-opacity="0.35" stroke-width="3"/>
+    <path d="M658 310C734 250 869 246 959 306" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="16" stroke-linecap="round"/>
+    <path d="M710 561C769 586 856 588 915 561" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+    <g filter="url(#shine)">
+      <path d="M504 266C637 204 841 194 1036 254" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="28" stroke-linecap="round"/>
+    </g>
+    <text x="800" y="472" text-anchor="middle" fill="url(#metal)" font-family="'Bahnschrift SemiBold', 'Segoe UI', sans-serif" font-size="190" font-weight="700" letter-spacing="10">PR</text>
+  </g>
+
+  <text x="800" y="785" text-anchor="middle" fill="url(#text)" font-family="'Bahnschrift SemiBold', 'Segoe UI', sans-serif" font-size="96" font-weight="700" letter-spacing="15">PLAYS RANCH</text>
+  <text x="800" y="840" text-anchor="middle" fill="#C5A574" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="28" font-weight="600" letter-spacing="12">PROGRAMMING CORPORATION</text>
+</svg>

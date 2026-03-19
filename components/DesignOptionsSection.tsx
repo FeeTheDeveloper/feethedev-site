@@ -19,13 +19,13 @@ type Option = {
 
 function PreviewImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40">
+    <div className="relative aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%),linear-gradient(180deg,rgba(11,12,16,0.96),rgba(4,5,8,0.98))] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
       <Image
         src={src}
         alt={alt}
         fill
         sizes="(max-width: 1024px) 100vw, 50vw"
-        className="object-cover"
+        className="object-contain p-3 sm:p-4"
       />
     </div>
   );
@@ -46,8 +46,8 @@ const options: Option[] = [
     accent: 'red',
     preview: (
       <PreviewImage
-        src="/images/portfolio/playsranch-preview.svg"
-        alt="Business website preview inspired by Plays Ranch"
+        src="/images/design/business-preview.png"
+        alt="Business website preview"
       />
     ),
   },
@@ -65,7 +65,7 @@ const options: Option[] = [
     accent: 'green',
     preview: (
       <PreviewImage
-        src="/images/design/ecommerce-preview.svg"
+        src="/images/design/ecommerce-preview.png"
         alt="E-commerce design preview"
       />
     ),
@@ -84,8 +84,8 @@ const options: Option[] = [
     accent: 'neutral',
     preview: (
       <PreviewImage
-        src="/images/portfolio/vetgang-preview.svg"
-        alt="Custom application preview inspired by Vet Gang"
+        src="/images/design/custom-app-preview.png"
+        alt="Custom application preview"
       />
     ),
   },
@@ -103,7 +103,7 @@ const options: Option[] = [
     accent: 'red',
     preview: (
       <PreviewImage
-        src="/images/design/redesign-preview.svg"
+        src="/images/design/redesign-preview.png"
         alt="Website redesign preview"
       />
     ),

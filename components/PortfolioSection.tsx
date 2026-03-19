@@ -38,12 +38,12 @@ function ProjectPreview({
   return (
     <div
       className={cn(
-        'relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border bg-black/40',
+        'relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_46%),linear-gradient(180deg,rgba(12,13,18,0.98),rgba(3,4,7,0.98))] p-4 transition duration-300',
         accent === 'green'
-          ? 'border-greenglow/15'
+          ? 'border-greenglow/20 shadow-[0_0_0_rgba(0,255,136,0)] group-hover:border-greenglow/45 group-hover:shadow-[0_0_36px_rgba(0,255,136,0.18)]'
           : accent === 'red'
-            ? 'border-redglow/15'
-            : 'border-white/10',
+            ? 'border-redglow/20 shadow-[0_0_0_rgba(255,43,43,0)] group-hover:border-redglow/45 group-hover:shadow-[0_0_36px_rgba(255,43,43,0.18)]'
+            : 'border-white/12 shadow-[0_0_0_rgba(255,255,255,0)] group-hover:border-white/25 group-hover:shadow-[0_0_36px_rgba(176,196,255,0.16)]',
       )}
     >
       <Image
@@ -52,9 +52,9 @@ function ProjectPreview({
         fill
         priority={priority}
         sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-        className="object-cover object-top"
+        className="object-contain p-6 drop-shadow-[0_18px_35px_rgba(0,0,0,0.55)] transition duration-300 group-hover:scale-[1.03]"
       />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_38%),linear-gradient(180deg,transparent,rgba(0,0,0,0.34))]" />
     </div>
   );
 }
@@ -62,13 +62,13 @@ function ProjectPreview({
 function ProjectGallery({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="space-y-4">
-      <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_44%),linear-gradient(180deg,rgba(12,13,18,0.98),rgba(3,4,7,0.98))] p-5">
         <Image
           src={src}
           alt={alt}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover object-top"
+          className="object-contain p-6 drop-shadow-[0_18px_35px_rgba(0,0,0,0.55)]"
         />
       </div>
       <div className="grid gap-3 sm:grid-cols-2">
@@ -77,8 +77,8 @@ function ProjectGallery({ src, alt }: { src: string; alt: string }) {
             Visual Direction
           </div>
           <div className="mt-2 text-sm leading-6 text-slate-200">
-            High-contrast screenshot treatment inside a browser-style frame for
-            quick scanning.
+            Premium metallic logo treatment staged inside a dark display frame
+            so each brand mark reads clearly at a glance.
           </div>
         </div>
         <div className="rounded-2xl border border-white/10 bg-black/25 px-4 py-4">
@@ -86,8 +86,8 @@ function ProjectGallery({ src, alt }: { src: string; alt: string }) {
             Reference
           </div>
           <div className="mt-2 text-sm leading-6 text-slate-200">
-            Portfolio media now uses generated project previews instead of
-            abstract placeholder blocks.
+            Portfolio media now uses polished metallic logo compositions instead
+            of page-preview placeholders.
           </div>
         </div>
       </div>
@@ -106,8 +106,8 @@ const projects: Project[] = [
     tags: ['Static', 'Corporate', 'Luxury Tech', 'Automation'],
     accent: 'red',
     domain: 'playsranch.com',
-    imageSrc: '/images/portfolio/playsranch-preview.svg',
-    imageAlt: 'Plays Ranch Programming preview',
+    imageSrc: '/images/portfolio/playsranch-metal.svg',
+    imageAlt: 'Metallic Plays Ranch Programming logo',
     details: {
       overview:
         'Designed as a sharp one-page authority site, this concept centers on premium positioning, animated story beats, and a clean path into a strategy consultation.',
@@ -132,8 +132,8 @@ const projects: Project[] = [
     tags: ['Next.js', 'Membership', 'Multi-page', 'Admin'],
     accent: 'green',
     domain: 'vetgang.com',
-    imageSrc: '/images/portfolio/vetgang-preview.svg',
-    imageAlt: 'Vet Gang membership preview',
+    imageSrc: '/images/portfolio/vetgang-metal.svg',
+    imageAlt: 'Metallic Vet Gang logo',
     details: {
       overview:
         'This portfolio concept is framed as a larger ecosystem build with member-facing routes, brand storytelling, application flows, and admin-capable expansion room.',
@@ -159,8 +159,8 @@ const projects: Project[] = [
     tags: ['Next.js', 'Logistics', 'Government', 'Multi-page'],
     accent: 'neutral',
     domain: 'dukeeltransport.com',
-    imageSrc: '/images/portfolio/dukeel-preview.svg',
-    imageAlt: 'Dukeel Transportation preview',
+    imageSrc: '/images/portfolio/dukeel-metal.svg',
+    imageAlt: 'Metallic Dukeel Transportation logo',
     details: {
       overview:
         'Dukeel is positioned as a modern freight and transportation website with a premium government-contractor aesthetic, combining clear operational messaging, multi-page structure, and polished motion-led presentation.',
@@ -393,7 +393,14 @@ export function PortfolioSection() {
                           duration: 0.35,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="rounded-[1.6rem] border border-white/10 bg-black/30 p-4"
+                        className={cn(
+                          'rounded-[1.6rem] border bg-black/30 p-4 transition duration-300',
+                          project.accent === 'green'
+                            ? 'border-greenglow/15 group-hover:border-greenglow/35'
+                            : project.accent === 'red'
+                              ? 'border-redglow/15 group-hover:border-redglow/35'
+                              : 'border-white/10 group-hover:border-white/20',
+                        )}
                       >
                         <div className="mb-4 flex items-center gap-2">
                           <span className="h-2.5 w-2.5 rounded-full bg-redglow/85" />
