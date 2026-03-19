@@ -1,0 +1,148 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="silverGradient" x1="248" y1="170" x2="949" y2="871" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#585D64"/>
+      <stop offset="0.16" stop-color="#A2A8B0"/>
+      <stop offset="0.34" stop-color="#F7FAFF"/>
+      <stop offset="0.52" stop-color="#8D949D"/>
+      <stop offset="0.72" stop-color="#E3E8EF"/>
+      <stop offset="1" stop-color="#454A51"/>
+    </linearGradient>
+    <linearGradient id="silverEdge" x1="294" y1="218" x2="901" y2="825" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#CBD1D9"/>
+      <stop offset="0.18" stop-color="#7A8088"/>
+      <stop offset="0.41" stop-color="#F4F7FC"/>
+      <stop offset="0.62" stop-color="#7F858E"/>
+      <stop offset="0.84" stop-color="#DCE2EA"/>
+      <stop offset="1" stop-color="#6C727A"/>
+    </linearGradient>
+    <radialGradient id="coreFill" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 520) rotate(90) scale(330)">
+      <stop offset="0" stop-color="#1B1D21"/>
+      <stop offset="0.62" stop-color="#101215"/>
+      <stop offset="1" stop-color="#050608"/>
+    </radialGradient>
+    <linearGradient id="coreReflection" x1="390" y1="300" x2="710" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="0.26" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="textSilver" x1="402" y1="402" x2="794" y2="650" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F6F9FF"/>
+      <stop offset="0.24" stop-color="#9AA1AA"/>
+      <stop offset="0.45" stop-color="#FFFFFF"/>
+      <stop offset="0.7" stop-color="#8B929A"/>
+      <stop offset="1" stop-color="#F0F3F8"/>
+    </linearGradient>
+    <linearGradient id="wordmarkSilver" x1="289" y1="1060" x2="924" y2="1246" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D3D9E1"/>
+      <stop offset="0.45" stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#8E949D"/>
+    </linearGradient>
+    <linearGradient id="accentRed" x1="266" y1="420" x2="320" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF2B2B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FF2B2B"/>
+    </linearGradient>
+    <linearGradient id="accentGreen" x1="880" y1="620" x2="934" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00FF88"/>
+      <stop offset="1" stop-color="#00FF88" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadowGlow" x="182" y="102" width="836" height="836" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#000000" flood-opacity="0.65"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#00FF88" flood-opacity="0.09"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#FF2B2B" flood-opacity="0.09"/>
+    </filter>
+    <filter id="orbitTrail" x="206" y="126" width="788" height="788" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="textShadow" x="300" y="284" width="600" height="480" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#FFFFFF" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#00FF88" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#FF2B2B" flood-opacity="0.08"/>
+    </filter>
+    <clipPath id="coreClip">
+      <circle cx="600" cy="520" r="280"/>
+    </clipPath>
+    <style>
+      .orbit-ring {
+        animation: orbitSpin 14s linear infinite;
+        transform-origin: 600px 520px;
+      }
+      .accent-pulse-red {
+        animation: redPulse 4.2s ease-in-out infinite;
+      }
+      .accent-pulse-green {
+        animation: greenPulse 5s ease-in-out infinite;
+      }
+      @keyframes orbitSpin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes redPulse {
+        0%, 100% { opacity: 0.45; }
+        50% { opacity: 1; }
+      }
+      @keyframes greenPulse {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 0.95; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="1400" fill="#0A0A0A"/>
+
+  <g filter="url(#shadowGlow)">
+    <circle cx="600" cy="520" r="344" stroke="url(#silverGradient)" stroke-width="10" stroke-opacity="0.22"/>
+    <circle cx="600" cy="520" r="318" stroke="#E7EDF6" stroke-width="2" stroke-opacity="0.14"/>
+  </g>
+
+  <g class="orbit-ring">
+    <g filter="url(#orbitTrail)" opacity="0.46">
+      <path d="M311 366C360 304 436 257 523 239" stroke="#FF2B2B" stroke-width="16" stroke-linecap="round"/>
+      <path d="M838 292C906 333 954 401 970 485" stroke="#00FF88" stroke-width="16" stroke-linecap="round"/>
+      <path d="M876 704C831 772 758 821 674 839" stroke="#FF2B2B" stroke-width="16" stroke-linecap="round"/>
+    </g>
+    <circle cx="600" cy="520" r="360" stroke="url(#silverEdge)" stroke-width="12" stroke-opacity="0.72"/>
+    <path d="M323 339C384 285 464 250 553 240" stroke="url(#silverGradient)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M833 246C914 287 973 363 985 455" stroke="url(#silverGradient)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M944 622C921 719 849 799 755 836" stroke="url(#silverGradient)" stroke-width="24" stroke-linecap="round"/>
+    <path d="M516 842C421 829 336 775 284 692" stroke="url(#silverGradient)" stroke-width="24" stroke-linecap="round"/>
+    <circle class="accent-pulse-red" cx="311" cy="366" r="12" fill="#FF2B2B"/>
+    <circle class="accent-pulse-green" cx="970" cy="485" r="12" fill="#00FF88"/>
+    <circle class="accent-pulse-red" cx="876" cy="704" r="10" fill="#FF2B2B"/>
+    <circle class="accent-pulse-green" cx="420" cy="833" r="10" fill="#00FF88"/>
+  </g>
+
+  <g>
+    <line x1="600" y1="132" x2="600" y2="170" stroke="url(#silverGradient)" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+    <line x1="600" y1="870" x2="600" y2="908" stroke="url(#silverGradient)" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+    <line x1="212" y1="520" x2="250" y2="520" stroke="url(#silverGradient)" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+    <line x1="950" y1="520" x2="988" y2="520" stroke="url(#silverGradient)" stroke-width="5" stroke-linecap="round" stroke-opacity="0.85"/>
+  </g>
+
+  <g filter="url(#shadowGlow)">
+    <circle cx="600" cy="520" r="280" fill="url(#coreFill)" stroke="url(#silverGradient)" stroke-width="18"/>
+    <circle cx="600" cy="520" r="244" stroke="url(#silverEdge)" stroke-width="7" stroke-opacity="0.9"/>
+    <circle cx="600" cy="520" r="214" stroke="#7A818A" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+
+  <g clip-path="url(#coreClip)">
+    <path d="M356 310C445 240 579 231 706 293C833 355 896 470 888 584" stroke="url(#coreReflection)" stroke-width="68" stroke-linecap="round" opacity="0.58"/>
+    <path d="M404 688C492 736 622 748 760 706" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="24" stroke-linecap="round"/>
+    <path d="M312 559C408 517 781 446 909 479" stroke="#00FF88" stroke-opacity="0.05" stroke-width="8" stroke-linecap="round"/>
+    <path d="M345 615C500 667 751 682 868 653" stroke="#FF2B2B" stroke-opacity="0.05" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#textShadow)">
+    <text x="600" y="545" text-anchor="middle" fill="url(#textSilver)" font-family="'Bahnschrift SemiBold', 'Agency FB', 'Segoe UI', sans-serif" font-size="248" font-weight="700" letter-spacing="18">FTD</text>
+  </g>
+
+  <g opacity="0.95">
+    <path d="M266 420H320" stroke="url(#accentRed)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M880 620H934" stroke="url(#accentGreen)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M404 237L437 269" stroke="#FF2B2B" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+    <path d="M792 770L827 805" stroke="#00FF88" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="600" y="1102" text-anchor="middle" fill="url(#wordmarkSilver)" font-family="'Bahnschrift SemiBold', 'Agency FB', 'Segoe UI', sans-serif" font-size="84" font-weight="700" letter-spacing="12">FEE THE DEVELOPER</text>
+  <text x="600" y="1174" text-anchor="middle" fill="#A8B0BB" fill-opacity="0.92" font-family="'Bahnschrift', 'Segoe UI', sans-serif" font-size="28" font-weight="600" letter-spacing="10">VETERAN-OWNED SOFTWARE</text>
+</svg>
