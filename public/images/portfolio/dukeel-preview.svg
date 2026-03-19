@@ -1,0 +1,33 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#071127"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M146 222C275 131 507 117 654 207C741 262 842 278 958 219C1105 145 1334 165 1460 236" stroke="#4E6DD7" stroke-opacity="0.35" stroke-width="18" stroke-linecap="round"/>
+  <path d="M102 298H1498" stroke="#4564C3" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="794" y="154" text-anchor="middle" fill="#F5F6FA" font-family="Segoe UI, Arial, sans-serif" font-size="86" font-weight="800">DUKEEL</text>
+  <text x="798" y="204" text-anchor="middle" fill="#FF9F2E" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">TRANSPORTATION &amp; FREIGHT</text>
+  <text x="800" y="378" text-anchor="middle" fill="#F6F8FC" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="800">Reliable logistics</text>
+  <text x="800" y="458" text-anchor="middle" fill="#F6F8FC" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="800">&amp; freight solutions.</text>
+  <text x="800" y="546" text-anchor="middle" fill="#FF982B" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="600">Government &amp; commercial contracting services.</text>
+  <rect x="545" y="596" width="214" height="74" rx="16" fill="#FF8B1E"/>
+  <rect x="797" y="596" width="214" height="74" rx="16" fill="#0D1737" stroke="#2F78F3" stroke-width="3"/>
+  <text x="652" y="644" text-anchor="middle" fill="#F6F8FC" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Get a Quote</text>
+  <text x="904" y="644" text-anchor="middle" fill="#F6F8FC" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Learn More</text>
+  <rect x="186" y="682" width="174" height="118" rx="10" fill="#0D2A71"/>
+  <rect x="238" y="606" width="174" height="118" rx="10" fill="#0E4FC6"/>
+  <rect x="322" y="670" width="174" height="118" rx="10" fill="#FF6E14"/>
+  <rect x="418" y="728" width="174" height="72" rx="10" fill="#0E2B71"/>
+  <path d="M622 760C622 716 657 680 700 680C743 680 778 716 778 760C778 820 700 850 700 850C700 850 622 819 622 760Z" fill="url(#pin)"/>
+  <rect x="760" y="706" width="120" height="122" rx="18" fill="#0F1C3F"/>
+  <rect x="884" y="680" width="104" height="148" rx="18" fill="#10275A"/>
+  <rect x="910" y="733" width="126" height="95" rx="20" fill="#111E3F"/>
+  <defs>
+    <linearGradient id="bg" x1="110" y1="72" x2="1455" y2="870" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1432"/>
+      <stop offset="1" stop-color="#081022"/>
+    </linearGradient>
+    <linearGradient id="pin" x1="700" y1="680" x2="700" y2="850" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB126"/>
+      <stop offset="1" stop-color="#F15A17"/>
+    </linearGradient>
+  </defs>
+</svg>

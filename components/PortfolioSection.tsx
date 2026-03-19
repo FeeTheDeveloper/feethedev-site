@@ -1,7 +1,7 @@
 'use client';
 
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import type { ReactNode } from 'react';
 import { useEffect, useState } from 'react';
 import { Body, Button, Card, H2, Section } from '@/components/ui';
 import { cn } from '@/lib/utils';
@@ -14,14 +14,86 @@ type Project = {
   tech: string;
   tags: string[];
   accent: 'red' | 'green' | 'neutral';
-  preview: ReactNode;
+  domain: string;
+  imageSrc: string;
+  imageAlt: string;
   details: {
     overview: string;
     features: string[];
     links: Array<{ label: string; href: string }>;
-    gallery: ReactNode;
   };
 };
+
+function ProjectPreview({
+  src,
+  alt,
+  accent,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  accent: Project['accent'];
+  priority?: boolean;
+}) {
+  return (
+    <div
+      className={cn(
+        'relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border bg-black/40',
+        accent === 'green'
+          ? 'border-greenglow/15'
+          : accent === 'red'
+            ? 'border-redglow/15'
+            : 'border-white/10',
+      )}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+        className="object-cover object-top"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+    </div>
+  );
+}
+
+function ProjectGallery({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="space-y-4">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover object-top"
+        />
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <div className="rounded-2xl border border-white/10 bg-black/25 px-4 py-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+            Visual Direction
+          </div>
+          <div className="mt-2 text-sm leading-6 text-slate-200">
+            High-contrast screenshot treatment inside a browser-style frame for
+            quick scanning.
+          </div>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-black/25 px-4 py-4">
+          <div className="text-xs uppercase tracking-[0.2em] text-slate-500">
+            Reference
+          </div>
+          <div className="mt-2 text-sm leading-6 text-slate-200">
+            Portfolio media now uses generated project previews instead of
+            abstract placeholder blocks.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const projects: Project[] = [
   {
@@ -33,15 +105,9 @@ const projects: Project[] = [
     tech: 'HTML/CSS/JS, custom animations, Resend contact form',
     tags: ['Static', 'Corporate', 'Luxury Tech', 'Automation'],
     accent: 'red',
-    preview: (
-      <div className="grid h-full gap-3">
-        <div className="h-44 rounded-[1.5rem] border border-redglow/20 bg-[radial-gradient(circle_at_top_left,rgba(255,43,43,0.28),transparent_30%),linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))]" />
-        <div className="grid gap-3 sm:grid-cols-[1.25fr_0.75fr]">
-          <div className="h-16 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-16 rounded-2xl border border-redglow/20 bg-redglow/10" />
-        </div>
-      </div>
-    ),
+    domain: 'playsranch.com',
+    imageSrc: '/images/portfolio/playsranch-preview.svg',
+    imageAlt: 'Plays Ranch Programming preview',
     details: {
       overview:
         'Designed as a sharp one-page authority site, this concept centers on premium positioning, animated story beats, and a clean path into a strategy consultation.',
@@ -54,13 +120,6 @@ const projects: Project[] = [
         { label: 'Visit Live Site', href: 'https://playsranch.com' },
         { label: 'Book Similar Build', href: '#design-options' },
       ],
-      gallery: (
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="h-32 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="bg-redglow/8 h-32 rounded-2xl border border-redglow/20" />
-          <div className="h-28 rounded-2xl border border-white/10 bg-white/5 sm:col-span-2" />
-        </div>
-      ),
     },
   },
   {
@@ -72,20 +131,9 @@ const projects: Project[] = [
     tech: 'Next.js 14, TypeScript, Tailwind, optional AWS DynamoDB back-end',
     tags: ['Next.js', 'Membership', 'Multi-page', 'Admin'],
     accent: 'green',
-    preview: (
-      <div className="grid h-full gap-3">
-        <div className="grid grid-cols-[0.32fr_1fr] gap-3">
-          <div className="h-44 rounded-[1.5rem] border border-white/10 bg-white/5" />
-          <div className="grid gap-3">
-            <div className="h-24 rounded-[1.5rem] border border-greenglow/20 bg-greenglow/10" />
-            <div className="grid grid-cols-2 gap-3">
-              <div className="h-[4.25rem] rounded-2xl border border-white/10 bg-white/5" />
-              <div className="h-[4.25rem] rounded-2xl border border-white/10 bg-white/5" />
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
+    domain: 'vetgang.com',
+    imageSrc: '/images/portfolio/vetgang-preview.svg',
+    imageAlt: 'Vet Gang membership preview',
     details: {
       overview:
         'This portfolio concept is framed as a larger ecosystem build with member-facing routes, brand storytelling, application flows, and admin-capable expansion room.',
@@ -98,13 +146,6 @@ const projects: Project[] = [
         { label: 'Visit Live Site', href: 'https://vetgang.com' },
         { label: 'Join Network', href: 'https://vetgang.com/join' },
       ],
-      gallery: (
-        <div className="grid gap-3 sm:grid-cols-[1.2fr_0.8fr]">
-          <div className="h-32 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="bg-greenglow/8 h-32 rounded-2xl border border-greenglow/20" />
-          <div className="h-28 rounded-2xl border border-white/10 bg-white/5 sm:col-span-2" />
-        </div>
-      ),
     },
   },
   {
@@ -117,16 +158,9 @@ const projects: Project[] = [
     tech: 'Next.js App Router, TypeScript, Tailwind CSS, Framer Motion',
     tags: ['Next.js', 'Logistics', 'Government', 'Multi-page'],
     accent: 'neutral',
-    preview: (
-      <div className="grid h-full gap-3">
-        <div className="h-44 rounded-[1.5rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))]" />
-        <div className="grid grid-cols-3 gap-3">
-          <div className="h-16 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-16 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-16 rounded-2xl border border-white/10 bg-white/5" />
-        </div>
-      </div>
-    ),
+    domain: 'dukeeltransport.com',
+    imageSrc: '/images/portfolio/dukeel-preview.svg',
+    imageAlt: 'Dukeel Transportation preview',
     details: {
       overview:
         'Dukeel is positioned as a modern freight and transportation website with a premium government-contractor aesthetic, combining clear operational messaging, multi-page structure, and polished motion-led presentation.',
@@ -139,14 +173,6 @@ const projects: Project[] = [
         { label: 'Visit Live Site', href: 'https://dukeeltransport.com' },
         { label: 'Compare Options', href: '#design-options' },
       ],
-      gallery: (
-        <div className="grid gap-3 sm:grid-cols-3">
-          <div className="h-32 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-32 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-32 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-28 rounded-2xl border border-white/10 bg-white/5 sm:col-span-3" />
-        </div>
-      ),
     },
   },
 ];
@@ -226,7 +252,10 @@ function PortfolioModal({
                       <span className="h-2.5 w-2.5 rounded-full bg-white/60" />
                       <span className="h-2.5 w-2.5 rounded-full bg-greenglow/85" />
                     </div>
-                    {project.details.gallery}
+                    <ProjectGallery
+                      src={project.imageSrc}
+                      alt={project.imageAlt}
+                    />
                   </div>
                   <p className="text-base leading-7 text-slate-300">
                     {project.details.overview}
@@ -331,9 +360,8 @@ export function PortfolioSection() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, index) => (
-              <motion.button
+              <motion.div
                 key={project.slug}
-                type="button"
                 initial={{ opacity: 0, y: 26 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
@@ -342,7 +370,15 @@ export function PortfolioSection() {
                   delay: index * 0.08,
                   ease: [0.22, 1, 0.36, 1],
                 }}
+                role="button"
+                tabIndex={0}
                 onClick={() => setActiveProject(project)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setActiveProject(project);
+                  }
+                }}
                 className="group text-left"
               >
                 <Card
@@ -364,7 +400,12 @@ export function PortfolioSection() {
                           <span className="h-2.5 w-2.5 rounded-full bg-white/60" />
                           <span className="h-2.5 w-2.5 rounded-full bg-greenglow/85" />
                         </div>
-                        {project.preview}
+                        <ProjectPreview
+                          src={project.imageSrc}
+                          alt={project.imageAlt}
+                          accent={project.accent}
+                          priority={index === 0}
+                        />
                       </motion.div>
                     </div>
 
@@ -385,6 +426,16 @@ export function PortfolioSection() {
                       <p className="text-sm uppercase tracking-[0.18em] text-slate-400">
                         {project.tech}
                       </p>
+
+                      <a
+                        href={`https://${project.domain}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-slate-200 underline decoration-white/15 underline-offset-4 transition hover:text-white"
+                      >
+                        {project.domain}
+                      </a>
 
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
@@ -413,7 +464,7 @@ export function PortfolioSection() {
                     </div>
                   </div>
                 </Card>
-              </motion.button>
+              </motion.div>
             ))}
           </div>
         </div>

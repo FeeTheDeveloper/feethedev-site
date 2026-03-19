@@ -1,0 +1,60 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#090708"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="804" cy="848" rx="468" ry="64" fill="url(#floorGlow)"/>
+  <path d="M155 257C430 344 1183 333 1457 249" stroke="url(#lineL)" stroke-width="3"/>
+  <path d="M144 652C375 737 1210 747 1466 659" stroke="url(#lineR)" stroke-width="3"/>
+  <path d="M784 103L928 178L909 362L796 428L677 357L654 178L784 103Z" fill="url(#shieldBody)" stroke="url(#shieldStroke)" stroke-width="8"/>
+  <path d="M784 141L891 197L874 336L796 388L715 336L698 197L784 141Z" fill="#130E0D" stroke="url(#innerStroke)" stroke-width="5"/>
+  <text x="800" y="284" text-anchor="middle" fill="url(#goldText)" font-family="Georgia, serif" font-size="106" font-weight="700">PRP</text>
+  <text x="800" y="525" text-anchor="middle" fill="#F5C47D" font-family="Georgia, serif" font-size="74" font-weight="700">We engineer the systems behind growth.</text>
+  <rect x="524" y="579" width="551" height="4" rx="2" fill="url(#divider)"/>
+  <text x="800" y="648" text-anchor="middle" fill="#EAB06A" font-family="Segoe UI, Arial, sans-serif" font-size="42" letter-spacing="2">Automation. Infrastructure. Scale.</text>
+  <rect x="426" y="723" width="304" height="72" rx="14" fill="#121011" stroke="#F58C2F" stroke-width="3"/>
+  <rect x="864" y="723" width="304" height="72" rx="14" fill="#121011" stroke="#F5B44A" stroke-width="3"/>
+  <text x="578" y="770" text-anchor="middle" fill="#F5BB73" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Book a Strategy Call</text>
+  <text x="1016" y="770" text-anchor="middle" fill="#F5BB73" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Learn More</text>
+  <defs>
+    <linearGradient id="bg" x1="235" y1="128" x2="1360" y2="824" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1312"/>
+      <stop offset="0.42" stop-color="#0C0A0B"/>
+      <stop offset="1" stop-color="#110807"/>
+    </linearGradient>
+    <radialGradient id="floorGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(804 848) rotate(90) scale(88 468)">
+      <stop stop-color="#FFAB3D"/>
+      <stop offset="1" stop-color="#FFAB3D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shieldBody" x1="672" y1="140" x2="939" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD16D"/>
+      <stop offset="0.38" stop-color="#F88E23"/>
+      <stop offset="1" stop-color="#AD4B0D"/>
+    </linearGradient>
+    <linearGradient id="shieldStroke" x1="654" y1="125" x2="928" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0B7"/>
+      <stop offset="1" stop-color="#FF9F2A"/>
+    </linearGradient>
+    <linearGradient id="innerStroke" x1="698" y1="176" x2="891" y2="343" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FEE39A"/>
+      <stop offset="1" stop-color="#B66A1A"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="720" y1="198" x2="868" y2="324" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE2A0"/>
+      <stop offset="1" stop-color="#C46E19"/>
+    </linearGradient>
+    <linearGradient id="divider" x1="524" y1="581" x2="1075" y2="581" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D29D44" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFD26B"/>
+      <stop offset="1" stop-color="#D29D44" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineL" x1="155" y1="257" x2="1457" y2="249" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6A2000" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FF6C1F"/>
+      <stop offset="1" stop-color="#6A2000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineR" x1="144" y1="652" x2="1466" y2="659" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6A2000" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FF7A22"/>
+      <stop offset="1" stop-color="#6A2000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -67,6 +67,6 @@ npm run build
 
 ### Notes
 
-- No environment variables are required for the current build.
+- No environment variables are required for the current build, but setting `NEXT_PUBLIC_SITE_URL` in Vercel is recommended for the final canonical domain.
 - `app/` uses the Next.js App Router and is already production-ready.
-- `robots.txt` and `sitemap` can be added later if the site moves from portfolio preview to live marketing deployment.
+- `app/robots.ts` and `app/sitemap.ts` are included for search-engine-ready deployment.

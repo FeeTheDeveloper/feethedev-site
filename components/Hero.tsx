@@ -1,8 +1,10 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button, Body, H1, Section } from '@/components/ui';
+import { siteConfig } from '@/lib/site-config';
 
 const FuturisticRubiksCube = dynamic(
   () =>
@@ -30,6 +32,27 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 max-w-2xl space-y-8"
         >
+          <div className="inline-flex items-center gap-4 rounded-[1.6rem] border border-white/10 bg-white/[0.04] px-4 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+            <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
+              <Image
+                src="/brand/ftd-logo.svg"
+                alt={`${siteConfig.name} logo`}
+                fill
+                priority
+                sizes="56px"
+                className="object-contain p-1.5"
+              />
+            </div>
+            <div className="space-y-1">
+              <div className="text-[0.65rem] uppercase tracking-[0.34em] text-slate-400">
+                Veteran-Owned Software Company
+              </div>
+              <div className="text-base font-semibold uppercase tracking-[0.22em] text-white sm:text-lg">
+                {siteConfig.name}
+              </div>
+            </div>
+          </div>
+
           <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.26em] text-slate-300 backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-redglow shadow-[0_0_18px_rgba(255,43,43,0.85)]" />
             Elite Software Systems
@@ -64,8 +87,20 @@ export function Hero() {
           className="relative"
         >
           <div className="pointer-events-none absolute inset-8 rounded-[2rem] bg-gradient-to-br from-redglow/10 via-transparent to-greenglow/10 blur-3xl" />
+          <div className="pointer-events-none absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2 rounded-[1.8rem] border border-white/10 bg-black/55 p-4 shadow-[0_18px_45px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+            <div className="relative h-20 w-20 sm:h-24 sm:w-24">
+              <Image
+                src="/brand/ftd-logo.svg"
+                alt="FTD header logo"
+                fill
+                priority
+                sizes="96px"
+                className="object-contain drop-shadow-[0_0_18px_rgba(255,255,255,0.18)]"
+              />
+            </div>
+          </div>
           <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 shadow-[0_24px_90px_rgba(0,0,0,0.4)] backdrop-blur-xl sm:p-5">
-            <div className="absolute inset-x-6 top-6 flex items-center justify-between rounded-full border border-white/10 bg-black/30 px-4 py-3 backdrop-blur">
+            <div className="absolute inset-x-6 top-8 flex items-center justify-between rounded-full border border-white/10 bg-black/30 px-4 py-3 backdrop-blur">
               <div>
                 <div className="text-xs uppercase tracking-[0.24em] text-slate-400">
                   Live Render

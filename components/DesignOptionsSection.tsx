@@ -1,6 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
+import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { Body, Card, H2, Section } from '@/components/ui';
@@ -16,6 +17,20 @@ type Option = {
   preview: ReactNode;
 };
 
+function PreviewImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover"
+      />
+    </div>
+  );
+}
+
 const options: Option[] = [
   {
     id: 'business',
@@ -30,13 +45,10 @@ const options: Option[] = [
     ],
     accent: 'red',
     preview: (
-      <div className="grid gap-3">
-        <div className="h-28 rounded-2xl border border-white/10 bg-gradient-to-br from-redglow/15 via-white/5 to-transparent" />
-        <div className="grid gap-3 sm:grid-cols-[1.2fr_0.8fr]">
-          <div className="h-20 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-20 rounded-2xl border border-redglow/20 bg-redglow/5" />
-        </div>
-      </div>
+      <PreviewImage
+        src="/images/portfolio/playsranch-preview.svg"
+        alt="Business website preview inspired by Plays Ranch"
+      />
     ),
   },
   {
@@ -52,14 +64,10 @@ const options: Option[] = [
     ],
     accent: 'green',
     preview: (
-      <div className="grid gap-3">
-        <div className="grid grid-cols-3 gap-3">
-          <div className="h-20 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="h-20 rounded-2xl border border-greenglow/20 bg-greenglow/5" />
-          <div className="h-20 rounded-2xl border border-white/10 bg-white/5" />
-        </div>
-        <div className="h-24 rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 via-greenglow/10 to-white/5" />
-      </div>
+      <PreviewImage
+        src="/images/design/ecommerce-preview.svg"
+        alt="E-commerce design preview"
+      />
     ),
   },
   {
@@ -75,16 +83,10 @@ const options: Option[] = [
     ],
     accent: 'neutral',
     preview: (
-      <div className="grid gap-3">
-        <div className="grid gap-3 sm:grid-cols-[0.4fr_1fr]">
-          <div className="h-28 rounded-2xl border border-white/10 bg-white/5" />
-          <div className="grid gap-3">
-            <div className="h-12 rounded-2xl border border-white/10 bg-white/5" />
-            <div className="h-12 rounded-2xl border border-white/10 bg-white/5" />
-            <div className="h-12 rounded-2xl border border-white/10 bg-white/5" />
-          </div>
-        </div>
-      </div>
+      <PreviewImage
+        src="/images/portfolio/vetgang-preview.svg"
+        alt="Custom application preview inspired by Vet Gang"
+      />
     ),
   },
   {
@@ -100,13 +102,10 @@ const options: Option[] = [
     ],
     accent: 'red',
     preview: (
-      <div className="grid gap-3">
-        <div className="h-20 rounded-2xl border border-white/10 bg-white/5" />
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="h-28 rounded-2xl border border-redglow/20 bg-redglow/5" />
-          <div className="h-28 rounded-2xl border border-white/10 bg-white/5" />
-        </div>
-      </div>
+      <PreviewImage
+        src="/images/design/redesign-preview.svg"
+        alt="Website redesign preview"
+      />
     ),
   },
 ];

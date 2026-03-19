@@ -1,0 +1,32 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#07080C"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="238" y="118" width="1124" height="664" rx="44" fill="#0D0E13" stroke="#2C3A2B"/>
+  <rect x="290" y="176" width="1020" height="162" rx="28" fill="#090A0F" stroke="#21262F"/>
+  <rect x="290" y="372" width="490" height="170" rx="28" fill="#0B0C11" stroke="#232833"/>
+  <rect x="820" y="372" width="490" height="170" rx="28" fill="#0B0C11" stroke="#232833"/>
+  <text x="344" y="454" fill="#F2F4F7" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Trusted operator density</text>
+  <text x="344" y="516" fill="#B9BFCA" font-family="Segoe UI, Arial, sans-serif" font-size="24">A vetted network of veteran-owned leaders built to</text>
+  <text x="344" y="554" fill="#B9BFCA" font-family="Segoe UI, Arial, sans-serif" font-size="24">collaborate quickly and execute reliably.</text>
+  <text x="850" y="454" fill="#F2F4F7" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">Force multiplier outcomes</text>
+  <text x="850" y="516" fill="#B9BFCA" font-family="Segoe UI, Arial, sans-serif" font-size="24">Network alignment increases velocity, credibility,</text>
+  <text x="850" y="554" fill="#B9BFCA" font-family="Segoe UI, Arial, sans-serif" font-size="24">and scale for serious organizations.</text>
+  <rect x="286" y="600" width="1028" height="192" rx="36" fill="url(#ctaBg)" stroke="#4F5632"/>
+  <text x="342" y="670" fill="#D7D472" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="8">MEMBERSHIP</text>
+  <text x="342" y="744" fill="#F7F8FA" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">Join a verified network that rewards</text>
+  <text x="342" y="810" fill="#F7F8FA" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="700">disciplined execution.</text>
+  <rect x="969" y="673" width="226" height="56" rx="28" fill="#9A0329"/>
+  <rect x="969" y="753" width="326" height="56" rx="28" fill="none" stroke="#D7D472"/>
+  <text x="1082" y="709" text-anchor="middle" fill="#E7DA77" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">JOIN VET GANG</text>
+  <text x="1132" y="789" text-anchor="middle" fill="#E7DA77" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="4">LEARN ABOUT VET GANG</text>
+  <defs>
+    <linearGradient id="bg" x1="160" y1="92" x2="1435" y2="855" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B0B12"/>
+      <stop offset="1" stop-color="#06070C"/>
+    </linearGradient>
+    <linearGradient id="ctaBg" x1="286" y1="600" x2="1314" y2="792" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101117"/>
+      <stop offset="1" stop-color="#14131B"/>
+    </linearGradient>
+  </defs>
+</svg>
