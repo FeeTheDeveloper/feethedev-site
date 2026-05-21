@@ -35,7 +35,7 @@ const options: Option[] = [
   {
     id: 'business',
     label: 'Business Website',
-    price: '$3,500 - $8,000',
+    price: '$700 - $1,600',
     description:
       'A polished authority site for service businesses that need trust, clarity, and a strong conversion path.',
     features: [
@@ -54,7 +54,7 @@ const options: Option[] = [
   {
     id: 'ecommerce',
     label: 'E-Commerce',
-    price: '$6,000 - $15,000',
+    price: '$1,200 - $3,000',
     description:
       'Premium storefronts designed to sell smoothly, showcase product value, and feel elevated at every step.',
     features: [
@@ -73,7 +73,7 @@ const options: Option[] = [
   {
     id: 'custom-app',
     label: 'Custom App',
-    price: '$12,000 - $35,000+',
+    price: '$2,400 - $7,000+',
     description:
       'Tailored application interfaces for dashboards, portals, internal tools, and specialized operational workflows.',
     features: [
@@ -92,7 +92,7 @@ const options: Option[] = [
   {
     id: 'redesign',
     label: 'Redesign',
-    price: '$4,500 - $12,000',
+    price: '$900 - $2,400',
     description:
       'A strategic rebuild for outdated sites that need sharper positioning, better UX, and stronger visual credibility.',
     features: [
