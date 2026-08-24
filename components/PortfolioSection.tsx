@@ -206,7 +206,10 @@ function PortfolioModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        role="dialog"\n        aria-modal="true"\n        aria-labelledby="portfolio-dialog-title"\n        className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-md"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="portfolio-dialog-title"
+        className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-md"
         onClick={onClose}
       >
         <div className="flex min-h-full items-center justify-center p-4 sm:p-8">
