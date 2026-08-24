@@ -62,7 +62,7 @@ export function CtaSection() {
                 Trusted by serious operators
               </span>
               <a
-                href="mailto:contact@feethedeveloper.com"
+                href="/start"
                 className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-200 transition hover:text-white"
               >
                 contact@feethedeveloper.com
@@ -79,8 +79,8 @@ export function CtaSection() {
                 ease: 'easeInOut',
               }}
             >
-              <Button href="mailto:contact@feethedeveloper.com" glow="gradient">
-                Book Your Strategy Session
+              <Button href="/start" glow="gradient">
+                Start Your Build
               </Button>
             </motion.div>
 
