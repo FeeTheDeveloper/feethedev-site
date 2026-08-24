@@ -74,12 +74,12 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.26em] text-slate-300 backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-redglow shadow-[0_0_18px_rgba(255,43,43,0.85)]" />
-              Elite Software Systems
+              AI Automation • Custom Software
             </div>
 
             <div className="space-y-5">
               <H1 className="max-w-4xl text-balance text-5xl leading-[0.92] sm:text-6xl lg:text-7xl">
-                WE BUILD SYSTEMS. NOT WEBSITES.
+                SOFTWARE THAT MOVES THE BUSINESS.
               </H1>
               <Body className="max-w-xl text-lg text-slate-300 sm:text-xl">
                 Futuristic, high-trust digital experiences engineered with
@@ -89,8 +89,8 @@ export function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button href="#contact" glow="gradient">
-                Start Your Build
+              <Button href="/start" glow="gradient">
+                Qualify Your Project
               </Button>
             </div>
           </motion.div>
@@ -110,10 +110,10 @@ export function Hero() {
               <div className="absolute inset-x-6 top-8 flex items-center justify-between rounded-full border border-white/10 bg-black/30 px-4 py-3 backdrop-blur">
                 <div>
                   <div className="text-xs uppercase tracking-[0.24em] text-slate-400">
-                    Live Render
+                    System Core
                   </div>
                   <div className="text-sm font-medium text-white">
-                    React Three Fiber Cube
+                    Automation • Software • Integrations
                   </div>
                 </div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-greenglow/20 bg-greenglow/10 px-3 py-2 text-xs uppercase tracking-[0.2em] text-greenglow">

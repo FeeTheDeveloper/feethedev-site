@@ -17,19 +17,18 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   applicationName: siteConfig.name,
-  authors: [{ name: siteConfig.name }],
+  authors: [{ name: 'Alfreddie Postell II', url: siteConfig.siteUrl }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   category: 'technology',
   keywords: [
-    'Next.js',
-    'TypeScript',
-    'Tailwind CSS',
-    'Framer Motion',
-    'React Three Fiber',
-    'web development',
-    'software systems',
-    'veteran-owned',
+    'AI automation company',
+    'custom software development',
+    'business automation',
+    'web application development',
+    'API integrations',
+    'Texas software company',
+    'veteran-owned technology company',
   ],
   alternates: {
     canonical: '/',
@@ -41,11 +40,13 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
     locale: 'en_US',
+    images: [{ url: '/brand/ftd-logo.svg', width: 1200, height: 630, alt: siteConfig.name }],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ['/brand/ftd-logo.svg'],
   },
   robots: {
     index: true,
@@ -66,6 +67,18 @@ export const viewport: Viewport = {
   themeColor: '#0A0A0A',
 };
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: siteConfig.legalName,
+  url: siteConfig.siteUrl,
+  email: siteConfig.email,
+  description: siteConfig.description,
+  founder: { '@type': 'Person', name: 'Alfreddie Postell II' },
+  areaServed: 'United States',
+  serviceType: siteConfig.services,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -73,7 +86,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} font-sans`}>{children}</body>
+      <body className={`${manrope.variable} font-sans`}>
+        <a href="#main-content" className="sr-only z-[100] rounded bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
+          Skip to content
+        </a>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        {children}
+      </body>
     </html>
   );
 }

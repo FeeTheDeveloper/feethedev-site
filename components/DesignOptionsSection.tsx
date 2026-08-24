@@ -34,8 +34,8 @@ function PreviewImage({ src, alt }: { src: string; alt: string }) {
 const options: Option[] = [
   {
     id: 'business',
-    label: 'Business Website',
-    price: '$700 - $1,600',
+    label: 'Business Authority System',
+    price: 'Starting at $1,500',
     description:
       'A polished authority site for service businesses that need trust, clarity, and a strong conversion path.',
     features: [
@@ -54,7 +54,7 @@ const options: Option[] = [
   {
     id: 'ecommerce',
     label: 'E-Commerce',
-    price: '$1,200 - $3,000',
+    price: 'Starting at $5,000',
     description:
       'Premium storefronts designed to sell smoothly, showcase product value, and feel elevated at every step.',
     features: [
@@ -73,7 +73,7 @@ const options: Option[] = [
   {
     id: 'custom-app',
     label: 'Custom App',
-    price: '$2,400 - $7,000+',
+    price: 'Discovery required',
     description:
       'Tailored application interfaces for dashboards, portals, internal tools, and specialized operational workflows.',
     features: [
@@ -92,7 +92,7 @@ const options: Option[] = [
   {
     id: 'redesign',
     label: 'Redesign',
-    price: '$900 - $2,400',
+    price: 'Starting at $2,500',
     description:
       'A strategic rebuild for outdated sites that need sharper positioning, better UX, and stronger visual credibility.',
     features: [
