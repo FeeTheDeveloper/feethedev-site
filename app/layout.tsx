@@ -67,6 +67,18 @@ export const viewport: Viewport = {
   themeColor: '#0A0A0A',
 };
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: siteConfig.legalName,
+  url: siteConfig.siteUrl,
+  email: siteConfig.email,
+  description: siteConfig.description,
+  founder: { '@type': 'Person', name: 'Alfreddie Postell II' },
+  areaServed: 'United States',
+  serviceType: siteConfig.services,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,6 +90,7 @@ export default function RootLayout({
         <a href="#main-content" className="sr-only z-[100] rounded bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
           Skip to content
         </a>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
         {children}
       </body>
     </html>
