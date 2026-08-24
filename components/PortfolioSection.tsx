@@ -206,7 +206,7 @@ function PortfolioModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-md"
+        role="dialog"\n        aria-modal="true"\n        aria-labelledby="portfolio-dialog-title"\n        className="fixed inset-0 z-[60] bg-black/70 backdrop-blur-md"
         onClick={onClose}
       >
         <div className="flex min-h-full items-center justify-center p-4 sm:p-8">
@@ -223,7 +223,7 @@ function PortfolioModal({
                 <div className="text-xs uppercase tracking-[0.24em] text-slate-400">
                   Featured Project
                 </div>
-                <h3 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                <h3 id="portfolio-dialog-title" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                   {project.title}
                 </h3>
                 <p className="text-base leading-7 text-slate-300">
