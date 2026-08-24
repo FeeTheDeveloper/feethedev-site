@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      - run: npm install
       - run: npx tsc --noEmit
       - run: npm run lint
       - run: npm run format:check
-      - run: npm run build
+      - run: npm run build\n      - run: npx opennextjs-cloudflare build
