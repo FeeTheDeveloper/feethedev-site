@@ -7,24 +7,25 @@ const fieldClass = 'w-full rounded-2xl border border-white/10 bg-black/35 px-4 p
 
 export function ProjectIntakeForm() {
   const [state, setState] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
-  const [message, setMessage] = useState('');
 
-  async function submit(event: FormEvent<HTMLFormElement>) {
+  function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setState('sending');
     const form = event.currentTarget;
-    const payload = Object.fromEntries(new FormData(form).entries());
-
-    try {
-      const response = await fetch('/api/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      const result = (await response.json()) as { error?: string };
-      if (!response.ok) throw new Error(result.error ?? 'Submission failed.');
-      setState('success');
-      form.reset();
-    } catch (error) {
-      setState('error');
-      setMessage(error instanceof Error ? error.message : 'Submission failed.');
-    }
+    const data = new FormData(form);
+    const subject = encodeURIComponent(`Project intake: ${data.get('service')} — ${data.get('name')}`);
+    const body = encodeURIComponent([
+      `Name: ${data.get('name')}`,
+      `Email: ${data.get('email')}`,
+      `Company: ${data.get('company') || 'Not provided'}`,
+      `Service: ${data.get('service')}`,
+      `Investment range: ${data.get('budget')}`,
+      `Timeline: ${data.get('timeline') || 'Not provided'}`,
+      '',
+      'Project goals:',
+      String(data.get('goals') ?? ''),
+    ].join('\n'));
+    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    setState('success');
   }
 
   if (state === 'success') {
@@ -56,8 +57,8 @@ export function ProjectIntakeForm() {
         <label className="space-y-2 text-sm text-slate-200">Target timeline<input className={fieldClass} name="timeline" placeholder="Example: 30–45 days" /></label>
       </div>
       <label className="space-y-2 text-sm text-slate-200">What must this system accomplish? *<textarea className={fieldClass} name="goals" minLength={20} rows={6} required placeholder="Describe the business problem, users, desired outcome, and required integrations." /></label>
-      <button className="rounded-full bg-gradient-to-r from-redglow via-white to-greenglow p-[1px] disabled:opacity-60" disabled={state === 'sending'} type="submit"><span className="block rounded-full bg-black px-6 py-4 font-semibold uppercase tracking-[0.16em] text-white">{state === 'sending' ? 'Submitting…' : 'Submit Build Request'}</span></button>
-      <p id="form-status" className={state === 'error' ? 'text-sm text-red-300' : 'sr-only'} aria-live="polite">{state === 'error' ? message : 'Complete the project intake form.'}</p>
+      <button className="rounded-full bg-gradient-to-r from-redglow via-white to-greenglow p-[1px] disabled:opacity-60" type="submit"><span className="block rounded-full bg-black px-6 py-4 font-semibold uppercase tracking-[0.16em] text-white">Submit Build Request</span></button>
+      <p id="form-status" className={state === 'error' ? 'text-sm text-red-300' : 'sr-only'} aria-live="polite">Complete the project intake form.</p>
     </form>
   );
 }
