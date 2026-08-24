@@ -216,6 +216,22 @@ export function FuturisticRubiksCube({
   className,
   style,
 }: FuturisticRubiksCubeProps) {
+  const reduceMotion = useReducedMotion();
+
+  if (reduceMotion) {
+    return (
+      <div
+        className={className}
+        style={{ width: '100%', minHeight: '320px', aspectRatio: '1 / 1', background: BACKGROUND, display: 'grid', placeItems: 'center', ...style }}
+      >
+        <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-10 text-center">
+          <div className="text-sm uppercase tracking-[0.3em] text-greenglow">Fee The Developer</div>
+          <div className="mt-3 text-2xl font-semibold text-white">Systems online.</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={className}
