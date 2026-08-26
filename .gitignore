@@ -8,4 +8,6 @@ coverage/
 assets/logo/.chrome-headless/
 Thumbs.db
 .DS_Store
-.open-next/\n.dev.vars\ncloudflare-env.d.ts\n
+.open-next/
+.dev.vars
+cloudflare-env.d.ts
