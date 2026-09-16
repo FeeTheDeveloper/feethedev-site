@@ -4,18 +4,41 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button, Body, H1, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
+import {
+  GitHubIcon,
+  VSCodeIcon,
+  ReactIcon,
+  FigmaIcon,
+  OpenAIIcon,
+  AWSIcon,
+  DockerIcon,
+  PostgreSQLIcon,
+} from '@/components/icons/DevToolIcons';
 
-const orbitItems = [
-  { label: 'AI', className: 'left-[2%] top-[18%]', delay: 0 },
-  { label: 'WEB', className: 'right-[4%] top-[12%]', delay: 0.2 },
-  { label: 'API', className: 'right-[1%] bottom-[20%]', delay: 0.4 },
-  { label: 'CLOUD', className: 'left-[4%] bottom-[15%]', delay: 0.6 },
+const devTools = [
+  { label: 'GitHub', Icon: GitHubIcon, className: 'left-[-2%] top-[8%]', delay: 0 },
+  { label: 'VS Code', Icon: VSCodeIcon, className: 'left-[-6%] top-[32%]', delay: 0.15 },
+  { label: 'React', Icon: ReactIcon, className: 'left-[-4%] bottom-[30%]', delay: 0.3 },
+  { label: 'Figma', Icon: FigmaIcon, className: 'left-[0%] bottom-[6%]', delay: 0.45 },
+  { label: 'ChatGPT', Icon: OpenAIIcon, className: 'right-[-2%] top-[6%]', delay: 0.6 },
+  { label: 'AWS', Icon: AWSIcon, className: 'right-[-6%] top-[30%]', delay: 0.75 },
+  { label: 'Docker', Icon: DockerIcon, className: 'right-[-4%] bottom-[28%]', delay: 0.9 },
+  { label: 'PostgreSQL', Icon: PostgreSQLIcon, className: 'right-[0%] bottom-[4%]', delay: 1.05 },
 ];
 
 export function Hero() {
   return (
     <Section className="relative flex min-h-screen items-center overflow-hidden bg-transparent py-0">
       <div className="pointer-events-none absolute inset-0">
+        <Image
+          src="/brand/ftd-background-drop.webp"
+          alt=""
+          fill
+          aria-hidden
+          sizes="100vw"
+          className="object-cover opacity-25 mix-blend-screen"
+        />
+        <div className="absolute inset-0 bg-background/70" />
         <div className="absolute left-[-10rem] top-16 h-80 w-80 rounded-full bg-electric/20 blur-[110px]" />
         <div className="absolute right-[-8rem] top-20 h-72 w-72 rounded-full bg-greenglow/15 blur-[100px]" />
         <div className="absolute bottom-[-7rem] left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-redglow/10 blur-[110px]" />
@@ -84,15 +107,18 @@ export function Hero() {
           <div className="pointer-events-none absolute inset-[8%] rounded-full border border-greenglow/15" />
           <div className="pointer-events-none absolute inset-[17%] rounded-full border border-redglow/10" />
 
-          {orbitItems.map((item) => (
+          {devTools.map(({ label, Icon, className, delay }) => (
             <motion.div
-              key={item.label}
-              className={`absolute z-20 ${item.className}`}
+              key={label}
+              className={`absolute z-20 ${className}`}
               animate={{ y: [0, -12, 0], rotate: [0, 2, 0] }}
-              transition={{ duration: 4.5, delay: item.delay, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{ duration: 4.5, delay, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <div className="rounded-2xl border border-white/10 bg-[#080d15]/90 px-4 py-3 text-xs font-bold tracking-[0.22em] text-white shadow-[0_14px_40px_rgba(0,0,0,.45)] backdrop-blur-xl">
-                {item.label}
+              <div
+                title={label}
+                className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-[#080d15]/90 p-2.5 shadow-[0_14px_40px_rgba(0,0,0,.45)] backdrop-blur-xl sm:h-14 sm:w-14"
+              >
+                <Icon className="h-full w-full text-white" />
               </div>
             </motion.div>
           ))}
