@@ -136,9 +136,9 @@ export function Hero() {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-6 pb-28 sm:p-10 sm:pb-10"
+                className="object-contain p-6 sm:p-10"
               />
-              <div className="absolute inset-x-3 bottom-3 rounded-xl border border-white/10 bg-black/80 p-3 backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:rounded-2xl sm:bg-black/70 sm:p-5">
+              <div className="hidden sm:absolute sm:inset-x-6 sm:bottom-6 sm:block sm:rounded-2xl sm:border sm:border-white/10 sm:bg-black/70 sm:p-5 sm:backdrop-blur-xl">
                 <div className="flex flex-wrap items-center gap-2 text-[0.55rem] uppercase tracking-[0.2em] text-cyan sm:text-[0.65rem] sm:tracking-[0.25em]">
                   <span>Direct Partnership</span>
                   <span className="h-1 w-1 rounded-full bg-greenglow" />
