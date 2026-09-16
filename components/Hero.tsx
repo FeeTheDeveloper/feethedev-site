@@ -131,7 +131,7 @@ export function Hero() {
             <div className="relative aspect-square overflow-hidden rounded-[1.6rem] bg-[#05070b]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(37,120,255,.2),transparent_35%)]" />
               <Image
-                src="/brand/ftd-logo.svg"
+                src="/logo.png"
                 alt={`${siteConfig.name} brand artwork`}
                 fill
                 priority
