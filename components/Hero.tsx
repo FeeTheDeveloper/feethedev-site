@@ -136,18 +136,18 @@ export function Hero() {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-7 sm:p-10"
+                className="object-contain p-6 pb-28 sm:p-10 sm:pb-10"
               />
-              <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/10 bg-black/70 p-4 backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:p-5">
-                <div className="flex flex-wrap items-center gap-2 text-[0.65rem] uppercase tracking-[0.25em] text-cyan">
+              <div className="absolute inset-x-3 bottom-3 rounded-xl border border-white/10 bg-black/80 p-3 backdrop-blur-xl sm:inset-x-6 sm:bottom-6 sm:rounded-2xl sm:bg-black/70 sm:p-5">
+                <div className="flex flex-wrap items-center gap-2 text-[0.55rem] uppercase tracking-[0.2em] text-cyan sm:text-[0.65rem] sm:tracking-[0.25em]">
                   <span>Direct Partnership</span>
                   <span className="h-1 w-1 rounded-full bg-greenglow" />
                   <span>Full Business Systems</span>
                 </div>
-                <div className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                <div className="mt-1.5 text-sm font-semibold text-white sm:mt-2 sm:text-lg sm:text-xl">
                   Fee The Developer × Hutchrok Solutions Group
                 </div>
-                <div className="mt-2 text-sm leading-6 text-slate-300">
+                <div className="mt-1.5 hidden text-sm leading-6 text-slate-300 sm:mt-2 sm:block">
                   Technology execution backed by complete business infrastructure.
                 </div>
               </div>
