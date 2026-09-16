@@ -11,3 +11,6 @@ Thumbs.db
 .open-next/
 .dev.vars
 cloudflare-env.d.ts
+.env
+.env.local
+.env.*.local
