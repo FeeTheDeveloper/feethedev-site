@@ -7,6 +7,11 @@ import { PartnershipSection } from '@/components/PartnershipSection';
 import { PortfolioSection } from '@/components/PortfolioSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { VeteranOwnedVerificationSection } from '@/components/sections/veteran-owned-verification-section';
+import { AddOnsTeaserSection } from '@/components/sections/addons-teaser-section';
+import { DataIntelligenceSection } from '@/components/data-intelligence/DataIntelligenceSection';
+import { CertificationsSection } from '@/components/certifications/CertificationsSection';
+import { ProgramsTeaserSection } from '@/components/sections/programs-teaser-section';
+import { GitHubProofSection } from '@/components/social-proof/GitHubProofSection';
 
 export default function Home() {
   return (
@@ -17,10 +22,15 @@ export default function Home() {
       <BusinessPresenceSection />
       <PartnershipSection />
       <ServicesSection />
+      <AddOnsTeaserSection />
+      <DataIntelligenceSection />
       <PackagesSection />
+      <CertificationsSection />
+      <ProgramsTeaserSection />
       <VeteranOwnedVerificationSection />
       <DesignOptionsSection />
       <PortfolioSection />
+      <GitHubProofSection />
       <CtaSection />
     </main>
   );

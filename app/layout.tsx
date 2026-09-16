@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import { siteConfig } from '@/lib/site-config';
+import { SiteHeader } from '@/components/shared/SiteHeader';
 import '../styles/globals.css';
 
 const manrope = Manrope({
@@ -36,6 +37,15 @@ export const metadata: Metadata = {
     'veteran-owned technology company',
     'business presence services',
     'Hutchrok Solutions Group',
+    'business intelligence consulting',
+    'public data scraping',
+    'analytics dashboards',
+    'Google Workspace setup',
+    'API integration company',
+    'CRM automation',
+    'veteran developer',
+    'junior developer apprenticeship',
+    'Devil To Developer',
   ],
   alternates: {
     canonical: '/',
@@ -95,6 +105,16 @@ const structuredData = {
   ],
 };
 
+const programStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOccupationalProgram',
+  name: 'Junior Developer Apprenticeship',
+  description:
+    'A portfolio-first software development apprenticeship covering foundations, application development, business systems, and reviewed production contribution.',
+  provider: { '@type': 'Organization', name: siteConfig.legalName, sameAs: siteConfig.siteUrl },
+  url: `${siteConfig.siteUrl}/apprenticeship`,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -107,6 +127,8 @@ export default function RootLayout({
           Skip to content
         </a>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(programStructuredData) }} />
+        <SiteHeader />
         {children}
       </body>
     </html>

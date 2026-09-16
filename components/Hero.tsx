@@ -71,9 +71,12 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4">
             <Button href="/start" glow="gradient">
-              Build My Business
+              Start Your Build
             </Button>
-            <Button href="#packages">Explore Bundles</Button>
+            <Button href="#services">Explore Services</Button>
+            <Button href="https://github.com/FeeTheDeveloper" variant="outline">
+              View GitHub Proof
+            </Button>
           </div>
 
           <div className="grid gap-3 pt-2 sm:grid-cols-3">
