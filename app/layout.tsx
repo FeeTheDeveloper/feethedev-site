@@ -12,7 +12,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} | Web Design + Full Business Presence`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -22,13 +22,20 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   category: 'technology',
   keywords: [
+    'business website design',
+    'web development company',
+    'Google Business Profile setup',
+    'Google Business verification support',
+    'Apple Business Connect setup',
+    'Yelp business profile setup',
     'AI automation company',
     'custom software development',
     'business automation',
-    'web application development',
-    'API integrations',
+    'Texas web design company',
     'Texas software company',
     'veteran-owned technology company',
+    'business presence services',
+    'Hutchrok Solutions Group',
   ],
   alternates: {
     canonical: '/',
@@ -36,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteConfig.siteUrl,
-    title: siteConfig.name,
+    title: `${siteConfig.name} | Web Design + Full Business Presence`,
     description: siteConfig.description,
     siteName: siteConfig.name,
     locale: 'en_US',
@@ -44,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: siteConfig.name,
+    title: `${siteConfig.name} | Web Design + Full Business Presence`,
     description: siteConfig.description,
     images: ['/brand/ftd-logo.svg'],
   },
@@ -77,6 +84,15 @@ const structuredData = {
   founder: { '@type': 'Person', name: 'Alfreddie Postell II' },
   areaServed: 'United States',
   serviceType: siteConfig.services,
+  knowsAbout: [
+    'Web Design',
+    'Web Development',
+    'Google Business Profile',
+    'Apple Business Connect',
+    'Yelp Business Profiles',
+    'AI Automation',
+    'Custom Software',
+  ],
 };
 
 export default function RootLayout({
