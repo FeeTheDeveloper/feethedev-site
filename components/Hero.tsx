@@ -144,8 +144,20 @@ export function Hero() {
                   <span className="h-1 w-1 rounded-full bg-greenglow" />
                   <span>Full Business Systems</span>
                 </div>
-                <div className="mt-1.5 text-sm font-semibold text-white sm:mt-2 sm:text-lg sm:text-xl">
-                  Fee The Developer × Hutchrok Solutions Group
+                <div className="mt-1.5 flex items-center gap-2 sm:mt-2 sm:gap-3">
+                  <span className="text-sm font-semibold text-white sm:text-lg sm:text-xl">
+                    Fee The Developer
+                  </span>
+                  <span className="text-sm font-semibold text-slate-500 sm:text-lg sm:text-xl">×</span>
+                  <span className="relative h-5 w-16 shrink-0 overflow-hidden rounded-md bg-white p-0.5 sm:h-7 sm:w-24 sm:rounded-lg sm:p-1">
+                    <Image
+                      src="/brand/hutchrok-logo.png"
+                      alt="Hutchrok Solutions Group"
+                      fill
+                      sizes="96px"
+                      className="object-contain"
+                    />
+                  </span>
                 </div>
                 <div className="mt-1.5 hidden text-sm leading-6 text-slate-300 sm:mt-2 sm:block">
                   Technology execution backed by complete business infrastructure.
