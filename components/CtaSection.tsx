@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Body, Button, H2, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
@@ -17,6 +18,15 @@ export function CtaSection() {
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02))] px-6 py-10 shadow-[0_26px_100px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-8 sm:py-12 lg:px-10"
       >
+        <Image
+          src="/brand/ftd-cta-system.webp"
+          alt=""
+          aria-hidden="true"
+          fill
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          className="pointer-events-none object-cover opacity-45"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-background/85 via-background/55 to-background/25" />
         <div className="pointer-events-none absolute inset-0 rounded-[2.25rem] border border-white/10" />
         <motion.div
           aria-hidden="true"

@@ -131,12 +131,12 @@ export function Hero() {
             <div className="relative aspect-square overflow-hidden rounded-[1.6rem] bg-[#05070b]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(37,120,255,.2),transparent_35%)]" />
               <Image
-                src="/logo.png"
-                alt={`${siteConfig.name} brand artwork`}
+                src="/brand/ftd-founder-hero.webp"
+                alt="Illustrated portrait of Fee The Developer in a white hoodie against a blue developer workspace"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain p-6 sm:p-10"
+                className="object-cover"
               />
               <div className="hidden sm:absolute sm:inset-x-6 sm:bottom-6 sm:block sm:rounded-2xl sm:border sm:border-white/10 sm:bg-black/70 sm:p-5 sm:backdrop-blur-xl">
                 <div className="flex flex-wrap items-center gap-2 text-[0.55rem] uppercase tracking-[0.2em] text-cyan sm:text-[0.65rem] sm:tracking-[0.25em]">
