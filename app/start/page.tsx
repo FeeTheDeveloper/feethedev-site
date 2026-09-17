@@ -1,26 +1,64 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { InteriorHero } from '@/components/InteriorHero';
 import { ProjectIntakeForm } from '@/components/ProjectIntakeForm';
+import { Body, H2, Section } from '@/components/ui';
+import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Start Your Build',
-  description: 'Qualify your software, automation, website, or e-commerce project with Fee The Developer.',
+  description:
+    'Tell Fee The Developer what you want to build or improve across websites, software, and automation.',
+  alternates: { canonical: '/start' },
 };
 
 export default function StartPage() {
   return (
-    <main id="main-content" className="min-h-screen bg-background py-20">
-      <div className="shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-        <section className="space-y-6 lg:sticky lg:top-12">
-          <Link href="/" className="text-sm uppercase tracking-[0.2em] text-slate-300">← Fee The Developer</Link>
-          <p className="text-sm uppercase tracking-[0.28em] text-greenglow">Project Qualification</p>
-          <h1 className="text-5xl font-semibold uppercase leading-[0.92] text-white sm:text-6xl">Build the system your business actually needs.</h1>
-          <p className="text-lg leading-8 text-slate-300">Tell us what must change operationally or commercially. We will review scope, fit, timeline, and the correct production path before the strategy session.</p>
-          <ul className="space-y-3 text-slate-200"><li>✓ Veteran-owned execution standards</li><li>✓ Software, automation, commerce, and integrations</li><li>✓ Clear scope before production begins</li></ul>
-        </section>
-        <ProjectIntakeForm />
-      </div>
+    <main id="main-content" className="min-h-screen bg-background">
+      <InteriorHero
+        eyebrow="Fee The Developer / Start a project"
+        title={
+          <>
+            Let&apos;s build{' '}
+            <span className="ftd-gradient-text">what&apos;s next.</span>
+          </>
+        }
+        description="Tell us about the goal, the people it serves, and what is getting in the way. We will use those details to shape a useful first conversation."
+        actions={[
+          { label: 'Share your project', href: '#project-details' },
+          { label: 'Explore our work', href: '/#portfolio', secondary: true },
+        ]}
+      />
+      <Section id="project-details" className="scroll-mt-24 bg-background">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
+          <div className="space-y-5 lg:sticky lg:top-24">
+            <p className="status-chip">Project details</p>
+            <H2 className="text-3xl sm:text-4xl">
+              Start with the problem you want to solve.
+            </H2>
+            <Body>
+              Tell us what should change, who will use it, and when you hope to
+              move. A rough idea is enough to begin.
+            </Body>
+            <div className="glass-panel space-y-3 p-6 text-sm leading-6 text-slate-300">
+              <p>Website, software, and automation projects are all welcome.</p>
+              <p>
+                This form opens your email app with the details prepared. Send
+                the email there to complete your inquiry.
+              </p>
+              <p>
+                Prefer a call?{' '}
+                <a
+                  className="font-semibold text-cyan underline underline-offset-4"
+                  href={`tel:${siteConfig.phone}`}
+                >
+                  {siteConfig.phoneDisplay}
+                </a>
+              </p>
+            </div>
+          </div>
+          <ProjectIntakeForm />
+        </div>
+      </Section>
     </main>
   );
 }
-

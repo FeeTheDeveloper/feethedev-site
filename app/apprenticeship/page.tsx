@@ -1,58 +1,145 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
+import { InteriorHero } from '@/components/InteriorHero';
+import { Body, Button, H2, Section } from '@/components/ui';
+import { siteConfig } from '@/lib/site-config';
+
+export const metadata: Metadata = {
+  title: 'Developer Apprenticeship',
+  description:
+    'Explore the Fee The Developer learning path from core development skills to reviewed project work and portfolio evidence.',
+  alternates: { canonical: '/apprenticeship' },
+};
 
 const stages = [
-  ['01', 'Foundation', 'Git, GitHub, HTML/CSS, JavaScript, Python fundamentals, command line, VS Code, AI-assisted development, and documentation.'],
-  ['02', 'Real Development', 'React, Next.js, APIs, databases, Supabase, deployment, testing, debugging, and production habits.'],
-  ['03', 'Business Systems', 'Google Workspace, Stripe, authentication, CRM/workflows, automation, business websites, and integrations.'],
-  ['04', 'Production Work', 'Controlled contributions to real Fee The Developer projects through documentation, QA, bug fixes, components, API testing, and internal tools.'],
-  ['05', 'Portfolio Graduation', 'GitHub contribution history, deployed projects, case studies, certificates, code reviews, and performance-based references.'],
+  {
+    number: '01',
+    title: 'Learn the tools',
+    description:
+      'Practice Git, web fundamentals, JavaScript, Python, the command line, and clear documentation.',
+  },
+  {
+    number: '02',
+    title: 'Build working software',
+    description:
+      'Move into React, Next.js, APIs, data, testing, debugging, and deployment with scoped exercises.',
+  },
+  {
+    number: '03',
+    title: 'Connect business systems',
+    description:
+      'Learn how websites, authentication, payments, and automation fit together in practical workflows.',
+  },
+  {
+    number: '04',
+    title: 'Contribute with review',
+    description:
+      'Where opportunities are available, work on bounded documentation, QA, components, or internal tools with supervision.',
+  },
+  {
+    number: '05',
+    title: 'Show the work',
+    description:
+      'Assemble a portfolio grounded in actual repositories, reviewed changes, demos, and lessons learned.',
+  },
 ];
 
 export default function ApprenticeshipPage() {
   return (
-    <main className="min-h-screen px-6 py-20 text-white sm:px-8 lg:px-12">
-      <section className="mx-auto max-w-7xl">
-        <div className="inline-flex rounded-full border border-greenglow/30 bg-greenglow/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-greenglow">
-          Junior Developer Apprenticeship
+    <main id="main-content" className="min-h-screen bg-background">
+      <InteriorHero
+        eyebrow="Fee The Developer / Learning Path"
+        title={
+          <>
+            Learn. Build.{' '}
+            <span className="ftd-gradient-text">Show the work.</span>
+          </>
+        }
+        description="A developer learning path built around useful skills, thoughtful review, and visible project evidence. Start with fundamentals, then grow into work you can explain and demonstrate."
+        actions={[
+          {
+            label: 'Ask about the path',
+            href: `mailto:${siteConfig.email}?subject=Developer%20learning%20path`,
+          },
+          {
+            label: 'Explore the initiative',
+            href: '/devil-to-developer',
+            secondary: true,
+          },
+        ]}
+      >
+        <div className="grid gap-4 sm:grid-cols-3">
+          {[
+            'Practical learning',
+            'Reviewed contributions',
+            'Portfolio evidence',
+          ].map((item) => (
+            <div
+              key={item}
+              className="glass-panel px-5 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-slate-100"
+            >
+              {item}
+            </div>
+          ))}
         </div>
-        <h1 className="mt-8 max-w-5xl text-5xl font-extrabold uppercase leading-[0.9] sm:text-7xl lg:text-8xl">
-          Learn. Build. <span className="ftd-gradient-text">Ship.</span>
-        </h1>
-        <p className="mt-8 max-w-3xl text-xl leading-8 text-slate-300">
-          A portfolio-first apprenticeship that converts technical learning into visible proof: repositories, deployments, reviews, certifications, and controlled real-world project experience.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-4">
-          <a href="mailto:contact@feethedeveloper.com?subject=Junior%20Developer%20Apprenticeship" className="rounded-2xl bg-white px-6 py-3 font-bold text-black transition hover:-translate-y-1">Apply / Request Intake</a>
-          <Link href="/devil-to-developer" className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 font-bold text-white transition hover:bg-white/10">See Devil To Developer</Link>
-        </div>
-      </section>
+      </InteriorHero>
 
-      <section className="mx-auto mt-24 max-w-7xl">
-        <div className="space-y-5">
-          {stages.map(([number, title, description]) => (
-            <article key={number} className="grid gap-5 rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl md:grid-cols-[90px_1fr] md:items-start">
-              <div className="text-4xl font-extrabold text-blueglow">{number}</div>
+      <Section className="bg-background">
+        <div className="mb-10 max-w-3xl space-y-4">
+          <p className="status-chip">The path</p>
+          <H2 className="text-3xl sm:text-4xl">Progress you can point to.</H2>
+          <Body>
+            Each stage connects learning to a concrete artifact or demonstrated
+            skill. The pace and project access depend on the opportunity and
+            readiness.
+          </Body>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {stages.map((stage) => (
+            <article
+              key={stage.number}
+              className="glass-panel flex gap-5 p-6 transition hover:border-electric/40"
+            >
+              <span className="text-2xl font-semibold text-cyan">
+                {stage.number}
+              </span>
               <div>
-                <h2 className="text-2xl font-bold">{title}</h2>
-                <p className="mt-3 max-w-4xl leading-7 text-slate-300">{description}</p>
+                <h3 className="text-xl font-semibold text-white">
+                  {stage.title}
+                </h3>
+                <p className="mt-3 leading-7 text-slate-300">
+                  {stage.description}
+                </p>
               </div>
             </article>
           ))}
         </div>
-      </section>
+      </Section>
 
-      <section className="mx-auto mt-24 max-w-7xl grid gap-6 lg:grid-cols-3">
-        {[
-          ['GitHub Proof', 'Contribution history, pull requests, commits, issue work, documentation, and portfolio repositories.'],
-          ['Credential Path', 'Coursera and approved technical certifications mapped to practical projects instead of certificate collecting.'],
-          ['Career + Business', 'Preparation for junior roles, freelance work, client delivery, or entrepreneurship through the broader Fee The Developer and Hutchrok ecosystem.'],
-        ].map(([title, description]) => (
-          <div key={title} className="neon-border rounded-3xl border border-white/10 bg-black/45 p-7">
-            <h3 className="text-2xl font-bold">{title}</h3>
-            <p className="mt-4 leading-7 text-slate-300">{description}</p>
+      <Section className="border-t border-white/10 bg-panel/50">
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+          <div className="space-y-4">
+            <p className="status-chip">Next step</p>
+            <H2 className="text-3xl sm:text-4xl">
+              Bring your curiosity. Start with a conversation.
+            </H2>
+            <Body>
+              Tell us what you have built, what you want to learn, and where you
+              would like to grow. Participation and project opportunities are
+              discussed individually; employment is not guaranteed.
+            </Body>
           </div>
-        ))}
-      </section>
+          <div className="flex flex-wrap gap-3 lg:justify-end">
+            <Button
+              href={`mailto:${siteConfig.email}?subject=Developer%20learning%20path`}
+            >
+              Get in touch
+            </Button>
+            <Button href="/" variant="outline" glow="green">
+              Back to the site
+            </Button>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
