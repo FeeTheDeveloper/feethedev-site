@@ -5,6 +5,8 @@ export const siteConfig = {
     'Veteran-owned web design, software, automation, and digital business presence company helping businesses launch strong across the web, Google, Apple, Yelp, and connected business systems in direct partnership with Hutchrok Solutions Group.',
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://feethedeveloper.com',
   email: 'contact@feethedeveloper.com',
+  phone: '+12144400022',
+  phoneDisplay: '(214) 440-0022',
   bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? '/start',
   depositUrl: process.env.NEXT_PUBLIC_DEPOSIT_URL ?? '/start#next-step',
   location: 'Texas, United States',
