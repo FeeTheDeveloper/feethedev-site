@@ -25,7 +25,7 @@ export default function StartPage() {
         description="Tell us about the goal, the people it serves, and what is getting in the way. We will use those details to shape a useful first conversation."
         actions={[
           { label: 'Share your project', href: '#project-details' },
-          { label: 'Explore our work', href: '/#portfolio', secondary: true },
+          { label: 'See my approach', href: '/#build', secondary: true },
         ]}
       />
       <Section id="project-details" className="scroll-mt-24 bg-background">

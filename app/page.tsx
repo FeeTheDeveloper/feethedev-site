@@ -1,12 +1,8 @@
 import { BusinessPresenceSection } from '@/components/BusinessPresenceSection';
 import { CtaSection } from '@/components/CtaSection';
-import { DesignOptionsSection } from '@/components/DesignOptionsSection';
 import { Hero } from '@/components/Hero';
-import { PackagesSection } from '@/components/PackagesSection';
+import { OwnerSection } from '@/components/OwnerSection';
 import { PartnershipSection } from '@/components/PartnershipSection';
-import { PortfolioSection } from '@/components/PortfolioSection';
-import { ServicesSection } from '@/components/ServicesSection';
-import { VeteranOwnedVerificationSection } from '@/components/sections/veteran-owned-verification-section';
 
 export default function Home() {
   return (
@@ -16,11 +12,7 @@ export default function Home() {
       <Hero />
       <BusinessPresenceSection />
       <PartnershipSection />
-      <ServicesSection />
-      <PackagesSection />
-      <VeteranOwnedVerificationSection />
-      <DesignOptionsSection />
-      <PortfolioSection />
+      <OwnerSection />
       <CtaSection />
     </main>
   );

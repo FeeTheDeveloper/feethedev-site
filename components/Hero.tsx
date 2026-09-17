@@ -52,7 +52,7 @@ export function Hero() {
           className="relative z-10 space-y-8"
         >
           <div className="inline-flex items-center gap-3 rounded-full border border-electric/30 bg-electric/10 px-4 py-2 text-xs uppercase tracking-[0.24em] text-slate-200 shadow-electric backdrop-blur-xl">
-            <span className="h-2 w-2 rounded-full bg-greenglow shadow-[0_0_18px_rgba(32,255,116,0.95)]" />
+            <span className="h-2 w-2 rounded-full bg-greenglow shadow-[0_0_18px_rgba(20,232,180,0.95)]" />
             Veteran-Owned • Web • AI • Business Presence
           </div>
 
@@ -73,7 +73,7 @@ export function Hero() {
             <Button href="/start" glow="gradient">
               Build My Business
             </Button>
-            <Button href="#packages">Explore Bundles</Button>
+            <Button href="#build">See My Approach</Button>
           </div>
 
           <div className="grid gap-3 pt-2 sm:grid-cols-3">

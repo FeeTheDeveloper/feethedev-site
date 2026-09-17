@@ -35,7 +35,7 @@ export function PartnershipSection() {
               'One coordinated handoff between technology and business execution',
             ].map((item) => (
               <div key={item} className="flex gap-3 text-sm leading-6 text-slate-200">
-                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-greenglow shadow-[0_0_12px_rgba(0,255,136,0.8)]" />
+                <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-greenglow shadow-[0_0_12px_rgba(20,232,180,0.8)]" />
                 <span>{item}</span>
               </div>
             ))}

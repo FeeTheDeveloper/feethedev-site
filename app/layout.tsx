@@ -132,11 +132,8 @@ export default function RootLayout({
                 aria-label="Main navigation"
                 className="order-3 flex w-full items-center gap-5 overflow-x-auto text-sm text-slate-300 sm:order-none sm:w-auto"
               >
-                <Link href="/#services" className="shrink-0 hover:text-white">
-                  Services
-                </Link>
-                <Link href="/#portfolio" className="shrink-0 hover:text-white">
-                  Work
+                <Link href="/#build" className="shrink-0 hover:text-white">
+                  Approach
                 </Link>
                 <Link
                   href="/devil-to-developer"

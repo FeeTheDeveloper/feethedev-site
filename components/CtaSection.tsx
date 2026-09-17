@@ -105,20 +105,6 @@ export function CtaSection() {
             </motion.div>
 
             <motion.div
-              animate={{ y: [0, -2, 0] }}
-              transition={{
-                duration: 3.2,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: 0.25,
-              }}
-            >
-              <Button href="#portfolio" glow="green" variant="outline">
-                Explore Our Work
-              </Button>
-            </motion.div>
-
-            <motion.div
               animate={{ y: [0, -1.5, 0] }}
               transition={{
                 duration: 3.4,
