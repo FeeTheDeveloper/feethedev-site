@@ -81,6 +81,7 @@ const structuredData = {
   name: siteConfig.legalName,
   url: siteConfig.siteUrl,
   email: siteConfig.email,
+  telephone: siteConfig.phone,
   description: siteConfig.description,
   founder: { '@type': 'Person', name: 'Alfreddie Postell II' },
   areaServed: 'United States',
