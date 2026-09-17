@@ -68,6 +68,12 @@ export function CtaSection() {
               >
                 Email: {siteConfig.email}
               </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-200 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow"
+              >
+                Call: {siteConfig.phoneDisplay}
+              </a>
               <span className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-300">
                 Based in {siteConfig.location}
               </span>
