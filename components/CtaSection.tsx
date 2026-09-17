@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Body, Button, H2, Section } from '@/components/ui';
+import { siteConfig } from '@/lib/site-config';
 
 export function CtaSection() {
   return (
@@ -62,11 +63,14 @@ export function CtaSection() {
                 Trusted by serious operators
               </span>
               <a
-                href="/start"
-                className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-200 transition hover:text-white"
+                href={`mailto:${siteConfig.email}`}
+                className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-200 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow"
               >
-                contact@feethedeveloper.com
+                Email: {siteConfig.email}
               </a>
+              <span className="rounded-full border border-white/10 bg-black/20 px-3 py-2 text-slate-300">
+                Based in {siteConfig.location}
+              </span>
             </div>
           </div>
 
