@@ -14,28 +14,87 @@ import {
 } from '@/components/icons/DevToolIcons';
 
 const floatingTools = [
-  { label: 'GitHub', Icon: GitHubIcon, className: 'left-[3%] top-[10%]', size: 'h-11 w-11', duration: 5.2, delay: 0 },
-  { label: 'Figma', Icon: FigmaIcon, className: 'left-[12%] top-[62%]', size: 'h-14 w-14', duration: 6.4, delay: 0.4 },
-  { label: 'VS Code', Icon: VSCodeIcon, className: 'left-[22%] top-[30%]', size: 'h-9 w-9', duration: 4.6, delay: 0.8 },
-  { label: 'ChatGPT', Icon: OpenAIIcon, className: 'right-[6%] top-[14%]', size: 'h-12 w-12', duration: 5.8, delay: 0.2 },
-  { label: 'React', Icon: ReactIcon, className: 'right-[16%] top-[58%]', size: 'h-10 w-10', duration: 5, delay: 1.1 },
-  { label: 'AWS', Icon: AWSIcon, className: 'right-[28%] top-[24%]', size: 'h-9 w-9', duration: 6.1, delay: 0.6 },
-  { label: 'Docker', Icon: DockerIcon, className: 'left-[46%] top-[8%]', size: 'h-9 w-9', duration: 5.5, delay: 1.4 },
-  { label: 'PostgreSQL', Icon: PostgreSQLIcon, className: 'right-[42%] top-[70%]', size: 'h-10 w-10', duration: 6.6, delay: 0.3 },
+  {
+    label: 'GitHub',
+    Icon: GitHubIcon,
+    className: 'left-[3%] top-[10%]',
+    size: 'h-11 w-11',
+    duration: 5.2,
+    delay: 0,
+  },
+  {
+    label: 'Figma',
+    Icon: FigmaIcon,
+    className: 'left-[12%] top-[62%]',
+    size: 'h-14 w-14',
+    duration: 6.4,
+    delay: 0.4,
+  },
+  {
+    label: 'VS Code',
+    Icon: VSCodeIcon,
+    className: 'left-[22%] top-[30%]',
+    size: 'h-9 w-9',
+    duration: 4.6,
+    delay: 0.8,
+  },
+  {
+    label: 'ChatGPT',
+    Icon: OpenAIIcon,
+    className: 'right-[6%] top-[14%]',
+    size: 'h-12 w-12',
+    duration: 5.8,
+    delay: 0.2,
+  },
+  {
+    label: 'React',
+    Icon: ReactIcon,
+    className: 'right-[16%] top-[58%]',
+    size: 'h-10 w-10',
+    duration: 5,
+    delay: 1.1,
+  },
+  {
+    label: 'AWS',
+    Icon: AWSIcon,
+    className: 'right-[28%] top-[24%]',
+    size: 'h-9 w-9',
+    duration: 6.1,
+    delay: 0.6,
+  },
+  {
+    label: 'Docker',
+    Icon: DockerIcon,
+    className: 'left-[46%] top-[8%]',
+    size: 'h-9 w-9',
+    duration: 5.5,
+    delay: 1.4,
+  },
+  {
+    label: 'PostgreSQL',
+    Icon: PostgreSQLIcon,
+    className: 'right-[42%] top-[70%]',
+    size: 'h-10 w-10',
+    duration: 6.6,
+    delay: 0.3,
+  },
 ];
 
 const pillars = [
   {
     title: 'Custom-Scoped Builds',
-    detail: 'Priced to the actual problem in front of us, not squeezed into a rigid tier.',
+    detail:
+      'Priced to the actual problem in front of us, not squeezed into a rigid tier.',
   },
   {
     title: 'Direct To The Builder',
-    detail: 'No account managers, no hand-offs between departments. You talk to who builds it.',
+    detail:
+      'No account managers, no hand-offs between departments. You talk to who builds it.',
   },
   {
     title: 'Dev + Creative, One Person',
-    detail: 'Engineering and design decisions made by the same person, in the same sitting.',
+    detail:
+      'Engineering and design decisions made by the same person, in the same sitting.',
   },
 ];
 
@@ -46,20 +105,27 @@ export function OwnerSection() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-70"
       >
-        {floatingTools.map(({ label, Icon, className, size, duration, delay }) => (
-          <motion.div
-            key={label}
-            className={`absolute ${className}`}
-            animate={{ y: [0, -16, 0], rotate: [0, 3, 0] }}
-            transition={{ duration, delay, repeat: Infinity, ease: 'easeInOut' }}
-          >
-            <div
-              className={`flex ${size} items-center justify-center rounded-2xl border border-white/10 bg-[#080d15]/80 p-2 shadow-[0_14px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl`}
+        {floatingTools.map(
+          ({ label, Icon, className, size, duration, delay }) => (
+            <motion.div
+              key={label}
+              className={`absolute ${className}`}
+              animate={{ y: [0, -16, 0], rotate: [0, 3, 0] }}
+              transition={{
+                duration,
+                delay,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
             >
-              <Icon className="h-full w-full text-white/90" />
-            </div>
-          </motion.div>
-        ))}
+              <div
+                className={`flex ${size} items-center justify-center rounded-2xl border border-white/10 bg-[#080d15]/80 p-2 shadow-[0_14px_40px_rgba(0,0,0,0.45)] backdrop-blur-xl`}
+              >
+                <Icon className="h-full w-full text-white/90" />
+              </div>
+            </motion.div>
+          ),
+        )}
       </div>
 
       <motion.div
@@ -80,10 +146,10 @@ export function OwnerSection() {
           </H2>
           <Body className="mx-auto max-w-2xl">
             I own this business, so I am the one writing the code and making the
-            creative calls &mdash; not a rotating account team pricing you against
-            a template. That means faster decisions, fewer hands in the project,
-            and the room to shape a service around what your business actually
-            needs at a rate a bigger shop cannot match.
+            creative calls &mdash; not a rotating account team pricing you
+            against a template. That means faster decisions, fewer hands in the
+            project, and the room to shape a service around what your business
+            actually needs at a rate a bigger shop cannot match.
           </Body>
         </div>
 

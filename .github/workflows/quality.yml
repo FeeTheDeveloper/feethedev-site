@@ -19,4 +19,5 @@ jobs:
       - run: npx tsc --noEmit
       - run: npm run lint
       - run: npm run format:check
-      - run: npm run build\n      - run: npx opennextjs-cloudflare build
+      - run: npm run build
+      - run: npx opennextjs-cloudflare build

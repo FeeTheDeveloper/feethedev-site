@@ -5,7 +5,10 @@ import { Body, Button, H2, Section } from '@/components/ui';
 
 export function PartnershipSection() {
   return (
-    <Section id="partnership" className="relative overflow-hidden bg-background">
+    <Section
+      id="partnership"
+      className="relative overflow-hidden bg-background"
+    >
       <div className="pointer-events-none absolute inset-y-0 right-[-10rem] w-80 rounded-full bg-greenglow/10 blur-3xl" />
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -23,7 +26,12 @@ export function PartnershipSection() {
               Fee The Developer × Hutchrok Solutions Group
             </H2>
             <Body className="mt-5 max-w-2xl text-slate-300">
-              Fee The Developer is the technology and digital execution arm. Hutchrok Solutions Group extends clients into full business solutions, infrastructure, launch support, operational setup, and growth systems. That means a client can start with a website and continue into a complete business presence without rebuilding the relationship from scratch.
+              Fee The Developer is the technology and digital execution arm.
+              Hutchrok Solutions Group extends clients into full business
+              solutions, infrastructure, launch support, operational setup, and
+              growth systems. That means a client can start with a website and
+              continue into a complete business presence without rebuilding the
+              relationship from scratch.
             </Body>
           </div>
 
@@ -34,7 +42,10 @@ export function PartnershipSection() {
               'Business infrastructure and operational solutions through Hutchrok',
               'One coordinated handoff between technology and business execution',
             ].map((item) => (
-              <div key={item} className="flex gap-3 text-sm leading-6 text-slate-200">
+              <div
+                key={item}
+                className="flex gap-3 text-sm leading-6 text-slate-200"
+              >
                 <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-greenglow shadow-[0_0_12px_rgba(20,232,180,0.8)]" />
                 <span>{item}</span>
               </div>
