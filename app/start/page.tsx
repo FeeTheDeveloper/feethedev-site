@@ -15,6 +15,7 @@ export default function StartPage() {
   return (
     <main id="main-content" className="min-h-screen bg-background">
       <InteriorHero
+        backgroundImage="/brand/generated/ftd-business-systems-hero.webp"
         eyebrow="Fee The Developer / Start a project"
         title={
           <>

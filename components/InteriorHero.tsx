@@ -10,17 +10,19 @@ export function InteriorHero({
   description,
   actions,
   children,
+  backgroundImage = '/brand/ftd-cta-system.webp',
 }: {
   eyebrow: string;
   title: ReactNode;
   description: string;
   actions: Action[];
   children?: ReactNode;
+  backgroundImage?: string;
 }) {
   return (
     <section className="relative overflow-hidden border-b border-white/10 py-20 sm:py-28">
       <Image
-        src="/brand/ftd-cta-system.webp"
+        src={backgroundImage}
         alt=""
         aria-hidden="true"
         fill
