@@ -16,14 +16,54 @@ import {
 } from '@/components/icons/DevToolIcons';
 
 const devTools = [
-  { label: 'GitHub', Icon: GitHubIcon, className: 'left-[-2%] top-[8%]', delay: 0 },
-  { label: 'VS Code', Icon: VSCodeIcon, className: 'left-[-6%] top-[32%]', delay: 0.15 },
-  { label: 'React', Icon: ReactIcon, className: 'left-[-4%] bottom-[30%]', delay: 0.3 },
-  { label: 'Figma', Icon: FigmaIcon, className: 'left-[0%] bottom-[6%]', delay: 0.45 },
-  { label: 'ChatGPT', Icon: OpenAIIcon, className: 'right-[-2%] top-[6%]', delay: 0.6 },
-  { label: 'AWS', Icon: AWSIcon, className: 'right-[-6%] top-[30%]', delay: 0.75 },
-  { label: 'Docker', Icon: DockerIcon, className: 'right-[-4%] bottom-[28%]', delay: 0.9 },
-  { label: 'PostgreSQL', Icon: PostgreSQLIcon, className: 'right-[0%] bottom-[4%]', delay: 1.05 },
+  {
+    label: 'GitHub',
+    Icon: GitHubIcon,
+    className: 'left-[-2%] top-[8%]',
+    delay: 0,
+  },
+  {
+    label: 'VS Code',
+    Icon: VSCodeIcon,
+    className: 'left-[-6%] top-[32%]',
+    delay: 0.15,
+  },
+  {
+    label: 'React',
+    Icon: ReactIcon,
+    className: 'left-[-4%] bottom-[30%]',
+    delay: 0.3,
+  },
+  {
+    label: 'Figma',
+    Icon: FigmaIcon,
+    className: 'left-[0%] bottom-[6%]',
+    delay: 0.45,
+  },
+  {
+    label: 'ChatGPT',
+    Icon: OpenAIIcon,
+    className: 'right-[-2%] top-[6%]',
+    delay: 0.6,
+  },
+  {
+    label: 'AWS',
+    Icon: AWSIcon,
+    className: 'right-[-6%] top-[30%]',
+    delay: 0.75,
+  },
+  {
+    label: 'Docker',
+    Icon: DockerIcon,
+    className: 'right-[-4%] bottom-[28%]',
+    delay: 0.9,
+  },
+  {
+    label: 'PostgreSQL',
+    Icon: PostgreSQLIcon,
+    className: 'right-[0%] bottom-[4%]',
+    delay: 1.05,
+  },
 ];
 
 export function Hero() {
@@ -61,11 +101,12 @@ export function Hero() {
               {siteConfig.name}
             </div>
             <H1 className="max-w-5xl text-balance text-5xl leading-[0.9] sm:text-6xl lg:text-7xl xl:text-8xl">
-              BUILD. <span className="ftd-gradient-text">AUTOMATE.</span> CREATE. SCALE.
+              BUILD. <span className="ftd-gradient-text">AUTOMATE.</span>{' '}
+              CREATE. SCALE.
             </H1>
             <Body className="max-w-2xl text-lg text-slate-300 sm:text-xl">
-              We design the site, wire the systems, strengthen the digital presence,
-              and connect the business to the tools that make it move.
+              We design the site, wire the systems, strengthen the digital
+              presence, and connect the business to the tools that make it move.
             </Body>
           </div>
 
@@ -91,7 +132,9 @@ export function Hero() {
                 className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-4 backdrop-blur-xl"
               >
                 <div className="text-sm font-semibold text-white">{title}</div>
-                <div className="mt-1 text-xs leading-5 text-slate-400">{desc}</div>
+                <div className="mt-1 text-xs leading-5 text-slate-400">
+                  {desc}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -112,7 +155,12 @@ export function Hero() {
               key={label}
               className={`absolute z-20 ${className}`}
               animate={{ y: [0, -12, 0], rotate: [0, 2, 0] }}
-              transition={{ duration: 4.5, delay, repeat: Infinity, ease: 'easeInOut' }}
+              transition={{
+                duration: 4.5,
+                delay,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
             >
               <div
                 title={label}
@@ -148,7 +196,9 @@ export function Hero() {
                   <span className="text-sm font-semibold text-white sm:text-lg sm:text-xl">
                     Fee The Developer
                   </span>
-                  <span className="text-sm font-semibold text-slate-500 sm:text-lg sm:text-xl">×</span>
+                  <span className="text-sm font-semibold text-slate-500 sm:text-lg sm:text-xl">
+                    ×
+                  </span>
                   <span className="relative h-5 w-16 shrink-0 overflow-hidden rounded-md bg-white p-0.5 sm:h-7 sm:w-24 sm:rounded-lg sm:p-1">
                     <Image
                       src="/brand/hutchrok-logo.png"
@@ -160,7 +210,8 @@ export function Hero() {
                   </span>
                 </div>
                 <div className="mt-1.5 hidden text-sm leading-6 text-slate-300 sm:mt-2 sm:block">
-                  Technology execution backed by complete business infrastructure.
+                  Technology execution backed by complete business
+                  infrastructure.
                 </div>
               </div>
             </div>

@@ -28,7 +28,13 @@ export function VSCodeIcon(props: IconProps) {
 
 export function ReactIcon(props: IconProps) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="#61DAFB" strokeWidth="1.2" {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="#61DAFB"
+      strokeWidth="1.2"
+      {...props}
+    >
       <circle cx="12" cy="12" r="2.1" fill="#61DAFB" stroke="none" />
       <ellipse cx="12" cy="12" rx="10" ry="4.2" />
       <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" />
@@ -78,7 +84,14 @@ export function AWSIcon(props: IconProps) {
         strokeLinecap="round"
         fill="none"
       />
-      <path d="M18.8 15.8 21 16.3l-.9 2.1" stroke="#FF9900" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <path
+        d="M18.8 15.8 21 16.3l-.9 2.1"
+        stroke="#FF9900"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
     </svg>
   );
 }
