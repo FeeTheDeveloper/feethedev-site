@@ -47,6 +47,7 @@ export default function ApprenticeshipPage() {
   return (
     <main id="main-content" className="min-h-screen bg-background">
       <InteriorHero
+        backgroundImage="/brand/generated/ftd-apprenticeship-hero.webp"
         eyebrow="Fee The Developer / Learning Path"
         title={
           <>

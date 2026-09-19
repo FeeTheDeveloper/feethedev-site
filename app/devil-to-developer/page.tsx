@@ -35,6 +35,7 @@ export default function DevilToDeveloperPage() {
   return (
     <main id="main-content" className="min-h-screen bg-background">
       <InteriorHero
+        backgroundImage="/brand/generated/ftd-devil-to-developer-hero.webp"
         eyebrow="Fee The Developer / Initiative"
         title={
           <>
