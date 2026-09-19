@@ -44,10 +44,15 @@ export function BusinessPresenceSection() {
             We do not stop when the website goes live.
           </H2>
           <Body className="max-w-xl text-slate-300">
-            The goal is a business that can be found, trusted, contacted, and operated across the platforms customers already use. Fee The Developer handles the technology layer while Hutchrok Solutions Group extends the engagement into business infrastructure and operational solutions.
+            The goal is a business that can be found, trusted, contacted, and
+            operated across the platforms customers already use. Fee The
+            Developer handles the technology layer while Hutchrok Solutions
+            Group extends the engagement into business infrastructure and
+            operational solutions.
           </Body>
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-sm leading-7 text-slate-300">
-            Website + Google + Apple + Yelp + business systems = one coordinated launch instead of disconnected vendors.
+            Website + Google + Apple + Yelp + business systems = one coordinated
+            launch instead of disconnected vendors.
           </div>
         </motion.div>
 
@@ -64,8 +69,12 @@ export function BusinessPresenceSection() {
                 <div className="text-sm font-medium uppercase tracking-[0.18em] text-greenglow">
                   0{index + 1}
                 </div>
-                <h3 className="mt-4 text-xl font-semibold text-white">{channel.name}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{channel.detail}</p>
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  {channel.name}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">
+                  {channel.detail}
+                </p>
               </Card>
             </motion.div>
           ))}

@@ -30,7 +30,8 @@ const config: Config = {
         sans: ['var(--font-sans)'],
       },
       backgroundImage: {
-        'ftd-grid': 'linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px)',
+        'ftd-grid':
+          'linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px)',
       },
     },
   },

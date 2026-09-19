@@ -148,7 +148,10 @@ export default function RootLayout({
                   Learning path
                 </Link>
                 <Show when="signed-out">
-                  <Link href="/sign-in" className="shrink-0 hover:text-white lg:hidden">
+                  <Link
+                    href="/sign-in"
+                    className="shrink-0 hover:text-white lg:hidden"
+                  >
                     Sign in
                   </Link>
                 </Show>
