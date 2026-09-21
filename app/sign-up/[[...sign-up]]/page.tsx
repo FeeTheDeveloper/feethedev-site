@@ -9,7 +9,11 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  if (!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || !process.env.CLERK_SECRET_KEY) notFound();
+  if (
+    !process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ||
+    !process.env.CLERK_SECRET_KEY
+  )
+    notFound();
   return (
     <AuthShell
       title="Build with us."

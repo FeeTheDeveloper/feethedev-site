@@ -117,7 +117,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} font-sans`}>
-        {hasClerkKeys ? <ClerkProvider><SiteContent>{children}</SiteContent></ClerkProvider> : <SiteContent>{children}</SiteContent>}
+        {hasClerkKeys ? (
+          <ClerkProvider>
+            <SiteContent>{children}</SiteContent>
+          </ClerkProvider>
+        ) : (
+          <SiteContent>{children}</SiteContent>
+        )}
       </body>
     </html>
   );
@@ -126,116 +132,119 @@ export default function RootLayout({
 function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
-          <a
-            href="#main-content"
-            className="sr-only z-[100] rounded bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      <a
+        href="#main-content"
+        className="sr-only z-[100] rounded bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      >
+        Skip to content
+      </a>
+      <header className="relative z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
+        <div className="shell flex flex-wrap items-center justify-between gap-4 py-4">
+          <Link
+            href="/"
+            className="text-base font-extrabold uppercase tracking-[0.1em] text-white sm:text-lg"
           >
-            Skip to content
-          </a>
-          <header className="relative z-50 border-b border-white/10 bg-background/85 backdrop-blur-xl">
-            <div className="shell flex flex-wrap items-center justify-between gap-4 py-4">
-              <Link
-                href="/"
-                className="text-base font-extrabold uppercase tracking-[0.1em] text-white sm:text-lg"
-              >
-                Fee The <span className="ftd-gradient-text">Developer</span>
-              </Link>
-              <nav
-                aria-label="Main navigation"
-                className="order-3 flex w-full items-center gap-5 overflow-x-auto text-sm text-slate-300 sm:order-none sm:w-auto"
-              >
-                <Link href="/#build" className="shrink-0 hover:text-white">
-                  Approach
-                </Link>
+            Fee The <span className="ftd-gradient-text">Developer</span>
+          </Link>
+          <nav
+            aria-label="Main navigation"
+            className="order-3 flex w-full items-center gap-5 overflow-x-auto text-sm text-slate-300 sm:order-none sm:w-auto"
+          >
+            <Link href="/#build" className="shrink-0 hover:text-white">
+              Approach
+            </Link>
+            <Link
+              href="/devil-to-developer"
+              className="shrink-0 hover:text-white"
+            >
+              Initiative
+            </Link>
+            <Link href="/apprenticeship" className="shrink-0 hover:text-white">
+              Learning path
+            </Link>
+            {hasClerkKeys && (
+              <Show when="signed-out">
                 <Link
-                  href="/devil-to-developer"
-                  className="shrink-0 hover:text-white"
+                  href="/sign-in"
+                  className="shrink-0 hover:text-white lg:hidden"
                 >
-                  Initiative
+                  Sign in
                 </Link>
+              </Show>
+            )}
+          </nav>
+          <div className="flex items-center gap-3">
+            {hasClerkKeys && (
+              <Show when="signed-out">
                 <Link
-                  href="/apprenticeship"
-                  className="shrink-0 hover:text-white"
+                  href="/sign-in"
+                  className="hidden text-sm text-slate-300 hover:text-white lg:inline"
                 >
-                  Learning path
+                  Sign in
                 </Link>
-                {hasClerkKeys && <Show when="signed-out">
-                  <Link
-                    href="/sign-in"
-                    className="shrink-0 hover:text-white lg:hidden"
-                  >
-                    Sign in
-                  </Link>
-                </Show>}
-              </nav>
-              <div className="flex items-center gap-3">
-                {hasClerkKeys && <Show when="signed-out">
-                  <Link
-                    href="/sign-in"
-                    className="hidden text-sm text-slate-300 hover:text-white lg:inline"
-                  >
-                    Sign in
-                  </Link>
-                </Show>}
-                {hasClerkKeys && <Show when="signed-in">
-                  <UserButton />
-                </Show>}
-                <Link
-                  href="/start"
-                  className="rounded-full border border-electric/40 bg-electric/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-electric/25"
-                >
-                  Start a project
-                </Link>
-              </div>
-            </div>
-          </header>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-          />
-          {children}
-          <footer className="border-t border-white/10 bg-[#04060a] py-10">
-            <div className="shell grid gap-8 text-sm text-slate-400 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="space-y-3">
-                <p className="font-bold uppercase tracking-[0.14em] text-white">
-                  Fee The Developer
-                </p>
-                <p>Build. Automate. Create. Scale.</p>
-              </div>
-              <nav
-                aria-label="Footer navigation"
-                className="flex flex-wrap content-start gap-x-5 gap-y-3"
-              >
-                <Link href="/" className="hover:text-white">
-                  Home
-                </Link>
-                <Link href="/start" className="hover:text-white">
-                  Start a project
-                </Link>
-                <Link href="/devil-to-developer" className="hover:text-white">
-                  Initiative
-                </Link>
-                <Link href="/apprenticeship" className="hover:text-white">
-                  Learning path
-                </Link>
-              </nav>
-              <div className="space-y-2 lg:text-right">
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="block hover:text-white"
-                >
-                  {siteConfig.email}
-                </a>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="block hover:text-white"
-                >
-                  {siteConfig.phoneDisplay}
-                </a>
-                <p>© {new Date().getFullYear()} Fee The Developer</p>
-              </div>
-            </div>
-          </footer>
+              </Show>
+            )}
+            {hasClerkKeys && (
+              <Show when="signed-in">
+                <UserButton />
+              </Show>
+            )}
+            <Link
+              href="/start"
+              className="rounded-full border border-electric/40 bg-electric/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-electric/25"
+            >
+              Start a project
+            </Link>
+          </div>
+        </div>
+      </header>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      {children}
+      <footer className="border-t border-white/10 bg-[#04060a] py-10">
+        <div className="shell grid gap-8 text-sm text-slate-400 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-3">
+            <p className="font-bold uppercase tracking-[0.14em] text-white">
+              Fee The Developer
+            </p>
+            <p>Build. Automate. Create. Scale.</p>
+          </div>
+          <nav
+            aria-label="Footer navigation"
+            className="flex flex-wrap content-start gap-x-5 gap-y-3"
+          >
+            <Link href="/" className="hover:text-white">
+              Home
+            </Link>
+            <Link href="/start" className="hover:text-white">
+              Start a project
+            </Link>
+            <Link href="/devil-to-developer" className="hover:text-white">
+              Initiative
+            </Link>
+            <Link href="/apprenticeship" className="hover:text-white">
+              Learning path
+            </Link>
+          </nav>
+          <div className="space-y-2 lg:text-right">
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="block hover:text-white"
+            >
+              {siteConfig.email}
+            </a>
+            <a
+              href={`tel:${siteConfig.phone}`}
+              className="block hover:text-white"
+            >
+              {siteConfig.phoneDisplay}
+            </a>
+            <p>© {new Date().getFullYear()} Fee The Developer</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

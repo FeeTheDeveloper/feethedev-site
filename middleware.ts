@@ -6,7 +6,9 @@ const hasClerkKeys = Boolean(
 );
 const withClerk = hasClerkKeys ? clerkMiddleware() : null;
 
-export default function middleware(...args: Parameters<NonNullable<typeof withClerk>>) {
+export default function middleware(
+  ...args: Parameters<NonNullable<typeof withClerk>>
+) {
   return withClerk ? withClerk(...args) : NextResponse.next();
 }
 
