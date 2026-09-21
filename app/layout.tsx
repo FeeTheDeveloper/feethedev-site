@@ -105,6 +105,10 @@ const structuredData = {
   ],
 };
 
+const hasClerkKeys = Boolean(
+  process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
+);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -113,7 +117,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable} font-sans`}>
-        <ClerkProvider>
+        {hasClerkKeys ? <ClerkProvider><SiteContent>{children}</SiteContent></ClerkProvider> : <SiteContent>{children}</SiteContent>}
+      </body>
+    </html>
+  );
+}
+
+function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <>
           <a
             href="#main-content"
             className="sr-only z-[100] rounded bg-white px-4 py-2 text-black focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
@@ -147,27 +159,27 @@ export default function RootLayout({
                 >
                   Learning path
                 </Link>
-                <Show when="signed-out">
+                {hasClerkKeys && <Show when="signed-out">
                   <Link
                     href="/sign-in"
                     className="shrink-0 hover:text-white lg:hidden"
                   >
                     Sign in
                   </Link>
-                </Show>
+                </Show>}
               </nav>
               <div className="flex items-center gap-3">
-                <Show when="signed-out">
+                {hasClerkKeys && <Show when="signed-out">
                   <Link
                     href="/sign-in"
                     className="hidden text-sm text-slate-300 hover:text-white lg:inline"
                   >
                     Sign in
                   </Link>
-                </Show>
-                <Show when="signed-in">
+                </Show>}
+                {hasClerkKeys && <Show when="signed-in">
                   <UserButton />
-                </Show>
+                </Show>}
                 <Link
                   href="/start"
                   className="rounded-full border border-electric/40 bg-electric/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-electric/25"
@@ -224,8 +236,6 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
-        </ClerkProvider>
-      </body>
-    </html>
+    </>
   );
 }
