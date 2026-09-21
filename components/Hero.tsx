@@ -121,7 +121,7 @@ export function Hero() {
             {[
               ['Web + Software', 'Design, apps, systems'],
               ['Google + Apple + Yelp', 'Presence + verification support'],
-              ['Hutchrok Partnership', 'Full business solutions'],
+              ['Google Product Suite', 'Placeholder — coming soon'],
             ].map(([title, desc], index) => (
               <motion.div
                 key={title}
@@ -188,30 +188,18 @@ export function Hero() {
               />
               <div className="hidden sm:absolute sm:inset-x-6 sm:bottom-6 sm:block sm:rounded-2xl sm:border sm:border-white/10 sm:bg-black/70 sm:p-5 sm:backdrop-blur-xl">
                 <div className="flex flex-wrap items-center gap-2 text-[0.55rem] uppercase tracking-[0.2em] text-cyan sm:text-[0.65rem] sm:tracking-[0.25em]">
-                  <span>Direct Partnership</span>
+                  <span>Web + AI + Automation</span>
                   <span className="h-1 w-1 rounded-full bg-greenglow" />
-                  <span>Full Business Systems</span>
+                  <span>Full Business Presence</span>
                 </div>
                 <div className="mt-1.5 flex items-center gap-2 sm:mt-2 sm:gap-3">
                   <span className="text-sm font-semibold text-white sm:text-lg sm:text-xl">
                     Fee The Developer
                   </span>
-                  <span className="text-sm font-semibold text-slate-500 sm:text-lg sm:text-xl">
-                    ×
-                  </span>
-                  <span className="relative h-5 w-16 shrink-0 overflow-hidden rounded-md bg-white p-0.5 sm:h-7 sm:w-24 sm:rounded-lg sm:p-1">
-                    <Image
-                      src="/brand/hutchrok-logo.png"
-                      alt="Hutchrok Solutions Group"
-                      fill
-                      sizes="96px"
-                      className="object-contain"
-                    />
-                  </span>
                 </div>
                 <div className="mt-1.5 hidden text-sm leading-6 text-slate-300 sm:mt-2 sm:block">
-                  Technology execution backed by complete business
-                  infrastructure.
+                  Technology execution backed by a complete digital business
+                  presence.
                 </div>
               </div>
             </div>

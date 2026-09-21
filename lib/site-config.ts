@@ -19,7 +19,7 @@ export const siteConfig = {
   name: 'Fee The Developer',
   legalName: 'Fee The Developer LLC',
   description:
-    'Veteran-owned web design, software, automation, and digital business presence company helping businesses launch strong across the web, Google, Apple, Yelp, and connected business systems in direct partnership with Hutchrok Solutions Group.',
+    'Veteran-owned web design, software, automation, and digital business presence company helping businesses launch strong across the web, Google, Apple, Yelp, and connected business systems.',
   siteUrl: getSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   email: 'contact@feethedeveloper.com',
   phone: '+12144400022',
@@ -38,8 +38,22 @@ export const siteConfig = {
     'API integrations',
   ],
   stack: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'AI integrations'],
-  partner: {
-    name: 'Hutchrok Solutions Group LLC',
-    url: 'https://hutchrok.com',
-  },
+  // TODO(King Fee): Replace with the actual Google products/services to promote.
+  googleProducts: [
+    {
+      name: 'Google Product Placeholder 1',
+      detail: 'Add the Google product or service to feature here.',
+      url: '#',
+    },
+    {
+      name: 'Google Product Placeholder 2',
+      detail: 'Add the Google product or service to feature here.',
+      url: '#',
+    },
+    {
+      name: 'Google Product Placeholder 3',
+      detail: 'Add the Google product or service to feature here.',
+      url: '#',
+    },
+  ],
 } as const;

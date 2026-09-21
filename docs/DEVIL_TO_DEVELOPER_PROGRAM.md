@@ -65,7 +65,6 @@ YouTube / Instagram -> Devil To Developer content -> GitHub proof -> learning tr
 - GitHub: public evidence of technical output and contribution history
 - Coursera: structured credential and learning support
 - feedeveloper.com: central conversion and application hub
-- Hutchrok Solutions Group: business infrastructure and entrepreneurship pathway
 
 ## Program KPIs
 

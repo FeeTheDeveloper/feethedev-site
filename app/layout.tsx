@@ -37,7 +37,6 @@ export const metadata: Metadata = {
     'Texas software company',
     'veteran-owned technology company',
     'business presence services',
-    'Hutchrok Solutions Group',
   ],
   alternates: {
     canonical: '/',
