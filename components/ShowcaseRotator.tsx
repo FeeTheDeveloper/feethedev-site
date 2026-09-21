@@ -74,10 +74,7 @@ export function ShowcaseRotator() {
   const item = showcaseItems[index];
 
   return (
-    <Section
-      id="showcase"
-      className="relative overflow-hidden bg-black/30"
-    >
+    <Section id="showcase" className="relative overflow-hidden bg-black/30">
       <div className="pointer-events-none absolute inset-y-0 left-[-10rem] w-80 rounded-full bg-electric/10 blur-3xl" />
       <div className="relative mx-auto max-w-3xl text-center">
         <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.24em] text-slate-300">
