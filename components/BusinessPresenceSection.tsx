@@ -46,9 +46,8 @@ export function BusinessPresenceSection() {
           <Body className="max-w-xl text-slate-300">
             The goal is a business that can be found, trusted, contacted, and
             operated across the platforms customers already use. Fee The
-            Developer handles the technology layer while Hutchrok Solutions
-            Group extends the engagement into business infrastructure and
-            operational solutions.
+            Developer handles the technology layer end to end, from launch
+            through ongoing business infrastructure and operational support.
           </Body>
           <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 text-sm leading-7 text-slate-300">
             Website + Google + Apple + Yelp + business systems = one coordinated

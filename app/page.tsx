@@ -1,8 +1,9 @@
 import { BusinessPresenceSection } from '@/components/BusinessPresenceSection';
 import { CtaSection } from '@/components/CtaSection';
+import { GoogleProductsSection } from '@/components/GoogleProductsSection';
 import { Hero } from '@/components/Hero';
 import { OwnerSection } from '@/components/OwnerSection';
-import { PartnershipSection } from '@/components/PartnershipSection';
+import { ShowcaseRotator } from '@/components/ShowcaseRotator';
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <div className="absolute right-[-4rem] top-28 h-56 w-56 rounded-full bg-greenglow/15 blur-3xl" />
       <Hero />
       <BusinessPresenceSection />
-      <PartnershipSection />
+      <GoogleProductsSection />
+      <ShowcaseRotator />
       <OwnerSection />
       <CtaSection />
     </main>
