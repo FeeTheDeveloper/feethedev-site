@@ -1,4 +1,5 @@
 import { BusinessPresenceSection } from '@/components/BusinessPresenceSection';
+import { BookingSection } from '@/components/BookingSection';
 import { CtaSection } from '@/components/CtaSection';
 import { GoogleProductsSection } from '@/components/GoogleProductsSection';
 import { Hero } from '@/components/Hero';
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <BusinessPresenceSection />
       <GoogleProductsSection />
+      <BookingSection />
       <ShowcaseRotator />
       <OwnerSection />
       <CtaSection />

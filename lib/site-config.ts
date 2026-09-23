@@ -1,4 +1,9 @@
 const defaultSiteUrl = 'https://feethedeveloper.com';
+const defaultBookingUrl = 'https://calendar.app.google/TAWDaUTtgBJA5VgSA';
+const approvedBookingHosts = new Set([
+  'calendar.app.google',
+  'calendar.google.com',
+]);
 
 function getSiteUrl(value: string | undefined): string {
   if (!value?.trim()) return defaultSiteUrl;
@@ -15,6 +20,21 @@ function getSiteUrl(value: string | undefined): string {
   return defaultSiteUrl;
 }
 
+function getBookingUrl(value: string | undefined): string {
+  if (!value?.trim()) return defaultBookingUrl;
+
+  try {
+    const url = new URL(value.trim());
+    if (url.protocol === 'https:' && approvedBookingHosts.has(url.hostname)) {
+      return url.toString();
+    }
+  } catch {
+    // Fall back to the approved Google Calendar booking page.
+  }
+
+  return defaultBookingUrl;
+}
+
 export const siteConfig = {
   name: 'Fee The Developer',
   legalName: 'Fee The Developer LLC',
@@ -24,7 +44,7 @@ export const siteConfig = {
   email: 'contact@feethedeveloper.com',
   phone: '+12144400022',
   phoneDisplay: '(214) 440-0022',
-  bookingUrl: process.env.NEXT_PUBLIC_BOOKING_URL ?? '/start',
+  bookingUrl: getBookingUrl(process.env.NEXT_PUBLIC_BOOKING_URL),
   depositUrl: process.env.NEXT_PUBLIC_DEPOSIT_URL ?? '/start#next-step',
   location: 'Texas, United States',
   services: [
@@ -41,7 +61,7 @@ export const siteConfig = {
   googleProducts: [
     {
       name: 'Workspace',
-      detail: 'Docs, Sheets, Drive, Meet, and shared team workflows.',
+      detail: 'Calendar, Docs, Sheets, Drive, Meet, and shared team workflows.',
       url: '#',
     },
     {
