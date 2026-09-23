@@ -129,7 +129,9 @@ export function ShowcaseRotator() {
                     </span>
                   </div>
                 )}
-                {item.image && <div className="showcase-artifact__flare" aria-hidden />}
+                {item.image && (
+                  <div className="showcase-artifact__flare" aria-hidden />
+                )}
               </div>
               <div className="flex flex-col justify-center gap-3">
                 <span className="w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.6rem] uppercase tracking-[0.24em] text-greenglow">
