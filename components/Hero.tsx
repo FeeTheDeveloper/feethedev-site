@@ -121,7 +121,7 @@ export function Hero() {
             {[
               ['Web + Software', 'Design, apps, systems'],
               ['Google + Apple + Yelp', 'Presence + verification support'],
-              ['Google Product Suite', 'Placeholder — coming soon'],
+              ['Google Product Suite', 'Workspace, AI, search, and maps'],
             ].map(([title, desc], index) => (
               <motion.div
                 key={title}

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Body, Card, H2, Section } from '@/components/ui';
+import { SignalArtwork } from '@/components/SignalArtwork';
 
 const channels = [
   {
@@ -29,7 +30,7 @@ const channels = [
 export function BusinessPresenceSection() {
   return (
     <Section id="presence" className="relative bg-black/30">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,6 +54,12 @@ export function BusinessPresenceSection() {
             Website + Google + Apple + Yelp + business systems = one coordinated
             launch instead of disconnected vendors.
           </div>
+          <SignalArtwork
+            src="/google_apple_yelp.PNG"
+            alt="Fee The Developer business presence artwork featuring Google, Apple, and Yelp services"
+            variant="prism"
+            className="mt-8"
+          />
         </motion.div>
 
         <div className="grid gap-5 sm:grid-cols-2">

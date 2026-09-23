@@ -11,7 +11,6 @@ type ShowcaseItem = {
   title: string;
   detail: string;
   meta?: string;
-  // TODO(King Fee): point this at a real image in /public once one exists.
   image?: string;
 };
 
@@ -30,9 +29,11 @@ const showcaseItems: ShowcaseItem[] = [
   {
     id: 'product-1',
     type: 'product',
-    title: 'Product spotlight placeholder',
-    detail: 'Feature a specific product or service here with a short pitch.',
-    meta: 'Placeholder pricing',
+    title: 'Web + software systems',
+    detail:
+      'Design, code, integrations, deployment, and scale brought together as one connected build.',
+    meta: 'Design · Apps · Systems',
+    image: '/web_software.PNG',
   },
   {
     id: 'event-1',
@@ -103,7 +104,13 @@ export function ShowcaseRotator() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="grid gap-6 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 text-left backdrop-blur-xl sm:grid-cols-[0.85fr_1.15fr] sm:p-8"
             >
-              <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl border border-dashed border-white/15 bg-gradient-to-br from-white/[0.06] to-black/40 sm:aspect-auto">
+              <div
+                className={`relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-white/[0.06] to-black/40 sm:aspect-auto ${
+                  item.image
+                    ? 'showcase-artifact border border-electric/25'
+                    : 'border border-dashed border-white/15'
+                }`}
+              >
                 {item.image ? (
                   <Image
                     src={item.image}
@@ -122,6 +129,7 @@ export function ShowcaseRotator() {
                     </span>
                   </div>
                 )}
+                {item.image && <div className="showcase-artifact__flare" aria-hidden />}
               </div>
               <div className="flex flex-col justify-center gap-3">
                 <span className="w-fit rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.6rem] uppercase tracking-[0.24em] text-greenglow">

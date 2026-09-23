@@ -38,21 +38,20 @@ export const siteConfig = {
     'API integrations',
   ],
   stack: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'AI integrations'],
-  // TODO(King Fee): Replace with the actual Google products/services to promote.
   googleProducts: [
     {
-      name: 'Google Product Placeholder 1',
-      detail: 'Add the Google product or service to feature here.',
+      name: 'Workspace',
+      detail: 'Docs, Sheets, Drive, Meet, and shared team workflows.',
       url: '#',
     },
     {
-      name: 'Google Product Placeholder 2',
-      detail: 'Add the Google product or service to feature here.',
+      name: 'Gemini + AI',
+      detail: 'Practical assistance for research, creation, and automation.',
       url: '#',
     },
     {
-      name: 'Google Product Placeholder 3',
-      detail: 'Add the Google product or service to feature here.',
+      name: 'Search + Maps',
+      detail: 'Discovery and local presence connected to your business.',
       url: '#',
     },
   ],
