@@ -163,24 +163,34 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             </Link>
             {hasClerkKeys && (
               <Show when="signed-out">
-                <Link
-                  href="/sign-in"
-                  className="shrink-0 hover:text-white lg:hidden"
-                >
-                  Sign in
-                </Link>
+                <span className="flex shrink-0 items-center gap-5 lg:hidden">
+                  <Link href="/sign-in" className="hover:text-white">
+                    Sign in
+                  </Link>
+                  <Link href="/sign-up" className="hover:text-white">
+                    Sign up
+                  </Link>
+                </span>
               </Show>
             )}
           </nav>
           <div className="flex items-center gap-3">
             {hasClerkKeys && (
               <Show when="signed-out">
-                <Link
-                  href="/sign-in"
-                  className="hidden text-sm text-slate-300 hover:text-white lg:inline"
-                >
-                  Sign in
-                </Link>
+                <span className="hidden items-center gap-3 text-sm lg:flex">
+                  <Link
+                    href="/sign-in"
+                    className="text-slate-300 hover:text-white"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    href="/sign-up"
+                    className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-2 text-white hover:bg-white/[0.1]"
+                  >
+                    Sign up
+                  </Link>
+                </span>
               </Show>
             )}
             {hasClerkKeys && (

@@ -103,27 +103,6 @@ export function CtaSection() {
                 Start Your Build
               </Button>
             </motion.div>
-
-            <motion.div
-              animate={{ y: [0, -1.5, 0] }}
-              transition={{
-                duration: 3.4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: 0.4,
-              }}
-            >
-              <Button
-                href="https://vetgang.com/join"
-                target="_blank"
-                rel="noreferrer"
-                className="px-4 py-2 text-xs"
-                glow="red"
-                variant="outline"
-              >
-                Join Vet Gang Network
-              </Button>
-            </motion.div>
           </div>
         </div>
       </motion.div>
