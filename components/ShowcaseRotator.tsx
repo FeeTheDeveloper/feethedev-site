@@ -7,24 +7,22 @@ import { Body, H2, Section } from '@/components/ui';
 
 type ShowcaseItem = {
   id: string;
-  type: 'review' | 'product' | 'event';
+  type: 'customer' | 'product' | 'event';
   title: string;
   detail: string;
   meta?: string;
   image?: string;
 };
 
-// TODO(King Fee): replace these placeholders with real customer reviews,
-// product spotlights, and event announcements (title, detail, meta, and an
-// image path). The rotator will pick them up automatically — no layout
-// changes needed.
 const showcaseItems: ShowcaseItem[] = [
   {
-    id: 'review-1',
-    type: 'review',
-    title: 'Customer review placeholder',
-    detail: 'Add a real client quote here once one is approved for use.',
-    meta: 'Placeholder rating',
+    id: 'customer-success',
+    type: 'customer',
+    title: 'From disconnected tools to connected growth',
+    detail:
+      'A customer success vision for bringing websites, scheduling, messaging, automation, and reporting into one clearer operating system.',
+    meta: 'Connected operations · Customer success',
+    image: '/ftd-showcase-customer-success.png',
   },
   {
     id: 'product-1',
@@ -36,16 +34,18 @@ const showcaseItems: ShowcaseItem[] = [
     image: '/web_software.PNG',
   },
   {
-    id: 'event-1',
+    id: 'software-launch-workshop',
     type: 'event',
-    title: 'Event placeholder',
-    detail: 'Announce a launch, workshop, or milestone here when one is set.',
-    meta: 'Placeholder date',
+    title: 'Build, launch, and scale workshop',
+    detail:
+      'A hands-on event experience focused on turning ideas into connected software, dependable launches, and systems ready to grow.',
+    meta: 'Workshop · Software launch',
+    image: '/ftd-showcase-event-workshop.png',
   },
 ];
 
 const typeLabel: Record<ShowcaseItem['type'], string> = {
-  review: 'Customer Review',
+  customer: 'Customer Success',
   product: 'Product Spotlight',
   event: 'Event',
 };
@@ -82,12 +82,11 @@ export function ShowcaseRotator() {
           Live Showcase
         </div>
         <H2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl">
-          Reviews, products, and events in rotation
+          Customer outcomes, products, and events in rotation
         </H2>
         <Body className="mx-auto mt-5 max-w-2xl text-slate-300">
-          Placeholder content that fades in and out to preview the rhythm of
-          this section. Real reviews, product spotlights, and event
-          announcements will replace these cards.
+          Explore customer outcomes, connected products, and hands-on events
+          built around practical digital growth.
         </Body>
 
         <div
