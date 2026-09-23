@@ -1,10 +1,25 @@
-import { clerkMiddleware } from '@clerk/nextjs/server';
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 
 const hasClerkKeys = Boolean(
   process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && process.env.CLERK_SECRET_KEY,
 );
-const withClerk = hasClerkKeys ? clerkMiddleware() : null;
+const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
+const withClerk = hasClerkKeys
+  ? clerkMiddleware(async (auth, request) => {
+      if (isProtectedRoute(request)) {
+        const { isAuthenticated } = await auth();
+        if (!isAuthenticated) {
+          const signInUrl = new URL('/sign-in', request.url);
+          signInUrl.searchParams.set(
+            'redirect_url',
+            `${request.nextUrl.pathname}${request.nextUrl.search}`,
+          );
+          return NextResponse.redirect(signInUrl);
+        }
+      }
+    })
+  : null;
 
 export default function middleware(
   ...args: Parameters<NonNullable<typeof withClerk>>

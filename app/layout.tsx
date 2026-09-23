@@ -152,6 +152,12 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             <Link href="/#build" className="shrink-0 hover:text-white">
               Approach
             </Link>
+            <Link href="/services" className="shrink-0 hover:text-white">
+              Services
+            </Link>
+            <Link href="/pricing" className="shrink-0 hover:text-white">
+              Pricing
+            </Link>
             <Link
               href="/devil-to-developer"
               className="shrink-0 hover:text-white"
@@ -195,7 +201,15 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             )}
             {hasClerkKeys && (
               <Show when="signed-in">
-                <UserButton />
+                <span className="flex items-center gap-3">
+                  <Link
+                    href="/dashboard"
+                    className="hidden text-sm text-slate-300 hover:text-white md:inline"
+                  >
+                    Dashboard
+                  </Link>
+                  <UserButton />
+                </span>
               </Show>
             )}
             <Link
@@ -230,6 +244,17 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             <Link href="/start" className="hover:text-white">
               Start a project
             </Link>
+            <Link href="/services" className="hover:text-white">
+              Services
+            </Link>
+            <Link href="/pricing" className="hover:text-white">
+              Pricing
+            </Link>
+            {hasClerkKeys && (
+              <Link href="/dashboard" className="hover:text-white">
+                Client portal
+              </Link>
+            )}
             <Link href="/devil-to-developer" className="hover:text-white">
               Initiative
             </Link>

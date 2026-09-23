@@ -19,7 +19,7 @@ export default function Page() {
       title="Welcome back."
       description="Sign in to your Fee The Developer account."
     >
-      <SignIn />
+      <SignIn fallbackRedirectUrl="/dashboard" />
     </AuthShell>
   );
 }

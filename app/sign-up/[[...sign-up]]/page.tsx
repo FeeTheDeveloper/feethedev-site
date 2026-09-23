@@ -19,7 +19,7 @@ export default function Page() {
       title="Build with us."
       description="Create your Fee The Developer account to get started."
     >
-      <SignUp />
+      <SignUp fallbackRedirectUrl="/dashboard" />
     </AuthShell>
   );
 }
