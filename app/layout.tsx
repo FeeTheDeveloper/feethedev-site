@@ -181,6 +181,12 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             )}
           </nav>
           <div className="flex items-center gap-3">
+            <Link
+              href="/merch"
+              className="shrink-0 rounded-full border border-electric/40 bg-electric/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-electric/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
+            >
+              Merch
+            </Link>
             {hasClerkKeys && (
               <Show when="signed-out">
                 <span className="hidden items-center gap-3 text-sm lg:flex">
@@ -249,6 +255,9 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             </Link>
             <Link href="/pricing" className="hover:text-white">
               Pricing
+            </Link>
+            <Link href="/merch" className="hover:text-white">
+              Merch
             </Link>
             {hasClerkKeys && (
               <Link href="/dashboard" className="hover:text-white">
