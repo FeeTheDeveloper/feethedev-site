@@ -4,6 +4,7 @@ export type MerchProduct = {
   price: number;
   image: string;
   imageAlt: string;
+  imageCrop?: { x: number; y: number; width: number; height: number };
   detail: string;
   sizes: readonly string[];
   colors: readonly string[];
@@ -35,7 +36,8 @@ export const merchProducts: MerchProduct[] = [
     name: 'Graphic joggers',
     price: 60,
     image: '/merch/full-line-reference.png',
-    imageAlt: 'Fee The Developer jogger design across the color line',
+    imageAlt: 'White Fee The Developer joggers, front and back designs',
+    imageCrop: { x: 18, y: 538, width: 292, height: 267 },
     detail: 'Globe and FTD marks with the Autonomy Has Levels leg detail.',
     sizes: apparelSizes,
     colors: merchColors,
@@ -45,7 +47,8 @@ export const merchProducts: MerchProduct[] = [
     name: 'Graphic T-shirt',
     price: 30,
     image: '/merch/full-line-reference.png',
-    imageAlt: 'Fee The Developer T-shirt design across the color line',
+    imageAlt: 'White Fee The Developer T-shirt, front and back designs',
+    imageCrop: { x: 17, y: 286, width: 292, height: 216 },
     detail: 'Wordmark front and globe artwork on the back.',
     sizes: apparelSizes,
     colors: merchColors,
@@ -55,7 +58,8 @@ export const merchProducts: MerchProduct[] = [
     name: 'Snapback hat',
     price: 40,
     image: '/merch/full-line-reference.png',
-    imageAlt: 'Fee The Developer snapback hat design across the color line',
+    imageAlt: 'White Fee The Developer snapback hat, front, side, and back designs',
+    imageCrop: { x: 8, y: 853, width: 300, height: 137 },
     detail: 'Globe front, FTD side, and Autonomy Has Levels rear detail.',
     sizes: [],
     colors: merchColors,

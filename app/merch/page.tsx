@@ -87,24 +87,22 @@ export default function MerchPage() {
                 className="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05]"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#dedede]">
-                  {product.slug === 'hoodie' ? (
+                  {product.imageCrop ? (
+                    <svg
+                      role="img"
+                      aria-label={product.imageAlt}
+                      viewBox={`${product.imageCrop.x} ${product.imageCrop.y} ${product.imageCrop.width} ${product.imageCrop.height}`}
+                      className="h-full w-full"
+                    >
+                      <image href={product.image} width="1536" height="1024" />
+                    </svg>
+                  ) : (
                     <Image
                       src={product.image}
                       alt={product.imageAlt}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover"
-                    />
-                  ) : (
-                    <div
-                      role="img"
-                      aria-label={product.imageAlt}
-                      className="h-full w-full bg-no-repeat"
-                      style={{
-                        backgroundImage: `url(${product.image})`,
-                        backgroundSize: '400% auto',
-                        backgroundPosition: `0% ${product.slug === 'tshirt' ? '35%' : product.slug === 'joggers' ? '70%' : '100%'}`,
-                      }}
                     />
                   )}
                 </div>
@@ -141,18 +139,8 @@ export default function MerchPage() {
         </div>
       </section>
 
-      <section className="shell mt-20">
-        <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#d9d9d9] p-3 sm:p-6">
-          <Image
-            src="/merch/full-line-reference.png"
-            alt="Full Fee The Developer merch concept showing hoodie, T-shirt, jogger, and snapback designs in white, gray, blue, red, and green"
-            width={1536}
-            height={1024}
-            sizes="100vw"
-            className="h-auto w-full rounded-2xl"
-          />
-        </div>
-        <p className="mt-4 text-sm leading-6 text-slate-400">
+      <section className="shell mt-10">
+        <p className="text-sm leading-6 text-slate-400">
           Approved color line: white, heather gray, royal blue, vivid red, and
           sage green. Apparel sizes: S, M, L, and XL. Hats are snapbacks.
           Availability and shipping destinations are confirmed before purchase.
