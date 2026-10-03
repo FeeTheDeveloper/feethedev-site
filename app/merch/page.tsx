@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { MerchOptions } from '@/components/MerchOptions';
 import { merchProducts, verifiedStripeLink } from '@/lib/merch';
 import { siteConfig } from '@/lib/site-config';
 
@@ -73,7 +74,9 @@ export default function MerchPage() {
               Pick your piece.
             </h2>
           </div>
-          <p className="text-sm text-slate-400">Prices in USD</p>
+          <p className="text-sm text-slate-400">
+            Prices in USD · Shipping $12.99
+          </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {merchProducts.map((product) => {
@@ -118,25 +121,19 @@ export default function MerchPage() {
                     {product.detail}
                   </p>
                   <p className="mt-3 text-xs leading-5 text-slate-400">
-                    {product.sizes}
+                    {product.colors.join(' · ')}
+                    {product.sizes.length > 0 && (
+                      <>
+                        <br />
+                        Sizes {product.sizes.join(' · ')}
+                      </>
+                    )}
                   </p>
-                  {checkoutLink ? (
-                    <a
-                      href={checkoutLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-auto inline-flex justify-center rounded-full bg-electric px-5 py-3 text-sm font-bold text-white hover:bg-blue-500"
-                    >
-                      Buy with Stripe
-                    </a>
-                  ) : (
-                    <a
-                      href={`mailto:${siteConfig.email}?subject=${encodeURIComponent(`Fee The Developer ${product.name} inquiry`)}`}
-                      className="mt-auto inline-flex justify-center rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white hover:bg-white/10"
-                    >
-                      Ask about this piece
-                    </a>
-                  )}
+                  <MerchOptions
+                    product={product}
+                    checkoutLink={checkoutLink}
+                    contactEmail={siteConfig.email}
+                  />
                 </div>
               </article>
             );
@@ -156,8 +153,9 @@ export default function MerchPage() {
           />
         </div>
         <p className="mt-4 text-sm leading-6 text-slate-400">
-          Collection artwork shows the proposed color line. Confirm the color
-          and size available for your order before purchase.
+          Approved color line: white, heather gray, royal blue, vivid red, and
+          sage green. Apparel sizes: S, M, L, and XL. Hats are snapbacks.
+          Availability and shipping destinations are confirmed before purchase.
         </p>
       </section>
       <section className="shell mt-16 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:grid-cols-[1fr_1.2fr] sm:items-center sm:p-10">
