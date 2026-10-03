@@ -58,7 +58,8 @@ export const merchProducts: MerchProduct[] = [
     name: 'Snapback hat',
     price: 40,
     image: '/merch/full-line-reference.png',
-    imageAlt: 'White Fee The Developer snapback hat, front, side, and back designs',
+    imageAlt:
+      'White Fee The Developer snapback hat, front, side, and back designs',
     imageCrop: { x: 8, y: 853, width: 300, height: 137 },
     detail: 'Globe front, FTD side, and Autonomy Has Levels rear detail.',
     sizes: [],
