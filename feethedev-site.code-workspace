@@ -1,9 +1,9 @@
 {
-	"folders": [
-		{
-			"name": "feethedev-site",
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "feethedev-site",
+      "path": ".",
+    },
+  ],
+  "settings": {},
 }
