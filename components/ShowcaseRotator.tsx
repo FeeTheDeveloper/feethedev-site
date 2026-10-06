@@ -2,37 +2,11 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Body, H2, Section } from '@/components/ui';
+import { portfolioItems } from '@/lib/portfolio';
 
-const items = [
-  {
-    id: 'customer-success',
-    category: 'Connected operations',
-    title: 'A clearer path from disconnected tools',
-    detail:
-      'A customer success vision for bringing websites, scheduling, messaging, automation, and reporting into one clearer operating system.',
-    image: '/ftd-showcase-customer-success.png',
-    imageAlt: 'Illustration of connected business operations',
-  },
-  {
-    id: 'web-software',
-    category: 'Web + software',
-    title: 'One connected build',
-    detail:
-      'Design, code, integrations, deployment, and scale brought together as one connected build.',
-    image: '/web_software.PNG',
-    imageAlt: 'Fee The Developer web and software artwork',
-  },
-  {
-    id: 'workshop',
-    category: 'Workshops',
-    title: 'Build, launch, and scale',
-    detail:
-      'A hands-on event concept focused on turning ideas into connected software, dependable launches, and systems ready to grow.',
-    image: '/ftd-showcase-event-workshop.png',
-    imageAlt: 'Artwork for a software launch workshop concept',
-  },
-];
+const items = portfolioItems.filter((item) => item.featured);
 
 export function ShowcaseRotator() {
   const [index, setIndex] = useState(0);
@@ -50,8 +24,8 @@ export function ShowcaseRotator() {
             See how the pieces connect.
           </H2>
           <Body className="mt-5 max-w-2xl text-slate-300">
-            Explore the work across business systems, software, and learning
-            experiences.
+            Explore verified work across brand experiences, customer-facing
+            products, and connected business systems.
           </Body>
         </div>
 
@@ -86,7 +60,7 @@ export function ShowcaseRotator() {
                 </span>
                 <span className="flex items-end justify-between gap-4">
                   <span className="text-xl font-semibold leading-tight text-white sm:text-2xl">
-                    {item.title}
+                    {item.name}
                   </span>
                   <span
                     className="shrink-0 text-2xl text-greenglow"
@@ -111,23 +85,40 @@ export function ShowcaseRotator() {
               alt={selected.imageAlt}
               fill
               sizes="(max-width: 1024px) 100vw, 55vw"
-              className="object-cover"
+              className={
+                selected.imageFit === 'contain'
+                  ? 'object-contain p-8 sm:p-10'
+                  : 'object-cover'
+              }
+              style={
+                selected.imagePosition
+                  ? { objectPosition: selected.imagePosition }
+                  : undefined
+              }
             />
           </div>
           <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-greenglow">
-              {selected.category}
+              {selected.status} · {selected.stage}
             </p>
             <h3 className="mt-4 text-2xl font-semibold leading-tight text-white sm:text-3xl">
-              {selected.title}
+              {selected.name}
             </h3>
             <p className="mt-4 max-w-prose text-base leading-7 text-slate-300">
-              {selected.detail}
+              {selected.summary}
             </p>
-            <p className="mt-6 text-xs uppercase tracking-[0.16em] text-slate-400">
-              {String(index + 1).padStart(2, '0')} /{' '}
-              {String(items.length).padStart(2, '0')}
-            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <Link
+                href="/work"
+                className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:bg-greenglow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b1018]"
+              >
+                See all selected work
+              </Link>
+              <p className="text-xs uppercase tracking-[0.16em] text-slate-400">
+                {String(index + 1).padStart(2, '0')} /{' '}
+                {String(items.length).padStart(2, '0')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

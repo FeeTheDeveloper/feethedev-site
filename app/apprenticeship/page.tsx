@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { InteriorHero } from '@/components/InteriorHero';
-import { Body, Button, H2, Section } from '@/components/ui';
+import { Body, Button as CtaLink, H2, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -130,14 +130,14 @@ export default function ApprenticeshipPage() {
             </Body>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
-            <Button
+            <CtaLink
               href={`mailto:${siteConfig.email}?subject=Developer%20learning%20path`}
             >
               Get in touch
-            </Button>
-            <Button href="/" variant="outline" glow="green">
+            </CtaLink>
+            <CtaLink href="/" variant="outline" glow="green">
               Back to the site
-            </Button>
+            </CtaLink>
           </div>
         </div>
       </Section>

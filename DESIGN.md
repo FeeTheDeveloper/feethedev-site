@@ -43,7 +43,7 @@ The interface behaves like a calm systems console: connected signals, legible st
 - **Locale:** English (`en-US`).
 - **Usage scene:** Mobile and desktop, occasional client check-ins, low-to-medium information density.
 - **Register:** Hybrid. Public routes are brand-led; `/dashboard` is product-led and quieter.
-- **Memorable signature:** A signal rail that turns service, project, and community touchpoints into one connected path.
+- **Memorable signature:** A signal rail that turns service, project, and community touchpoints into one connected path. On `/work`, the rail groups verified examples by Build, Connect, and Strengthen without flattening their distinct client identities. External learning records are presented as individual continuing education, never as company certification or platform endorsement.
 - **Restraint:** Client data, navigation, status, and calls to action remain familiar, stable, and easy to scan.
 - **Anti-references:** Generic white SaaS dashboards; excessive neon decoration; fake metrics or unsupported client activity.
 - **Token ownership/runtime mapping:** This file documents the canonical values implemented in `tailwind.config.ts` and `styles/globals.css`. Runtime token changes must update this document in the same change.
@@ -80,7 +80,7 @@ Primary actions use solid or luminous treatments; secondary actions use quiet ou
 
 ### Navigation and data display
 
-Public navigation exposes Services, Pricing, and Client portal. Product navigation marks the current destination. Lists favor semantic markup and explicit statuses over decorative charts.
+Public navigation exposes Services, Work, Pricing, and Client portal. Product navigation marks the current destination. Lists favor semantic markup and explicit statuses over decorative charts. Portfolio cards use explicit Live presentation, Review build, or Technical case study labels.
 
 ### Forms and overlays
 
