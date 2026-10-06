@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Runner Demon intelligence pipeline</title>
+  <desc id="desc">A local engine receives source observations, preserves history, applies controls, and publishes curated output.</desc>
+  <defs>
+    <radialGradient id="bg" cx="55%" cy="45%" r="75%">
+      <stop offset="0" stop-color="#15223d"/>
+      <stop offset="1" stop-color="#05070b"/>
+    </radialGradient>
+    <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2578ff"/>
+      <stop offset="0.55" stop-color="#14e8b4"/>
+      <stop offset="1" stop-color="#ff6b35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <g fill="none" stroke="url(#signal)" stroke-width="8" opacity="0.82">
+    <path d="M210 500h250"/>
+    <path d="M700 500h220"/>
+    <path d="M1160 500h230"/>
+  </g>
+  <g fill="#0b1018" stroke="#f3f6fa" stroke-opacity="0.26" stroke-width="3">
+    <rect x="80" y="350" width="300" height="300" rx="38"/>
+    <rect x="460" y="260" width="240" height="480" rx="38"/>
+    <rect x="920" y="260" width="240" height="480" rx="38"/>
+    <rect x="1220" y="350" width="300" height="300" rx="38"/>
+  </g>
+  <g fill="#f3f6fa" font-family="ui-sans-serif, system-ui, sans-serif" text-anchor="middle">
+    <text x="230" y="455" font-size="28" letter-spacing="7" fill="#91a0b7">SOURCES</text>
+    <text x="230" y="525" font-size="44" font-weight="700">OBSERVE</text>
+    <text x="580" y="390" font-size="28" letter-spacing="7" fill="#91a0b7">LOCAL</text>
+    <text x="580" y="470" font-size="54" font-weight="800">DEMON</text>
+    <text x="580" y="540" font-size="24" fill="#14e8b4">immutable history</text>
+    <text x="580" y="585" font-size="24" fill="#14e8b4">normalized state</text>
+    <text x="1040" y="390" font-size="28" letter-spacing="7" fill="#91a0b7">GUARDS</text>
+    <text x="1040" y="470" font-size="44" font-weight="700">CONTROL</text>
+    <text x="1040" y="535" font-size="24" fill="#2578ff">freshness</text>
+    <text x="1040" y="580" font-size="24" fill="#2578ff">fail closed</text>
+    <text x="1370" y="455" font-size="28" letter-spacing="7" fill="#91a0b7">CURATED</text>
+    <text x="1370" y="525" font-size="42" font-weight="700">PUBLISH</text>
+  </g>
+  <circle cx="420" cy="500" r="18" fill="#2578ff"/>
+  <circle cx="810" cy="500" r="18" fill="#14e8b4"/>
+  <circle cx="1190" cy="500" r="18" fill="#ff6b35"/>
+  <text x="80" y="890" fill="#91a0b7" font-family="ui-monospace, monospace" font-size="26" letter-spacing="5">RUNNER SPORTS / TECHNICAL CASE STUDY / NO AUTOMATED WAGERING</text>
+</svg>

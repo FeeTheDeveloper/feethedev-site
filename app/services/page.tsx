@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/PageIntro';
-import { Button, Card, Section } from '@/components/ui';
+import { Button as CtaLink, Card, Section } from '@/components/ui';
 import { serviceGroups } from '@/lib/catalog';
 
 export const metadata: Metadata = {
@@ -95,7 +95,13 @@ export default function ServicesPage() {
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button href="/start">Start a project</Button>
+            <CtaLink href="/start">Start a project</CtaLink>
+            <Link
+              href="/work"
+              className="inline-flex items-center rounded-full border border-greenglow/25 bg-greenglow/[0.08] px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white hover:bg-greenglow/[0.14] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/50"
+            >
+              See selected work
+            </Link>
             <Link
               href="/pricing"
               className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/50"

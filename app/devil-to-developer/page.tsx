@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { InteriorHero } from '@/components/InteriorHero';
-import { Body, Button, H2, Section } from '@/components/ui';
+import { Body, Button as CtaLink, H2, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -100,10 +100,10 @@ export default function DevilToDeveloperPage() {
             </Body>
           </div>
           <div className="flex flex-wrap gap-3 lg:justify-end">
-            <Button href="/apprenticeship">View the path</Button>
-            <Button href="/" variant="outline" glow="green">
+            <CtaLink href="/apprenticeship">View the path</CtaLink>
+            <CtaLink href="/" variant="outline" glow="green">
               Back to the site
-            </Button>
+            </CtaLink>
           </div>
         </div>
       </Section>

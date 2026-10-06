@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { PageIntro } from '@/components/PageIntro';
-import { Button, Card, Section } from '@/components/ui';
+import { Button as CtaLink, Card, Section } from '@/components/ui';
 import { addOnPricing, pricingOptions } from '@/lib/catalog';
 
 export const metadata: Metadata = {
@@ -120,7 +120,7 @@ export default function PricingPage() {
             approvals are controlled by each platform and are not guaranteed.
           </p>
           <div className="mt-7 flex justify-center">
-            <Button href="/start">Plan my project</Button>
+            <CtaLink href="/start">Plan my project</CtaLink>
           </div>
         </div>
       </Section>
