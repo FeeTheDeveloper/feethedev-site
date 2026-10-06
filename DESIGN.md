@@ -92,7 +92,7 @@ Icons are simple inline SVG strokes at 20–24px. Text labels remain present for
 
 ### Motion
 
-Motion suggests signal flow and state change, using 180–550ms ease-out transitions. Routine dashboard interaction remains quiet. Reduced-motion users receive static states.
+Motion suggests signal flow and state change. The public homepage uses one continuous signal-current composition: a deliberate hero entrance, a scroll-progress rail, scrubbed statement text, and scale/fade media transitions. GSAP owns this page-level choreography; routine component transitions remain 180–700ms with custom ease-out curves. Ambient audio is optional, starts only after a visitor activates the labeled control, and never autoplays. Routine dashboard interaction remains quiet. Reduced-motion users receive static states.
 
 ### Content and data visualization
 
