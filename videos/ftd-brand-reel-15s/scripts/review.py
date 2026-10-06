@@ -34,7 +34,7 @@ def frames(path, w, h, fps=None, gray=False):
     return a.reshape(-1, h, w) if gray else a.reshape(-1, h, w, 3)
 def frames_at(path, idx, w, h):
     sel = '+'.join(f'eq(n\\,{i})' for i in idx)
-    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', path, '-vf', f"select='{sel}',scale={w}:{h}:flags=area", '-vsync', '0', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True, check=True).stdout
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', path, '-vf', f"select='{sel}',scale={w}:{h}:flags=area", '-fps_mode', 'passthrough', '-f', 'rawvideo', '-pix_fmt', 'rgb24', '-'], capture_output=True, check=True).stdout
     return np.frombuffer(raw, np.uint8).reshape(-1, h, w, 3)
 def tile(ims, cols, labels, out, pad=6, lab=22, bg=(20, 20, 20)):
     w, h = ims[0].size; rows = (len(ims) + cols - 1) // cols
