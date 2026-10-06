@@ -86,9 +86,10 @@ export default function MerchPage() {
               Pick your piece.
             </h2>
           </div>
-          <p className="text-sm text-slate-400">
-            {`Prices in USD · Shipping $${shippingRateUsd}`}
-          </p>
+          <div className="text-sm text-slate-400 sm:text-right">
+            <p>Tap a color swatch to change each product preview.</p>
+            <p className="mt-1">{`Prices in USD · Shipping $${shippingRateUsd}`}</p>
+          </div>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {merchProducts.map((product) => (
