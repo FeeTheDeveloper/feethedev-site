@@ -217,3 +217,37 @@ export function resolveCheckoutLinks(
   }
   return links;
 }
+
+export type MerchModelShot = {
+  color: string;
+  colorSlug: string;
+  swatch: string;
+  image: string;
+  imageAlt: string;
+};
+
+/**
+ * The hero lookbook set: one model, one pose, photographed once per approved
+ * colorway so the merch hero can morph between them without the frame moving.
+ * Generated on October 5 from the supplied white hoodie artwork; swap these
+ * files for studio photography of the same framing and the hero picks it up.
+ */
+export const merchModelShots: readonly MerchModelShot[] = [
+  'white',
+  'heather-gray',
+  'royal-blue',
+  'vivid-red',
+  'sage-green',
+].map((colorSlug) => {
+  const color = merchColors.find(
+    (name) => name.toLowerCase().replace(/\s+/g, '-') === colorSlug,
+  ) as string;
+
+  return {
+    color,
+    colorSlug,
+    swatch: swatches[colorSlug],
+    image: `/merch/model-hoodie-${colorSlug}.jpg`,
+    imageAlt: `Model wearing the ${color} Fee The Developer graphic hoodie, front wordmark design`,
+  };
+});

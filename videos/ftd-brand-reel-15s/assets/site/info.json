@@ -1,0 +1,519 @@
+{
+  "url": "https://www.feethedeveloper.com/",
+  "title": "Fee The Developer | Web Design + Full Business Presence",
+  "description": "Veteran-owned web design, software, automation, and digital business presence company helping businesses launch strong across the web, Google, Apple, Yelp, and connected business systems.",
+  "font_families_by_use": [
+    [
+      "Manrope, \"Manrope Fallback\"",
+      131
+    ],
+    [
+      "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace",
+      3
+    ],
+    [
+      "Arial, sans-serif",
+      2
+    ]
+  ],
+  "font_faces": [
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/438aa629764e75f3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/875ae681bfde4580-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/51251f8b9793cdb3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/e857b654a2caa584-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/cc978ac5ee68c2b6-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "400",
+      "style": "normal",
+      "range": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/438aa629764e75f3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/875ae681bfde4580-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/51251f8b9793cdb3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/e857b654a2caa584-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/cc978ac5ee68c2b6-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "500",
+      "style": "normal",
+      "range": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/438aa629764e75f3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/875ae681bfde4580-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/51251f8b9793cdb3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/e857b654a2caa584-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/cc978ac5ee68c2b6-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "600",
+      "style": "normal",
+      "range": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/438aa629764e75f3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/875ae681bfde4580-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/51251f8b9793cdb3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/e857b654a2caa584-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/cc978ac5ee68c2b6-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "700",
+      "style": "normal",
+      "range": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/438aa629764e75f3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/875ae681bfde4580-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/51251f8b9793cdb3-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/e857b654a2caa584-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/cc978ac5ee68c2b6-s.woff2"
+      ]
+    },
+    {
+      "family": "Manrope",
+      "weight": "800",
+      "style": "normal",
+      "range": "U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
+      "urls": [
+        "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+      ]
+    },
+    {
+      "family": "Manrope Fallback",
+      "weight": "400",
+      "style": "normal",
+      "range": "",
+      "urls": []
+    }
+  ],
+  "text_colors": [
+    [
+      "rgb(255, 255, 255)",
+      39
+    ],
+    [
+      "rgb(203, 213, 225)",
+      31
+    ],
+    [
+      "rgb(148, 163, 184)",
+      24
+    ],
+    [
+      "rgb(243, 246, 250)",
+      17
+    ],
+    [
+      "rgb(20, 232, 180)",
+      13
+    ],
+    [
+      "rgb(226, 232, 240)",
+      4
+    ],
+    [
+      "rgb(34, 211, 238)",
+      3
+    ],
+    [
+      "rgba(0, 0, 0, 0)",
+      2
+    ],
+    [
+      "rgb(0, 0, 0)",
+      1
+    ],
+    [
+      "rgb(100, 116, 139)",
+      1
+    ],
+    [
+      "rgba(255, 255, 255, 0.9)",
+      1
+    ]
+  ],
+  "bg_colors": [
+    [
+      "rgba(255, 255, 255, 0.05)",
+      13
+    ],
+    [
+      "rgba(8, 13, 21, 0.9)",
+      8
+    ],
+    [
+      "rgba(8, 13, 21, 0.8)",
+      8
+    ],
+    [
+      "rgba(255, 255, 255, 0.1)",
+      7
+    ],
+    [
+      "rgb(5, 7, 11)",
+      6
+    ],
+    [
+      "rgba(255, 255, 255, 0.08)",
+      5
+    ],
+    [
+      "rgba(255, 255, 255, 0.04)",
+      5
+    ],
+    [
+      "rgba(37, 120, 255, 0.1)",
+      3
+    ],
+    [
+      "rgb(20, 232, 180)",
+      3
+    ],
+    [
+      "rgba(255, 255, 255, 0.043)",
+      3
+    ],
+    [
+      "rgba(0, 0, 0, 0.3)",
+      3
+    ],
+    [
+      "rgba(0, 0, 0, 0.25)",
+      3
+    ],
+    [
+      "rgba(0, 0, 0, 0.2)",
+      3
+    ],
+    [
+      "rgb(255, 255, 255)",
+      2
+    ],
+    [
+      "rgba(37, 120, 255, 0.15)",
+      2
+    ],
+    [
+      "rgba(20, 232, 180, 0.15)",
+      2
+    ],
+    [
+      "rgba(20, 232, 180, 0.1)",
+      2
+    ],
+    [
+      "rgb(66, 133, 244)",
+      2
+    ],
+    [
+      "rgba(255, 255, 255, 0.2)",
+      2
+    ],
+    [
+      "rgba(5, 7, 11, 0.85)",
+      1
+    ]
+  ],
+  "css_vars": {},
+  "headings": [
+    "A: Skip to content  [Manrope, \"Manrope Fallback\" 16px 400 ls normal rgb(0, 0, 0)]",
+    "A: FEE THE DEVELOPER  [Manrope, \"Manrope Fallback\" 18px 800 ls 1.8px rgb(255, 255, 255)]",
+    "A: Approach  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Services  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Pricing  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Initiative  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Learning path  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Sign in  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Sign up  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: MERCH  [Manrope, \"Manrope Fallback\" 12px 600 ls 1.44px rgb(255, 255, 255)]",
+    "A: Sign in  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "A: Sign up  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(255, 255, 255)]",
+    "A: START A PROJECT  [Manrope, \"Manrope Fallback\" 12px 600 ls 1.44px rgb(255, 255, 255)]",
+    "H1: BUILD. AUTOMATE. CREATE. SCALE.  [Manrope, \"Manrope Fallback\" 96px 600 ls -2.4px rgb(255, 255, 255)]",
+    "P: We design the site, wire the systems, strengthen the digital presence, and connect the business to the tools that make it move.  [Manrope, \"Manrope Fallback\" 20px 400 ls normal rgb(203, 213, 225)]",
+    "A: BUILD MY BUSINESS  [Manrope, \"Manrope Fallback\" 14px 600 ls 2.8px rgb(255, 255, 255)]",
+    "A: SEE MY APPROACH  [Manrope, \"Manrope Fallback\" 14px 600 ls 2.8px rgb(255, 255, 255)]",
+    "H2: We do not stop when the website goes live.  [Manrope, \"Manrope Fallback\" 48px 600 ls -1.2px rgb(255, 255, 255)]",
+    "H3: Google Business Profile  [Manrope, \"Manrope Fallback\" 20px 600 ls normal rgb(255, 255, 255)]",
+    "P: Profile setup, optimization, verification support, business categories, service areas, contact data, and launch-readiness.  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "H3: Apple Business Connect  [Manrope, \"Manrope Fallback\" 20px 600 ls normal rgb(255, 255, 255)]",
+    "P: Business presence setup for Apple Maps and Apple ecosystem discovery with consistent company information and brand presentation.  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "H3: Yelp Business Profile  [Manrope, \"Manrope Fallback\" 20px 600 ls normal rgb(255, 255, 255)]",
+    "P: Profile creation or cleanup, business information alignment, service presentation, and reputation-ready setup.  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "H3: Website + Business Infrastructure  [Manrope, \"Manrope Fallback\" 20px 600 ls normal rgb(255, 255, 255)]",
+    "P: A conversion-ready website connected to branded email, analytics, forms, booking, payments, automation, and the systems the business actually uses.  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(203, 213, 225)]",
+    "P: FEE THE DEVELOPER  [Manrope, \"Manrope Fallback\" 14px 700 ls 1.96px rgb(255, 255, 255)]",
+    "P: Build. Automate. Create. Scale.  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Home  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Start a project  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Services  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Pricing  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Merch  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Client portal  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Initiative  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: Learning path  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: contact@feethedeveloper.com  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "A: (214) 440-0022  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]",
+    "P: © 2026 Fee The Developer  [Manrope, \"Manrope Fallback\" 14px 400 ls normal rgb(148, 163, 184)]"
+  ],
+  "images": [
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fbrand%2Fftd-background-drop.webp&w=3840&q=75",
+      "alt": "",
+      "w": 696,
+      "h": 392
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fbrand%2Fftd-founder-hero.webp&w=1920&q=75",
+      "alt": "Illustrated portrait of Fee The Developer in a white hoodie against a blue developer workspace",
+      "w": 522,
+      "h": 522
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fgoogle_apple_yelp.PNG&w=1920&q=75",
+      "alt": "Fee The Developer business presence artwork featuring Google, Apple, and Yelp services",
+      "w": 467,
+      "h": 584
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fgoogle_product_suite.PNG&w=1920&q=75",
+      "alt": "Fee The Developer artwork featuring Google Search, Gemini, Drive, Docs, Sheets, Photos, Maps, and Meet",
+      "w": 467,
+      "h": 584
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fweb_software.PNG&w=1920&q=75",
+      "alt": "Web + software systems",
+      "w": 374,
+      "h": 467
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fbrand%2Falfreddie-postell-founder.jpg&w=1920&q=75",
+      "alt": "Alfreddie Postell II, founder of Fee The Developer",
+      "w": 289,
+      "h": 289
+    },
+    {
+      "src": "https://www.feethedeveloper.com/_next/image?url=%2Fbrand%2Fftd-cta-system.webp&w=3840&q=75",
+      "alt": "",
+      "w": 557,
+      "h": 313
+    }
+  ],
+  "videos": [],
+  "og_image": "https://feethedeveloper.com/brand/ftd-logo.svg",
+  "favicons": [],
+  "header_svgs": [],
+  "network_media": [
+    "https://www.feethedeveloper.com/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+  ]
+}

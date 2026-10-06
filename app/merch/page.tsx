@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { MerchCard } from '@/components/MerchCard';
+import { MerchModelHero } from '@/components/MerchModelHero';
 import {
+  merchModelShots,
   merchProducts,
   resolveCheckoutLinks,
   shippingRateUsd,
@@ -33,15 +35,15 @@ const checkoutLinks: Record<string, MerchCheckoutLinks> = Object.fromEntries(
 export default function MerchPage() {
   return (
     <main id="main-content" className="min-h-screen pb-24">
-      <section className="shell grid gap-10 py-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:py-24">
+      <section className="shell grid gap-10 py-16 lg:grid-cols-[1fr_0.85fr] lg:items-center lg:py-24">
         <div>
           <p className="status-chip">Fee The Developer / Merch line</p>
           <h1 className="mt-6 max-w-xl text-5xl font-extrabold leading-[1.04] tracking-tight text-white sm:text-6xl">
             Wear the <span className="ftd-gradient-text">build.</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-slate-300">
-            The Fee The Developer line, led by the white front-to-back hoodie.
-            Build. Automate. Create. Scale.
+            The Fee The Developer line, led by the front-to-back hoodie in all
+            five colorways. Build. Automate. Create. Scale.
           </p>
           <a
             href="#collection"
@@ -49,31 +51,31 @@ export default function MerchPage() {
           >
             Explore the collection
           </a>
+
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:max-w-md sm:gap-4">
+            <figure className="overflow-hidden rounded-2xl bg-[#e8e8e8]">
+              <Image
+                src="/merch/white-hoodie-front.png"
+                alt="White Fee The Developer hoodie, front view with colorful wordmark"
+                width={1536}
+                height={864}
+                className="h-full w-full object-cover"
+              />
+              <figcaption className="sr-only">White hoodie front</figcaption>
+            </figure>
+            <figure className="overflow-hidden rounded-2xl bg-[#e8e8e8]">
+              <Image
+                src="/merch/white-hoodie-back.png"
+                alt="White Fee The Developer hoodie, back view with globe and Autonomy Has Levels artwork"
+                width={1536}
+                height={864}
+                className="h-full w-full object-cover"
+              />
+              <figcaption className="sr-only">White hoodie back</figcaption>
+            </figure>
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:gap-5">
-          <figure className="overflow-hidden rounded-3xl bg-[#e8e8e8]">
-            <Image
-              src="/merch/white-hoodie-front.png"
-              alt="White Fee The Developer hoodie, front view with colorful wordmark"
-              width={1536}
-              height={864}
-              priority
-              className="h-full w-full object-cover"
-            />
-            <figcaption className="sr-only">White hoodie front</figcaption>
-          </figure>
-          <figure className="overflow-hidden rounded-3xl bg-[#e8e8e8]">
-            <Image
-              src="/merch/white-hoodie-back.png"
-              alt="White Fee The Developer hoodie, back view with globe and Autonomy Has Levels artwork"
-              width={1536}
-              height={864}
-              priority
-              className="h-full w-full object-cover"
-            />
-            <figcaption className="sr-only">White hoodie back</figcaption>
-          </figure>
-        </div>
+        <MerchModelHero shots={merchModelShots} />
       </section>
 
       <section id="collection" className="shell scroll-mt-10">
