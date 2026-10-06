@@ -16,3 +16,7 @@ cloudflare-env.d.ts
 .env.*.local
 *.tsbuildinfo
 .vercel
+
+# motion-kit film projects (renders, wavs, local playwright)
+videos/
+*.wav

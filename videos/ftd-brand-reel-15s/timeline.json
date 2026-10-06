@@ -1,0 +1,86 @@
+{
+  "note": "Single source of truth for picture + sound. Everything is in BEATS on the measured grid (beats.json). film.js reads marks via data.js; sync.mjs turns sfx events into cues.json; music.py reads music.sections.",
+  "title": "Fee The Developer — Build. Automate. Create. Scale.",
+  "duration": 15,
+  "fps": 60,
+  "bpm": 120,
+  "formats": ["16x9", "9x16"],
+  "music": {
+    "source": "synth",
+    "chords": ["Am", "F", "C", "G"],
+    "sections": [
+      { "at": "hook", "kind": "intro" },
+      { "at": "site", "kind": "full" },
+      { "at": "systems", "kind": "build" },
+      { "at": "gap", "kind": "gap" },
+      { "at": "end", "kind": "drop" }
+    ],
+    "accents": ["end"]
+  },
+  "mix": { "music": 0, "sfx": -3, "vo": 0, "duck": true },
+  "voiceover": null,
+
+  "marks": {
+    "hook": 0,
+    "w_automate": 1,
+    "w_create": 2,
+    "w_scale": 3,
+
+    "site": 4,
+    "chip": 5,
+    "navline": 6,
+    "hero_card": 7.5,
+
+    "systems": 10,
+    "sys_a": 10.5,
+    "sys_b": 12,
+    "sys_c": 13.5,
+
+    "promise": 16,
+    "promise_b": 18,
+
+    "build": 20,
+    "build_b": 22,
+    "gap": 25,
+
+    "end": 26,
+    "cta": 27,
+    "done": 30
+  },
+
+  "sfx": [
+    { "at": "hook", "type": "thump", "gain": 0.85, "what": "BUILD. already landed on frame 0" },
+    { "at": "w_automate", "type": "pop", "gain": 0.6, "what": "AUTOMATE. rises (accent word)" },
+    { "at": "w_create", "type": "pop", "gain": 0.55, "what": "CREATE. rises" },
+    { "at": "w_scale", "type": "pop", "gain": 0.6, "what": "SCALE. rises" },
+
+    { "at": "site", "type": "whoosh", "gain": 0.75, "what": "site panel rises and covers the headline" },
+    { "at": "chip", "type": "click", "gain": 0.5, "what": "veteran-owned chip snaps in" },
+    { "at": "navline", "type": "click", "gain": 0.45, "what": "nav rule wipes across" },
+    { "at": "hero_card", "type": "whoosh", "gain": 0.5, "what": "founder card settles out of perspective" },
+
+    { "at": "systems", "type": "whoosh", "gain": 0.7, "what": "wipe covers the cut to the systems row" },
+    { "at": "sys_a", "type": "click", "gain": 0.7, "what": "indicator lands on card A" },
+    { "at": "sys_b", "type": "click", "gain": 0.7, "what": "indicator moves to card B" },
+    { "at": "sys_c", "type": "click", "gain": 0.7, "what": "indicator moves to card C" },
+
+    { "at": "promise", "type": "whoosh", "gain": 0.6, "what": "cards collapse into the promise line" },
+    { "at": "promise_b", "type": "pop", "gain": 0.5, "what": "second phrase lands" },
+
+    { "at": "build", "type": "whoosh", "gain": 0.65, "what": "push past camera into the build" },
+    { "at": 20, "to": 24, "every": 0.5, "type": "tick", "gain": 0.3, "what": "grid accelerating under the build" },
+    { "at": "gap", "type": "riser", "gain": 0.65, "what": "riser through the gap, peaks on the logo" },
+
+    { "at": "end", "type": "thump", "gain": 0.95, "what": "logo lands on the downbeat" },
+    { "at": "cta", "type": "pop", "gain": 0.55, "what": "feethedeveloper.com" }
+  ],
+
+  "brand": {
+    "product": "Fee The Developer",
+    "url": "https://www.feethedeveloper.com",
+    "promise": "Veteran-owned software: custom builds, automation and AI integration.",
+    "hook": "Build. Automate. Create. Scale.",
+    "cta": "feethedeveloper.com",
+    "must_avoid": "other companies' logos, colours or client data (Hutchrok, Runner Gang, Fee The Producer, Runner Sports and clients each have their own preset); unverified numbers, testimonials or results; credentials or private dashboards in screenshots"
+  }
+}

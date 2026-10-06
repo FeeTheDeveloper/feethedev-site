@@ -1,0 +1,62 @@
+{
+  "from": "fee-the-developer",
+  "name": "Fee The Developer - brand reels",
+  "brand": {
+    "product": "Fee The Developer",
+    "url": "https://www.feethedeveloper.com",
+    "promise": "Veteran-owned software: custom builds, automation and AI integration.",
+    "hook": "",
+    "cta": "",
+    "audience": "",
+    "reference": "",
+    "must_show": "",
+    "must_avoid": "other companies' logos, colours or client data (Hutchrok, Runner Gang, Fee The Producer, Runner Sports and clients each have their own preset); unverified numbers, testimonials or results; credentials or private dashboards in screenshots"
+  },
+  "colors": {
+    "bg": "",
+    "ink": "",
+    "ink2": "",
+    "accent": "",
+    "card": ""
+  },
+  "fonts": {
+    "display": {
+      "file": "",
+      "family": "",
+      "weight": null,
+      "tracking": ""
+    },
+    "ui": {
+      "file": "",
+      "family": ""
+    }
+  },
+  "timeline": {
+    "duration": 15,
+    "fps": 60,
+    "bpm": 120,
+    "formats": [
+      "16x9",
+      "9x16"
+    ],
+    "music": {
+      "source": "synth",
+      "chords": [],
+      "seed": null
+    }
+  },
+  "voiceover": {
+    "provider": "none",
+    "voice": "",
+    "style": ""
+  },
+  "notes": [
+    "One company per film. Nothing from another Hutchrok network company or client appears in an FTD reel.",
+    "Colours, fonts and UI are measured from feethedeveloper.com or supplied by King Fee. Never guessed.",
+    "On-screen numbers, client names and results must be real and supplied. No placeholder proof.",
+    "Check every captured screenshot for credentials, emails and client records before it enters the film.",
+    "Shotlist needs King Fee's explicit OK before any build. Publishing is his call, not part of the render.",
+    "Everything that must be read passes the 360 px-wide phone check in every format.",
+    "Parallel sessions: always scaffold into a new, distinctive videos/<slug>."
+  ]
+}
