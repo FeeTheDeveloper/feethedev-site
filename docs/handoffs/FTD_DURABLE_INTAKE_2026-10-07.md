@@ -46,10 +46,19 @@ How storage works:
 - Returns 404 for `/dashboard(.*)` when Clerk is not configured.
 - `app/dashboard/page.tsx` already called `notFound()` in that case, so this adds a second layer.
 
-## Activation (not done; needs the owner)
+## Production schema reconciliation (2026-10-07)
 
-1. Apply the migration to the production Supabase project.
-2. Set the Worker secret: `wrangler secret put SUPABASE_SECRET_KEY`.
+`public.project_intakes` already existed in production. It was created by the remote-only migration `site_operational_tables` (2026-09-16), which is not in this repo, with a `budget_range` column and no idempotency key. The original `create table` migration would have failed, and the route's inserts would have been rejected. Fix:
+
+- The migration is now additive. It adds `submission_id` (unique), `tenant_id`, `source`, `status`, `user_agent` and `updated_at`, plus constraints and indexes, and revokes anon/authenticated access.
+- King Fee approved it, and it was applied to Supabase project `wjedqgrzuvkhnqctsmnd` on 2026-10-07. It is recorded in the remote history as `create_project_intakes`.
+- The route now writes `budget_range`.
+- Verified in production inside a rolled-back transaction: a duplicate `submission_id` stores one row with tenant `fee-the-developer` and status `received`.
+
+## Activation (remaining)
+
+1. ~~Apply the migration to the production Supabase project.~~ Done 2026-10-07.
+2. Set `SUPABASE_SECRET_KEY` on the production host: a Cloudflare Worker secret (`wrangler secret put SUPABASE_SECRET_KEY`) and/or a Vercel project environment variable, depending on which host serves feethedeveloper.com.
 3. Confirm `NEXT_PUBLIC_SUPABASE_URL` is set for the build.
 4. Deploy. Production deploys need Level C approval.
 5. Submit one test intake and confirm the row.

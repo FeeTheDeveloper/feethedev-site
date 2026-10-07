@@ -77,7 +77,7 @@ export async function POST(request: Request) {
           email: intake.email,
           company: intake.company,
           service: intake.service,
-          budget: intake.budget,
+          budget_range: intake.budget,
           timeline: intake.timeline,
           goals: intake.goals,
           source: 'feethedev-site:/start',
