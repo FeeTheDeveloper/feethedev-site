@@ -24,7 +24,12 @@ const withClerk = hasClerkKeys
 export default function middleware(
   ...args: Parameters<NonNullable<typeof withClerk>>
 ) {
-  return withClerk ? withClerk(...args) : NextResponse.next();
+  if (withClerk) return withClerk(...args);
+  // Without Clerk the dashboard cannot authenticate anyone: fail closed.
+  if (isProtectedRoute(args[0])) {
+    return new NextResponse('Not found', { status: 404 });
+  }
+  return NextResponse.next();
 }
 
 export const config = {

@@ -6,31 +6,90 @@ import { siteConfig } from '@/lib/site-config';
 const fieldClass =
   'w-full rounded-2xl border border-white/10 bg-black/35 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-greenglow/60 focus:ring-2 focus:ring-greenglow/20';
 
-export function ProjectIntakeForm() {
-  const [state, setState] = useState<'idle' | 'email-opened'>('idle');
+type IntakeState = 'idle' | 'sending' | 'received' | 'email-opened';
 
-  function submit(event: FormEvent<HTMLFormElement>) {
+function openEmailFallback(data: FormData) {
+  const subject = encodeURIComponent(
+    `Project intake: ${data.get('service')} — ${data.get('name')}`,
+  );
+  const body = encodeURIComponent(
+    [
+      `Name: ${data.get('name')}`,
+      `Email: ${data.get('email')}`,
+      `Company: ${data.get('company') || 'Not provided'}`,
+      `Service: ${data.get('service')}`,
+      `Investment range: ${data.get('budget')}`,
+      `Timeline: ${data.get('timeline') || 'Not provided'}`,
+      '',
+      'Project goals:',
+      String(data.get('goals') ?? ''),
+    ].join('\n'),
+  );
+  window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+}
+
+export function ProjectIntakeForm() {
+  const [state, setState] = useState<IntakeState>('idle');
+  // One id per form visit, so a retried or double-clicked submit is stored once.
+  const [submissionId] = useState(() => crypto.randomUUID());
+
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const form = event.currentTarget;
-    const data = new FormData(form);
-    const subject = encodeURIComponent(
-      `Project intake: ${data.get('service')} — ${data.get('name')}`,
-    );
-    const body = encodeURIComponent(
-      [
-        `Name: ${data.get('name')}`,
-        `Email: ${data.get('email')}`,
-        `Company: ${data.get('company') || 'Not provided'}`,
-        `Service: ${data.get('service')}`,
-        `Investment range: ${data.get('budget')}`,
-        `Timeline: ${data.get('timeline') || 'Not provided'}`,
-        '',
-        'Project goals:',
-        String(data.get('goals') ?? ''),
-      ].join('\n'),
-    );
-    window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+    if (state === 'sending') return;
+    const data = new FormData(event.currentTarget);
+    setState('sending');
+    try {
+      const response = await fetch('/api/intake', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...Object.fromEntries(data.entries()),
+          submissionId,
+        }),
+      });
+      if (response.ok) {
+        setState('received');
+        return;
+      }
+    } catch {
+      // Network failure: fall through to the email fallback.
+    }
+    openEmailFallback(data);
     setState('email-opened');
+  }
+
+  if (state === 'received') {
+    return (
+      <div
+        id="next-step"
+        className="space-y-6 rounded-[2rem] border border-greenglow/30 bg-greenglow/10 p-7"
+        role="status"
+      >
+        <h2 className="text-3xl font-semibold text-white">
+          Your project request is in.
+        </h2>
+        <p className="text-slate-200">
+          We received your details and will reply from {siteConfig.email}.
+          Reference: <span className="font-mono text-sm">{submissionId}</span>
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <a
+            className="rounded-full bg-white px-5 py-3 font-semibold text-black"
+            href={siteConfig.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a strategy call
+          </a>
+          <a
+            className="rounded-full border border-white/20 px-5 py-3 font-semibold text-white"
+            href={`tel:${siteConfig.phone}`}
+          >
+            Call {siteConfig.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    );
   }
 
   if (state === 'email-opened') {
@@ -159,13 +218,16 @@ export function ProjectIntakeForm() {
       <button
         className="rounded-full bg-gradient-to-r from-redglow via-white to-greenglow p-[1px] disabled:opacity-60"
         type="submit"
+        disabled={state === 'sending'}
       >
         <span className="block rounded-full bg-black px-6 py-4 font-semibold uppercase tracking-[0.16em] text-white">
-          Submit Build Request
+          {state === 'sending' ? 'Sending…' : 'Submit Build Request'}
         </span>
       </button>
       <p id="form-status" className="sr-only" aria-live="polite">
-        Complete the project intake form.
+        {state === 'sending'
+          ? 'Sending your project request.'
+          : 'Complete the project intake form.'}
       </p>
     </form>
   );
