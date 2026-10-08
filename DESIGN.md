@@ -62,7 +62,7 @@ Public pages use the shared 80rem shell and generous section rhythm. The dashboa
 
 ## Elevation & Depth
 
-Hierarchy comes from tonal panels, one-pixel translucent borders, limited blur, and soft shadows. Interactive cards may lift slightly; operational dashboard cards do not scale so scanning remains stable.
+Hierarchy comes from tonal panels, one-pixel translucent borders, limited blur, and soft shadows. Interactive cards may lift slightly; operational dashboard cards do not scale so scanning remains stable. Public media and portfolio cards may add a pointer-driven perspective tilt (`components/Tilt3D.tsx`, at most about 6°) with a soft following glare; it is limited to fine-pointer devices, never applies to dashboard surfaces, and is removed under reduced motion.
 
 ## Shapes
 
@@ -92,7 +92,7 @@ Icons are simple inline SVG strokes at 20–24px. Text labels remain present for
 
 ### Motion
 
-Motion suggests signal flow and state change. The public homepage uses one continuous signal-current composition: a deliberate hero entrance, a scroll-progress rail, scrubbed statement text, and scale/fade media transitions. GSAP owns this page-level choreography; routine component transitions remain 180–700ms with custom ease-out curves. Ambient audio is optional, starts only after a visitor activates the labeled control, and never autoplays. Routine dashboard interaction remains quiet. Reduced-motion users receive static states.
+Motion suggests signal flow and state change. The public homepage uses one continuous signal-current composition: a deliberate hero entrance, a scroll-progress rail, scrubbed statement text, and scale/fade media transitions. GSAP owns this page-level choreography; routine component transitions remain 180–700ms with custom ease-out curves. The homepage hero adds a decorative 3D signal field (`components/three/`): a brand-colored node network with packets travelling along its links, slow pointer parallax, and a scroll-linked drift. It is plain three.js loaded after hydration, stays quiet behind the headline via a contrast mask, pauses off-screen, and is not rendered for reduced-motion visitors or browsers without WebGL. Ambient audio is optional, starts only after a visitor activates the labeled control, and never autoplays. Routine dashboard interaction remains quiet. Reduced-motion users receive static states.
 
 ### Content and data visualization
 

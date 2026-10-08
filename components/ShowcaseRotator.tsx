@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Tilt3D } from '@/components/Tilt3D';
 import { Body, H2, Section } from '@/components/ui';
 import { portfolioItems } from '@/lib/portfolio';
 
@@ -34,43 +35,44 @@ export function ShowcaseRotator() {
           aria-label="Showcase topics"
         >
           {items.map((item, itemIndex) => (
-            <button
-              key={item.id}
-              type="button"
-              aria-pressed={index === itemIndex}
-              aria-controls="showcase-detail"
-              onClick={() => setIndex(itemIndex)}
-              className={`group relative isolate min-h-52 overflow-hidden rounded-2xl border p-5 text-left transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-greenglow motion-reduce:transition-none sm:min-h-64 ${
-                index === itemIndex
-                  ? 'border-greenglow/70 shadow-[0_16px_55px_rgba(20,232,180,0.12)]'
-                  : 'border-white/15 hover:-translate-y-1 hover:border-white/40 motion-reduce:hover:translate-y-0'
-              }`}
-            >
-              <Image
-                src={item.image}
-                alt=""
-                fill
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="-z-20 object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
-              />
-              <span className="absolute inset-0 -z-10 bg-gradient-to-t from-[#05070b] via-[#05070b]/50 to-[#05070b]/10" />
-              <span className="flex h-full flex-col justify-between gap-8">
-                <span className="w-fit rounded-full border border-white/25 bg-black/45 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm">
-                  {item.category}
-                </span>
-                <span className="flex items-end justify-between gap-4">
-                  <span className="text-xl font-semibold leading-tight text-white sm:text-2xl">
-                    {item.name}
+            <Tilt3D key={item.id} max={6} className="rounded-2xl">
+              <button
+                type="button"
+                aria-pressed={index === itemIndex}
+                aria-controls="showcase-detail"
+                onClick={() => setIndex(itemIndex)}
+                className={`group relative isolate h-full min-h-52 w-full overflow-hidden rounded-2xl border p-5 text-left transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-greenglow motion-reduce:transition-none sm:min-h-64 ${
+                  index === itemIndex
+                    ? 'border-greenglow/70 shadow-[0_16px_55px_rgba(20,232,180,0.12)]'
+                    : 'border-white/15 hover:-translate-y-1 hover:border-white/40 motion-reduce:hover:translate-y-0'
+                }`}
+              >
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, 33vw"
+                  className="-z-20 object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                <span className="absolute inset-0 -z-10 bg-gradient-to-t from-[#05070b] via-[#05070b]/50 to-[#05070b]/10" />
+                <span className="flex h-full flex-col justify-between gap-8">
+                  <span className="w-fit rounded-full border border-white/25 bg-black/45 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm">
+                    {item.category}
                   </span>
-                  <span
-                    className="shrink-0 text-2xl text-greenglow"
-                    aria-hidden="true"
-                  >
-                    ↗
+                  <span className="flex items-end justify-between gap-4">
+                    <span className="text-xl font-semibold leading-tight text-white sm:text-2xl">
+                      {item.name}
+                    </span>
+                    <span
+                      className="shrink-0 text-2xl text-greenglow"
+                      aria-hidden="true"
+                    >
+                      ↗
+                    </span>
                   </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </Tilt3D>
           ))}
         </div>
 

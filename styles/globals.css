@@ -342,6 +342,69 @@
   .motion-marquee {
     animation: motion-marquee 28s linear infinite;
   }
+
+  /* Hero 3D signal field: quiet the area behind the headline so type keeps
+     full contrast, and fade the field out toward the section edges. */
+  .signal-field-mask {
+    -webkit-mask-image:
+      radial-gradient(
+        ellipse 40% 20% at 50% 34%,
+        rgba(0, 0, 0, 0.22) 0%,
+        rgba(0, 0, 0, 0.22) 45%,
+        #000 100%
+      ),
+      linear-gradient(to bottom, #000 0%, #000 62%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      radial-gradient(
+        ellipse 40% 20% at 50% 34%,
+        rgba(0, 0, 0, 0.22) 0%,
+        rgba(0, 0, 0, 0.22) 45%,
+        #000 100%
+      ),
+      linear-gradient(to bottom, #000 0%, #000 62%, transparent 100%);
+    mask-composite: intersect;
+  }
+
+  /* Pointer-driven depth tilt (components/Tilt3D.tsx). */
+  .tilt-3d {
+    perspective: 1400px;
+  }
+
+  .tilt-3d__inner {
+    position: relative;
+    height: 100%;
+    border-radius: inherit;
+    transform: rotateX(var(--tilt-rx, 0deg)) rotateY(var(--tilt-ry, 0deg));
+    transform-style: preserve-3d;
+    transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .tilt-3d[data-tilting] .tilt-3d__inner {
+    transition-duration: 160ms;
+    will-change: transform;
+  }
+
+  .tilt-3d__glare {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    background: radial-gradient(
+      circle at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.12),
+      rgba(37, 120, 255, 0.05) 32%,
+      transparent 58%
+    );
+    mix-blend-mode: screen;
+    transition: opacity 400ms ease-out;
+  }
+
+  .tilt-3d[data-tilting] .tilt-3d__glare {
+    opacity: 1;
+  }
 }
 
 @media (forced-colors: active) {
@@ -482,6 +545,14 @@
 
   .motion-marquee {
     transform: none !important;
+  }
+
+  .tilt-3d__inner {
+    transform: none !important;
+  }
+
+  .tilt-3d__glare {
+    display: none;
   }
 }
 
