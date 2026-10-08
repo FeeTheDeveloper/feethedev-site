@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { Button, Body, H1, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
 import { SoundscapeToggle } from '@/components/SoundscapeToggle';
+import { Tilt3D } from '@/components/Tilt3D';
+import { SignalFieldLayer } from '@/components/three/SignalFieldLayer';
 import {
   AWSIcon,
   DockerIcon,
@@ -63,6 +65,7 @@ export function Hero() {
           className="object-cover opacity-25 mix-blend-screen"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_16%,rgba(37,120,255,0.2),transparent_34%),linear-gradient(180deg,rgba(5,7,11,0.6),#05070b_78%)]" />
+        <SignalFieldLayer className="signal-field-mask absolute inset-x-0 top-0 h-[100svh] min-h-[38rem]" />
         <div className="absolute left-[-9rem] top-24 h-80 w-80 rounded-full bg-electric/15 blur-[110px]" />
         <div className="absolute right-[-8rem] top-32 h-72 w-72 rounded-full bg-greenglow/10 blur-[100px]" />
       </div>
@@ -122,33 +125,35 @@ export function Hero() {
           data-motion-hero-stage
           className="relative mt-14 w-full max-w-6xl sm:mt-16"
         >
-          <div className="rounded-[2rem] bg-white/[0.055] p-1.5 ring-1 ring-white/10 sm:rounded-[2.5rem] sm:p-2">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[calc(2rem-0.375rem)] bg-panel shadow-[inset_0_1px_1px_rgba(255,255,255,0.13),0_36px_140px_rgba(0,0,0,0.58)] sm:aspect-[16/9] sm:rounded-[calc(2.5rem-0.5rem)]">
-              <Image
-                src="/brand/ftd-founder-hero.webp"
-                alt="Illustrated portrait of Fee The Developer in a white hoodie against a blue developer workspace"
-                fill
-                priority
-                sizes="(max-width: 1280px) 100vw, 1152px"
-                className="object-cover object-center sm:object-[center_38%]"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,11,0.08)_35%,rgba(5,7,11,0.94)_100%)]" />
-              <div className="absolute inset-x-0 bottom-0 flex flex-col items-start gap-3 p-6 text-left sm:flex-row sm:items-end sm:justify-between sm:p-9">
-                <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-greenglow">
-                    Web · AI · automation · presence
-                  </p>
-                  <p className="mt-3 max-w-xl text-2xl font-semibold leading-tight text-white sm:text-4xl">
-                    From first impression to working system.
+          <Tilt3D max={3.5} className="rounded-[2rem] sm:rounded-[2.5rem]">
+            <div className="rounded-[2rem] bg-white/[0.055] p-1.5 ring-1 ring-white/10 sm:rounded-[2.5rem] sm:p-2">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[calc(2rem-0.375rem)] bg-panel shadow-[inset_0_1px_1px_rgba(255,255,255,0.13),0_36px_140px_rgba(0,0,0,0.58)] sm:aspect-[16/9] sm:rounded-[calc(2.5rem-0.5rem)]">
+                <Image
+                  src="/brand/ftd-founder-hero.webp"
+                  alt="Illustrated portrait of Fee The Developer in a white hoodie against a blue developer workspace"
+                  fill
+                  priority
+                  sizes="(max-width: 1280px) 100vw, 1152px"
+                  className="object-cover object-center sm:object-[center_38%]"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,7,11,0.08)_35%,rgba(5,7,11,0.94)_100%)]" />
+                <div className="absolute inset-x-0 bottom-0 flex flex-col items-start gap-3 p-6 text-left sm:flex-row sm:items-end sm:justify-between sm:p-9">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-greenglow">
+                      Web · AI · automation · presence
+                    </p>
+                    <p className="mt-3 max-w-xl text-2xl font-semibold leading-tight text-white sm:text-4xl">
+                      From first impression to working system.
+                    </p>
+                  </div>
+                  <p className="max-w-xs text-sm leading-6 text-slate-300 sm:text-right">
+                    Technology execution with a complete digital business
+                    presence.
                   </p>
                 </div>
-                <p className="max-w-xs text-sm leading-6 text-slate-300 sm:text-right">
-                  Technology execution with a complete digital business
-                  presence.
-                </p>
               </div>
             </div>
-          </div>
+          </Tilt3D>
 
           {devTools.map(({ label, Icon, className }) => (
             <div
