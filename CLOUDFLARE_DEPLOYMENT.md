@@ -93,17 +93,49 @@ is applied to that project.
 
 ## Domain cutover
 
-`feethedeveloper.com` is already on Cloudflare nameservers but its records still
-point at Vercel (apex `216.150.x`, `www` → `vercel-dns`). The Worker is verified
-on `*.workers.dev` only. To move the live site:
+Cut over on 2026-10-14 to Worker version
+`e562c976-83f1-473f-a524-a669a2c7d994` at 100% traffic. The staged code upload
+was version `df11e695-8840-4d58-b1b4-a68cf7aabd82`; the second version adds the
+seven required Worker secrets without briefly serving the application without
+them.
 
-1. Attach `feethedeveloper.com` and `www` as Worker custom domains.
-2. Let Cloudflare replace the Vercel apex/`www` records.
-3. Keep DNS proxied.
+The two pre-cutover DNS records were unproxied CNAMEs:
+
+- `feethedeveloper.com` → `c2ee0eef8c97ab4f.vercel-dns-016.com`
+- `www.feethedeveloper.com` → `c2ee0eef8c97ab4f.vercel-dns-016.com`
+
+Cloudflare now owns both hostnames as Worker custom domains. The account API
+reports proxied placeholder records for both and public resolver `1.1.1.1`
+returns Cloudflare anycast addresses. Google mail and domain-verification
+records were not changed.
+
+Post-cutover checks:
+
+- `/`, `/work`, `/merch`, `/sign-in`, `/start`, `/robots.txt`, and
+  `/sitemap.xml` return `200` from the Cloudflare edge.
+- `/dashboard` returns `307` to `/sign-in?redirect_url=%2Fdashboard`, and the
+  Clerk sign-in widget loads in Chrome.
+- `/work` visibly renders the 10-project catalog; `/merch` renders all four
+  Stripe checkout links.
+- The browser console showed no warnings or errors on the checked Fee The
+  Developer routes.
+- `/api/supabase/health` returns `503` because `public.service_catalog` has not
+  been created in Supabase. The response confirms that the publishable key,
+  secret key, project reference, and JWKS URL are present; this optional catalog
+  migration remains follow-up work.
 
 Before cutover, set a real `NEXT_PUBLIC_DEPOSIT_URL`. `.env.local` holds a
 placeholder, and `lib/site-config.ts` only accepts a `buy.stripe.com` host, so
 the deposit button currently falls back to `/start#next-step`.
+
+## Recovery
+
+The Vercel project has been removed, so restoring the two old CNAMEs is not a
+working rollback. Recover by deploying a corrected Worker version and moving
+100% traffic to it with `wrangler versions deploy`. Keep version
+`e562c976-83f1-473f-a524-a669a2c7d994` available as the first known-good
+Cloudflare release. Removing the custom domains without a replacement would
+turn the public site back into an outage.
 
 ## Security and operations
 
