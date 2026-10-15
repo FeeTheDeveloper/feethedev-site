@@ -39,9 +39,9 @@ node scripts/set-cloudflare-secrets.mjs --apply
 That covers `CLERK_SECRET_KEY`, `SUPABASE_SECRET_KEY`, `STRIPE_SECRET_KEY`, and
 the four `MERCH_*_STRIPE_LINK` maps.
 
-`CLERK_SECRET_KEY` is load-bearing: `middleware.ts` only enforces `/dashboard`
-protection when both Clerk keys are present, and silently serves the route
-unprotected when they are not.
+`CLERK_SECRET_KEY` is load-bearing. `middleware.ts` enforces `/dashboard`
+protection when both Clerk keys are present and fails closed with `404` when
+they are not.
 
 ## Build
 

@@ -6,6 +6,11 @@
   "compatibility_date": "2026-08-24",
   "compatibility_flags": ["nodejs_compat"],
   "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    { "pattern": "www.feethedeveloper.com", "custom_domain": true },
+    { "pattern": "feethedeveloper.com", "custom_domain": true },
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS",

@@ -75,6 +75,7 @@ if (!apply) {
   process.exit(0);
 }
 
+let failed = false;
 for (const name of SECRETS) {
   process.stdout.write(`  ${name.padEnd(26)} `);
   try {
@@ -85,7 +86,12 @@ for (const name of SECRETS) {
     });
     console.log('set');
   } catch (error) {
+    failed = true;
     const detail = `${error.stderr ?? ''}${error.stdout ?? ''}`.trim();
     console.log(`FAILED${detail ? `: ${detail.split('\n').pop()}` : ''}`);
   }
+}
+
+if (failed) {
+  fail('one or more Worker secrets were not set');
 }
