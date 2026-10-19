@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "fee-the-developer",
+  "account_id": "62738e2bb751720449f1cd904f6d175f",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-08-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": true,
+  "routes": [
+    { "pattern": "www.feethedeveloper.com", "custom_domain": true },
+    { "pattern": "feethedeveloper.com", "custom_domain": true },
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+  // Public runtime config. Publishable keys and URLs only - never secrets.
+  // Secrets (CLERK_SECRET_KEY, SUPABASE_SECRET_KEY, STRIPE_SECRET_KEY,
+  // MERCH_*_STRIPE_LINK) are set with `wrangler secret put` and are not
+  // stored in this file.
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://feethedeveloper.com",
+    "NEXT_PUBLIC_BOOKING_URL": "https://calendar.app.google/TAWDaUTtgBJA5VgSA",
+    "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsuZmVldGhlZGV2ZWxvcGVyLmNvbSQ",
+    "NEXT_PUBLIC_CLERK_SIGN_IN_URL": "/sign-in",
+    "NEXT_PUBLIC_CLERK_SIGN_UP_URL": "/sign-up",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://gbsqtusozqvfxaojfflt.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_Ipmg5gr4zsRrNcXPzqzjTQ_XzMsRnCi",
+    "SUPABASE_URL": "https://gbsqtusozqvfxaojfflt.supabase.co",
+    "SUPABASE_PUBLISHABLE_KEY": "sb_publishable_Ipmg5gr4zsRrNcXPzqzjTQ_XzMsRnCi",
+    "SUPABASE_JWKS_URL": "https://gbsqtusozqvfxaojfflt.supabase.co/auth/v1/.well-known/jwks.json",
+  },
+}
