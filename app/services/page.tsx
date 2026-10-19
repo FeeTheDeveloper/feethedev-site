@@ -97,12 +97,6 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-3">
             <CtaLink href="/start">Start a project</CtaLink>
             <Link
-              href="/work"
-              className="inline-flex items-center rounded-full border border-greenglow/25 bg-greenglow/[0.08] px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white hover:bg-greenglow/[0.14] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/50"
-            >
-              See selected work
-            </Link>
-            <Link
               href="/pricing"
               className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/50"
             >

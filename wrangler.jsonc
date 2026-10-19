@@ -25,7 +25,7 @@
   // stored in this file.
   "vars": {
     "NEXT_PUBLIC_SITE_URL": "https://feethedeveloper.com",
-    "NEXT_PUBLIC_BOOKING_URL": "https://calendar.app.google/TAWDaUTtgBJA5VgSA",
+    "NEXT_PUBLIC_BOOKING_URL": "https://calendar.app.google/rEzR9K3wUQYivMjn8",
     "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_live_Y2xlcmsuZmVldGhlZGV2ZWxvcGVyLmNvbSQ",
     "NEXT_PUBLIC_CLERK_SIGN_IN_URL": "/sign-in",
     "NEXT_PUBLIC_CLERK_SIGN_UP_URL": "/sign-up",

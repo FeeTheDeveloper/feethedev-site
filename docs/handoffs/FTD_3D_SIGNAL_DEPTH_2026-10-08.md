@@ -15,7 +15,7 @@ Add 3D enhancement to the public site without breaking the signal-system design 
 | --------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 3D signal field | `components/three/SignalField.tsx`                            | three.js node network in brand tokens (electric, cyan, green, rare orange); packets travel node-to-node along links; pointer parallax; scroll drift. Deterministic layout. |
 | Layer gate      | `components/three/SignalFieldLayer.tsx`                       | Lazy-loads the scene after hydration; skipped for reduced motion or no WebGL; pauses when off-screen or the tab is hidden; lighter density under 640px.                    |
-| Depth tilt      | `components/Tilt3D.tsx` + `.tilt-3d*` in `styles/globals.css` | Perspective tilt and glare on the hero stage, homepage showcase cards, and `/work` portfolio cards. Mouse-only; reduced motion disables it.                                |
+| Depth tilt      | `components/Tilt3D.tsx` + `.tilt-3d*` in `styles/globals.css` | Perspective tilt and glare on the hero stage. Mouse-only; reduced motion disables it.                                                                                      |
 | Headline mask   | `.signal-field-mask` in `styles/globals.css`                  | Dims the field behind the hero headline so type keeps full contrast.                                                                                                       |
 
 ## Decision log

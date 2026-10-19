@@ -16,10 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${siteConfig.siteUrl}/work`,
+      url: `${siteConfig.siteUrl}/credentials`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.8,
     },
     {
       url: `${siteConfig.siteUrl}/pricing`,

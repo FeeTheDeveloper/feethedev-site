@@ -155,8 +155,8 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             <Link href="/services" className="shrink-0 hover:text-white">
               Services
             </Link>
-            <Link href="/work" className="shrink-0 hover:text-white">
-              Work
+            <Link href="/credentials" className="shrink-0 hover:text-white">
+              Credentials
             </Link>
             <Link href="/pricing" className="shrink-0 hover:text-white">
               Pricing
@@ -256,8 +256,8 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
             <Link href="/services" className="hover:text-white">
               Services
             </Link>
-            <Link href="/work" className="hover:text-white">
-              Work
+            <Link href="/credentials" className="hover:text-white">
+              Credentials
             </Link>
             <Link href="/pricing" className="hover:text-white">
               Pricing

@@ -266,31 +266,6 @@
     );
   }
 
-  .showcase-artifact img {
-    transition:
-      filter 600ms ease,
-      transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .showcase-artifact:hover img {
-    filter: contrast(1.08) saturate(1.12) hue-rotate(-3deg);
-    transform: scale(1.04) rotate(-0.35deg);
-  }
-
-  .showcase-artifact__flare {
-    position: absolute;
-    inset: -40% -60%;
-    pointer-events: none;
-    background: linear-gradient(
-      105deg,
-      transparent 43%,
-      rgb(34 211 238 / 0.28) 50%,
-      transparent 57%
-    );
-    mix-blend-mode: screen;
-    animation: showcase-flare 6.5s ease-in-out infinite;
-  }
-
   .signal-rail li {
     @apply relative pl-8;
   }
@@ -468,22 +443,6 @@
   }
   100% {
     transform: translateY(580%);
-    opacity: 0;
-  }
-}
-
-@keyframes showcase-flare {
-  0%,
-  60% {
-    transform: translateX(-35%) skewX(-12deg);
-    opacity: 0;
-  }
-  72% {
-    opacity: 0.7;
-  }
-  88%,
-  100% {
-    transform: translateX(35%) skewX(-12deg);
     opacity: 0;
   }
 }

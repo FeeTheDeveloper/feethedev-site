@@ -1,5 +1,5 @@
 const defaultSiteUrl = 'https://feethedeveloper.com';
-const defaultBookingUrl = 'https://calendar.app.google/TAWDaUTtgBJA5VgSA';
+const defaultBookingUrl = 'https://calendar.app.google/rEzR9K3wUQYivMjn8';
 const approvedBookingHosts = new Set([
   'calendar.app.google',
   'calendar.google.com',

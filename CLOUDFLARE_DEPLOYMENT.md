@@ -111,12 +111,11 @@ records were not changed.
 
 Post-cutover checks:
 
-- `/`, `/work`, `/merch`, `/sign-in`, `/start`, `/robots.txt`, and
+- `/`, `/merch`, `/sign-in`, `/start`, `/robots.txt`, and
   `/sitemap.xml` return `200` from the Cloudflare edge.
 - `/dashboard` returns `307` to `/sign-in?redirect_url=%2Fdashboard`, and the
   Clerk sign-in widget loads in Chrome.
-- `/work` visibly renders the 10-project catalog; `/merch` renders all four
-  Stripe checkout links.
+- `/merch` renders all four Stripe checkout links.
 - The browser console showed no warnings or errors on the checked Fee The
   Developer routes.
 - `/api/supabase/health` returns `503` because `public.service_catalog` has not

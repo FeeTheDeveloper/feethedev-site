@@ -6,7 +6,6 @@ import { Hero } from '@/components/Hero';
 import { MotionChapter } from '@/components/MotionChapter';
 import { OwnerSection } from '@/components/OwnerSection';
 import { PremiumMotionExperience } from '@/components/PremiumMotionExperience';
-import { ShowcaseRotator } from '@/components/ShowcaseRotator';
 
 export default function Home() {
   return (
@@ -19,7 +18,6 @@ export default function Home() {
         <BusinessPresenceSection />
         <GoogleProductsSection />
         <BookingSection />
-        <ShowcaseRotator />
         <OwnerSection />
         <CtaSection />
       </PremiumMotionExperience>

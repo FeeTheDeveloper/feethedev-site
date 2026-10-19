@@ -113,30 +113,6 @@ export default function MerchPage() {
           destinations are confirmed before purchase.
         </p>
       </section>
-      <section className="shell mt-16 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:grid-cols-[1fr_1.2fr] sm:items-center sm:p-10">
-        <div className="max-w-sm overflow-hidden rounded-2xl bg-white">
-          <Image
-            src="/merch/black-hoodie-reference.png"
-            alt="Black Fee The Developer hoodie reference design"
-            width={493}
-            height={657}
-            sizes="(max-width: 640px) 100vw, 40vw"
-            className="h-auto w-full"
-          />
-        </div>
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.22em] text-greenglow">
-            Alternate concept
-          </p>
-          <h2 className="mt-3 text-3xl font-bold text-white">
-            The black hoodie reference.
-          </h2>
-          <p className="mt-4 max-w-lg leading-7 text-slate-300">
-            A second graphic direction from the supplied artwork. Ask about
-            availability before ordering.
-          </p>
-        </div>
-      </section>
     </main>
   );
 }

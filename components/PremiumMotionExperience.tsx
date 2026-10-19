@@ -102,9 +102,7 @@ export function PremiumMotionExperience({ children }: { children: ReactNode }) {
         }
 
         gsap.utils
-          .toArray<HTMLElement>(
-            '[data-motion-media], .signal-artwork__frame, .showcase-artifact',
-          )
+          .toArray<HTMLElement>('[data-motion-media], .signal-artwork__frame')
           .forEach((media) => {
             gsap.fromTo(
               media,
