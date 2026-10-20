@@ -1,5 +1,5 @@
 export const SIXERS_SEASON_PROMOTION = {
-  code: 'SIXERS20',
+  code: 'YOBUL',
   percentOff: 20,
   validThrough: 'June 30, 2027',
 } as const;

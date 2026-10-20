@@ -253,7 +253,7 @@ export function ProjectIntakeForm({
           id="promotion-code-help"
           className="block text-xs leading-5 text-slate-400"
         >
-          Enter SIXERS20 if you are a Philadelphia 76ers fan. The code is
+          Enter YOBUL if you are a Philadelphia 76ers fan. The code is
           attached to your quote request.
         </span>
         <span
