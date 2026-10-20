@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PageIntro } from '@/components/PageIntro';
+import { SeasonOffer } from '@/components/SeasonOffer';
 import { Button as CtaLink, Card, Section } from '@/components/ui';
 import { serviceGroups } from '@/lib/catalog';
+import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
     'Explore Fee The Developer services for websites, business presence, software, AI, automation, and integrations.',
-  alternates: { canonical: '/services' },
+  alternates: { canonical: new URL('/services', siteConfig.siteUrl) },
 };
 
 export default function ServicesPage() {
@@ -42,6 +44,10 @@ export default function ServicesPage() {
           </div>
         }
       />
+
+      <Section className="pb-0">
+        <SeasonOffer compact />
+      </Section>
 
       <Section>
         <div className="grid gap-6 lg:grid-cols-3">
@@ -97,7 +103,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-3">
             <CtaLink href="/start">Start a project</CtaLink>
             <Link
-              href="/pricing"
+              href={new URL('/pricing', siteConfig.siteUrl).toString()}
               className="inline-flex items-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white hover:bg-white/[0.07] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/50"
             >
               View pricing

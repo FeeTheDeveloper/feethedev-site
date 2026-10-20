@@ -80,7 +80,9 @@ export async function POST(request: Request) {
           budget_range: intake.budget,
           timeline: intake.timeline,
           goals: intake.goals,
-          source: 'feethedev-site:/start',
+          source: intake.promotionCode
+            ? `feethedev-site:/start?promo=${intake.promotionCode}`
+            : 'feethedev-site:/start',
           user_agent: request.headers.get('user-agent')?.slice(0, 300) ?? null,
         }),
         signal: AbortSignal.timeout(8000),

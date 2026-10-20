@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Body, Button, H2, Section } from '@/components/ui';
-import { siteConfig } from '@/lib/site-config';
+import { Body, H2, Section } from '@/components/ui';
+import { BookingModal } from '@/components/BookingModal';
 
 const bookingSteps = [
   ['01', 'Choose a time', 'See live availability in Google Calendar.'],
@@ -45,17 +45,9 @@ export function BookingSection() {
             </Body>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Button
-                href={siteConfig.bookingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                glow="green"
-              >
-                View available times
-                <span aria-hidden="true">-&gt;</span>
-              </Button>
+              <BookingModal className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-r from-electric to-greenglow px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] text-[#05070b] transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" />
               <span className="text-sm text-slate-400">
-                Opens Google Calendar in a new tab
+                Opens booking options in a popup
               </span>
             </div>
           </div>

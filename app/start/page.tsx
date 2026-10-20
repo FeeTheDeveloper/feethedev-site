@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { InteriorHero } from '@/components/InteriorHero';
+import { BookingModal } from '@/components/BookingModal';
 import { ProjectIntakeForm } from '@/components/ProjectIntakeForm';
 import { Body, H2, Section } from '@/components/ui';
+import { normalizePromotionCode } from '@/lib/promotions';
 import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
@@ -11,7 +13,14 @@ export const metadata: Metadata = {
   alternates: { canonical: '/start' },
 };
 
-export default function StartPage() {
+export default async function StartPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ promo?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const initialPromotionCode = normalizePromotionCode(query.promo) ?? '';
+
   return (
     <main id="main-content" className="min-h-screen bg-background">
       <InteriorHero
@@ -46,18 +55,19 @@ export default function StartPage() {
                 This form opens your email app with the details prepared. Send
                 the email there to complete your inquiry.
               </p>
-              <p>
-                Prefer a call?{' '}
+              <p>Prefer to book a call?</p>
+              <div className="flex flex-wrap items-center gap-4">
+                <BookingModal className="rounded-full border border-greenglow/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-greenglow/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow" />
                 <a
                   className="font-semibold text-cyan underline underline-offset-4"
                   href={`tel:${siteConfig.phone}`}
                 >
-                  {siteConfig.phoneDisplay}
+                  Call {siteConfig.phoneDisplay}
                 </a>
-              </p>
+              </div>
             </div>
           </div>
-          <ProjectIntakeForm />
+          <ProjectIntakeForm initialPromotionCode={initialPromotionCode} />
         </div>
       </Section>
     </main>

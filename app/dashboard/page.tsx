@@ -2,6 +2,7 @@ import { auth } from '@clerk/nextjs/server';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
+import { BookingModal } from '@/components/BookingModal';
 import { Card } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
 
@@ -169,14 +170,7 @@ export default async function DashboardPage() {
               Choose an available time through the verified Fee The Developer
               Google Calendar.
             </p>
-            <a
-              href={siteConfig.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/60"
-            >
-              View available times <ArrowIcon />
-            </a>
+            <BookingModal className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-greenglow/60" />
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6">

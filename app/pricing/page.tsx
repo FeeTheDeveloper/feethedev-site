@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import { PageIntro } from '@/components/PageIntro';
+import { SeasonOffer } from '@/components/SeasonOffer';
 import { Button as CtaLink, Card, Section } from '@/components/ui';
 import { addOnPricing, pricingOptions } from '@/lib/catalog';
+import { siteConfig } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Pricing',
   description:
     'Review Fee The Developer service packages, add-ons, and current starting prices.',
-  alternates: { canonical: '/pricing' },
+  alternates: { canonical: new URL('/pricing', siteConfig.siteUrl) },
 };
 
 export default function PricingPage() {
@@ -34,6 +36,10 @@ export default function PricingPage() {
           </div>
         }
       />
+
+      <Section className="pb-0">
+        <SeasonOffer />
+      </Section>
 
       <Section>
         <div className="grid gap-6 md:grid-cols-2">

@@ -2,6 +2,8 @@ import { ClerkProvider, Show, UserButton } from '@clerk/nextjs';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import Link from 'next/link';
+import { BookingModal } from '@/components/BookingModal';
+import { SignUpAction } from '@/components/SignUpAction';
 import { siteConfig } from '@/lib/site-config';
 import '../styles/globals.css';
 
@@ -176,14 +178,13 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
                   <Link href="/sign-in" className="hover:text-white">
                     Sign in
                   </Link>
-                  <Link href="/sign-up" className="hover:text-white">
-                    Sign up
-                  </Link>
+                  <SignUpAction className="hover:text-white" />
                 </span>
               </Show>
             )}
           </nav>
           <div className="flex items-center gap-3">
+            <BookingModal className="rounded-full border border-greenglow/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-greenglow/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow" />
             <Link
               href="/merch"
               className="shrink-0 rounded-full border border-electric/40 bg-electric/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-electric/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-electric"
@@ -199,12 +200,7 @@ function SiteContent({ children }: Readonly<{ children: React.ReactNode }>) {
                   >
                     Sign in
                   </Link>
-                  <Link
-                    href="/sign-up"
-                    className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-2 text-white hover:bg-white/[0.1]"
-                  >
-                    Sign up
-                  </Link>
+                  <SignUpAction className="rounded-full border border-white/15 bg-white/[0.06] px-3 py-2 text-white hover:bg-white/[0.1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow" />
                 </span>
               </Show>
             )}

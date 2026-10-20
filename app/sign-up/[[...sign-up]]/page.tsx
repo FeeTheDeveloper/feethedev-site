@@ -1,7 +1,7 @@
-import { SignUp } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AuthShell } from '@/components/AuthShell';
+import { AutoSignUpModal } from '@/components/AutoSignUpModal';
 
 export const metadata: Metadata = {
   title: 'Sign up',
@@ -19,7 +19,7 @@ export default function Page() {
       title="Build with us."
       description="Create your Fee The Developer account to get started."
     >
-      <SignUp fallbackRedirectUrl="/dashboard" />
+      <AutoSignUpModal />
     </AuthShell>
   );
 }

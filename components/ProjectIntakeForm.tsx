@@ -1,12 +1,22 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import { BookingModal } from '@/components/BookingModal';
+import {
+  normalizePromotionCode,
+  SIXERS_SEASON_PROMOTION,
+} from '@/lib/promotions';
 import { siteConfig } from '@/lib/site-config';
 
 const fieldClass =
   'w-full rounded-2xl border border-white/10 bg-black/35 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-greenglow/60 focus:ring-2 focus:ring-greenglow/20';
 
-type IntakeState = 'idle' | 'sending' | 'received' | 'email-opened';
+type IntakeState =
+  | 'idle'
+  | 'sending'
+  | 'received'
+  | 'email-opened'
+  | 'invalid-promotion';
 
 function openEmailFallback(data: FormData) {
   const subject = encodeURIComponent(
@@ -20,6 +30,9 @@ function openEmailFallback(data: FormData) {
       `Service: ${data.get('service')}`,
       `Investment range: ${data.get('budget')}`,
       `Timeline: ${data.get('timeline') || 'Not provided'}`,
+      ...(normalizePromotionCode(data.get('promotionCode'))
+        ? [`Promotion code: ${SIXERS_SEASON_PROMOTION.code}`]
+        : []),
       '',
       'Project goals:',
       String(data.get('goals') ?? ''),
@@ -28,7 +41,11 @@ function openEmailFallback(data: FormData) {
   window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
 }
 
-export function ProjectIntakeForm() {
+export function ProjectIntakeForm({
+  initialPromotionCode = '',
+}: {
+  initialPromotionCode?: string;
+}) {
   const [state, setState] = useState<IntakeState>('idle');
   // One id per form visit, so a retried or double-clicked submit is stored once.
   const [submissionId] = useState(() => crypto.randomUUID());
@@ -37,6 +54,12 @@ export function ProjectIntakeForm() {
     event.preventDefault();
     if (state === 'sending') return;
     const data = new FormData(event.currentTarget);
+    const promotionCode = String(data.get('promotionCode') ?? '').trim();
+    if (promotionCode && !normalizePromotionCode(promotionCode)) {
+      setState('invalid-promotion');
+      document.getElementById('promotion-code')?.focus();
+      return;
+    }
     setState('sending');
     try {
       const response = await fetch('/api/intake', {
@@ -73,14 +96,10 @@ export function ProjectIntakeForm() {
           Reference: <span className="font-mono text-sm">{submissionId}</span>
         </p>
         <div className="flex flex-wrap gap-3">
-          <a
-            className="rounded-full bg-white px-5 py-3 font-semibold text-black"
-            href={siteConfig.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Book a strategy call
-          </a>
+          <BookingModal
+            className="rounded-full bg-white px-5 py-3 font-semibold text-black transition hover:bg-cyan focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-greenglow"
+            label="Book a strategy call"
+          />
           <a
             className="rounded-full border border-white/20 px-5 py-3 font-semibold text-white"
             href={`tel:${siteConfig.phone}`}
@@ -214,6 +233,38 @@ export function ProjectIntakeForm() {
           required
           placeholder="Describe the business problem, users, desired outcome, and required integrations."
         />
+      </label>
+      <label
+        className="space-y-2 text-sm text-slate-200"
+        htmlFor="promotion-code"
+      >
+        76ers fan offer code (optional)
+        <input
+          className={fieldClass}
+          id="promotion-code"
+          name="promotionCode"
+          defaultValue={initialPromotionCode}
+          autoCapitalize="characters"
+          autoComplete="off"
+          aria-invalid={state === 'invalid-promotion'}
+          aria-describedby="promotion-code-help promotion-code-error"
+        />
+        <span
+          id="promotion-code-help"
+          className="block text-xs leading-5 text-slate-400"
+        >
+          Enter SIXERS20 if you are a Philadelphia 76ers fan. The code is
+          attached to your quote request.
+        </span>
+        <span
+          id="promotion-code-error"
+          className="block min-h-5 text-xs text-red-300"
+          role={state === 'invalid-promotion' ? 'alert' : undefined}
+        >
+          {state === 'invalid-promotion'
+            ? 'That code is not recognized. Check it and try again.'
+            : ''}
+        </span>
       </label>
       <button
         className="rounded-full bg-gradient-to-r from-redglow via-white to-greenglow p-[1px] disabled:opacity-60"

@@ -1,3 +1,5 @@
+import { normalizePromotionCode } from '@/lib/promotions';
+
 /**
  * Project intake contract shared by the /start form and POST /api/intake.
  * Intakes persist to Supabase `public.project_intakes` (source of truth for
@@ -25,6 +27,7 @@ export type ProjectIntake = {
   budget: string;
   timeline: string | null;
   goals: string;
+  promotionCode: string | null;
 };
 
 export type IntakeValidation =
@@ -58,6 +61,7 @@ export function validateIntake(input: unknown): IntakeValidation {
     budget: text(raw.budget),
     timeline: text(raw.timeline) || null,
     goals: text(raw.goals),
+    promotionCode: normalizePromotionCode(raw.promotionCode),
   };
 
   const errors: string[] = [];
@@ -89,7 +93,6 @@ export function validateIntake(input: unknown): IntakeValidation {
   ) {
     errors.push('goals');
   }
-
   return errors.length
     ? { ok: false, spam: false, errors }
     : { ok: true, intake };
