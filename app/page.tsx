@@ -1,5 +1,6 @@
 import { BusinessPresenceSection } from '@/components/BusinessPresenceSection';
 import { BookingSection } from '@/components/BookingSection';
+import { CharacterStudioSection } from '@/components/CharacterStudioSection';
 import { CtaSection } from '@/components/CtaSection';
 import { GoogleProductsSection } from '@/components/GoogleProductsSection';
 import { Hero } from '@/components/Hero';
@@ -15,6 +16,7 @@ export default function Home() {
       <PremiumMotionExperience>
         <Hero />
         <MotionChapter />
+        <CharacterStudioSection />
         <BusinessPresenceSection />
         <GoogleProductsSection />
         <BookingSection />
