@@ -156,8 +156,7 @@ export function MotionChapter() {
                   Comfortable to use
                 </h3>
                 <p className="mt-3 max-w-sm leading-7 text-slate-300">
-                  The site respects reduced-motion preferences for a more comfortable
-                  experience.
+                  A clear, comfortable experience on every screen size.
                 </p>
               </div>
             </div>
