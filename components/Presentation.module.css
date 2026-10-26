@@ -1,0 +1,332 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  max-width: 96rem;
+  margin: auto;
+  padding: 5rem clamp(1.25rem, 5vw, 5rem) 6rem;
+  background: #090b0e;
+  color: #f4f1e9;
+}
+.heroCopy {
+  position: relative;
+  z-index: 2;
+}
+.eyebrow {
+  color: #d4b778;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1.8;
+}
+.headline {
+  font-size: clamp(2.5rem, 5.6vw, 6.5rem);
+  letter-spacing: -0.065em;
+  font-weight: 800;
+  line-height: 1.02;
+  margin: 1.8rem 0;
+}
+.headline > span {
+  display: block;
+}
+.outline {
+  color: #d4b778;
+  font-size: 0.74em;
+  letter-spacing: -0.055em;
+}
+.intro {
+  max-width: 34rem;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.85;
+  color: #b9bdc5;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 3.25rem;
+  padding: 0.8rem 1.4rem;
+  background: #d4b778;
+  color: #14120e;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 3px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.primary:hover {
+  background: #ead6a8;
+  transform: translateY(-2px);
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: 44px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #f4f1e9;
+  border-bottom: 1px solid #77715e;
+}
+.textLink:hover {
+  color: #d4b778;
+}
+.primary:focus-visible,
+.textLink:focus-visible,
+.controls button:focus-visible {
+  outline: 2px solid #f1cf87;
+  outline-offset: 5px;
+}
+.sound {
+  margin-top: 1.8rem;
+}
+.heroVisual {
+  min-width: 0;
+  padding: 1rem 0;
+}
+.heroTilt {
+  border-radius: 4px;
+}
+.portrait {
+  position: relative;
+  min-height: 36rem;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border: 1px solid #d4b77833;
+  border-radius: 4px;
+  box-shadow: 0 28px 80px #0005;
+}
+.heroImage {
+  object-fit: cover;
+  object-position: 52% center;
+}
+.portraitShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #05070b00 35%, #05070bd9 80%, #05070b);
+}
+.visualCaption {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+}
+.visualCaption h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1rem 0;
+  letter-spacing: -0.04em;
+}
+.visualCaption > p:last-child {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  max-width: 23rem;
+  color: #b9bdc5;
+}
+.journey {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 5rem;
+  align-items: start;
+  margin-top: 4rem;
+}
+.stage {
+  position: sticky;
+  top: 2rem;
+  border: 1px solid #d4b77840;
+  background: #0d1015;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.stageHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.3rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #d4b778;
+  border-bottom: 1px solid #ffffff15;
+}
+.stageMedia {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.frame {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 0.5s ease,
+    transform 0.8s ease;
+}
+.frameActive {
+  opacity: 1;
+  transform: scale(1);
+}
+.stageImage {
+  object-fit: cover;
+}
+.stageShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #080b10 0%, #080b1000 80%);
+}
+.stageWord {
+  position: absolute;
+  left: 1.4rem;
+  bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  color: #f4f1e9;
+}
+.stageWord span {
+  color: #d4b778;
+}
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #ffffff15;
+}
+.controls button {
+  padding: 1.1rem 0.6rem;
+  min-height: 48px;
+  color: #b9bdc5;
+  font-size: 0.75rem;
+  border-right: 1px solid #ffffff15;
+  transition: background 0.2s;
+}
+.controls button:last-child {
+  border-right: 0;
+}
+.controls button span {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.6rem;
+  color: #d4b778;
+}
+.controls button[aria-pressed='true'] {
+  background: #d4b778;
+  color: #14120e;
+  font-weight: 800;
+}
+.controls button[aria-pressed='true'] span {
+  color: #514225;
+}
+.selection {
+  min-height: 4.5rem;
+  padding: 1rem 1.3rem;
+  color: #b9bdc5;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+.chapter {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 3rem 0;
+  border-bottom: 1px solid #ffffff20;
+}
+.chapterNumber {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: #d4b778;
+}
+.chapter h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin: 1rem 0;
+}
+.chapter p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #b9bdc5;
+  max-width: 21rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 3rem;
+  }
+  .headline {
+    font-size: clamp(2.5rem, 10.5vw, 6.5rem);
+  }
+  .heroVisual {
+    max-width: 42rem;
+    width: 100%;
+  }
+  .portrait {
+    min-height: 0;
+    aspect-ratio: 5/4;
+  }
+  .journey {
+    gap: 2rem;
+  }
+}
+@media (max-width: 650px) {
+  .hero {
+    padding-bottom: 3rem;
+  }
+  .portrait {
+    aspect-ratio: 4/5;
+  }
+  .visualCaption {
+    left: 1.4rem;
+    right: 1.4rem;
+    bottom: 1.4rem;
+  }
+  .journey {
+    grid-template-columns: 1fr;
+  }
+  .stage {
+    position: relative;
+    top: auto;
+  }
+  .chapter {
+    min-height: 0;
+    padding: 2rem 0;
+  }
+  .chapter h3 {
+    font-size: 2.5rem;
+  }
+  .stageWord {
+    font-size: 3rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .frame,
+  .primary,
+  .controls button {
+    transition: none;
+    transform: none;
+  }
+  .stage {
+    position: relative;
+    top: auto;
+  }
+  .chapter {
+    min-height: 0;
+    padding: 2rem 0;
+  }
+}

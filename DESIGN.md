@@ -104,3 +104,11 @@ The voice is direct, specific, and client-centered. Status copy never implies li
 - **Do:** Label unavailable or unconfigured destinations honestly.
 - **Don't:** Invent project progress, subscriber counts, testimonials, or financial terms.
 - **Don't:** Trade navigation clarity or contrast for atmospheric effects.
+
+## Homepage presentation refresh — 2026-10-25
+
+The homepage retains its existing information, offers, links and founder wording. Its presentation uses an editorial split hero, existing founder artwork and a sticky, selectable Build/Connect/Strengthen sequence. This is an original FTD treatment informed by cinematic references, not a copied site.
+
+Local presentation tokens in `components/Presentation.module.css`: background #090b0e, foreground #f4f1e9, muted #b9bdc5, accent #d4b778. Shared operational tokens remain unchanged. At narrow widths the chapter stage becomes static; reduced motion removes transitions and sticky behavior. No generated video is claimed or fabricated. Existing still images are used until approved media is supplied.
+
+Preserve all services, pricing, auth, payment and booking destinations. The retired portfolio stays retired until each company site's refresh is validated. Social profile work is visual only; retain existing bios and account facts.

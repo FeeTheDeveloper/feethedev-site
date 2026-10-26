@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Body, Button, H2, Section } from '@/components/ui';
 import {
   GitHubIcon,
@@ -100,8 +100,12 @@ const pillars = [
 ];
 
 export function OwnerSection() {
+  const reduceMotion = useReducedMotion();
   return (
-    <Section id="build" className="relative overflow-hidden bg-black/30">
+    <Section
+      id="build"
+      className="ftd-founder relative overflow-hidden bg-black/30"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-70"
@@ -111,7 +115,9 @@ export function OwnerSection() {
             <motion.div
               key={label}
               className={`absolute ${className}`}
-              animate={{ y: [0, -16, 0], rotate: [0, 3, 0] }}
+              animate={
+                reduceMotion ? undefined : { y: [0, -16, 0], rotate: [0, 3, 0] }
+              }
               transition={{
                 duration,
                 delay,
@@ -130,7 +136,7 @@ export function OwnerSection() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, y: 22 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
