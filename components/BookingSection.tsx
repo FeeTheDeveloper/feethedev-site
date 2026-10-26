@@ -41,14 +41,11 @@ export function BookingSection() {
             </H2>
             <Body className="mt-5 max-w-2xl text-lg text-slate-300">
               Pick an available time for a focused conversation about your
-              website, software, automation, or connected business systems.
+              website, software, automation, or online presence.
             </Body>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <BookingModal className="inline-flex min-h-12 items-center justify-center rounded-full bg-gradient-to-r from-electric to-greenglow px-6 py-3 text-sm font-bold uppercase tracking-[0.13em] text-[#05070b] transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" />
-              <span className="text-sm text-slate-400">
-                Opens booking options in a popup
-              </span>
             </div>
           </div>
 
@@ -56,10 +53,10 @@ export function BookingSection() {
             <div className="mb-8 flex items-center justify-between border-b border-white/10 pb-5">
               <div>
                 <div className="text-xs uppercase tracking-[0.22em] text-slate-400">
-                  Appointment flow
+                  What to expect
                 </div>
                 <div className="mt-2 text-lg font-semibold text-white">
-                  Simple by design
+                  Three quick steps
                 </div>
               </div>
               <div

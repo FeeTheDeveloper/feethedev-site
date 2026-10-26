@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Section } from '@/components/ui';
 
 const statement =
-  'A premium digital presence should feel connected before anyone has to ask how the system works.';
+  'Websites, software, and online tools that make it easier to run and grow your business.';
 
 const capabilities = [
   'Web design',
@@ -10,25 +10,26 @@ const capabilities = [
   'AI automation',
   'Google Workspace',
   'Business presence',
-  'Operational systems',
+  'Business automation',
 ];
 
 const layers = [
   {
-    title: 'Build',
-    description: 'A clear, credible home for the business.',
+    title: 'Website',
+    description: 'A clear, credible home for your business.',
     image: '/web_software.PNG',
     href: '/services',
   },
   {
-    title: 'Connect',
-    description: 'The tools and workflows behind the experience.',
+    title: 'Business tools',
+    description: 'Software and automation that save time on routine work.',
     image: '/google_product_suite.PNG',
     href: '/services',
   },
   {
-    title: 'Strengthen',
-    description: 'A business presence that stays consistent.',
+    title: 'Online presence',
+    description:
+      'Consistent business information across Google, Apple, and Yelp.',
     image: '/google_apple_yelp.PNG',
     href: '/services',
   },
@@ -37,7 +38,7 @@ const layers = [
 export function MotionChapter() {
   return (
     <Section
-      id="motion-system"
+      id="services-overview"
       data-motion-section
       className="relative overflow-hidden border-y border-white/10 bg-[#060910] py-28 sm:py-36 lg:py-44"
       containerClassName="max-w-[88rem]"
@@ -49,7 +50,7 @@ export function MotionChapter() {
           data-motion-reveal
           className="text-xs font-semibold uppercase tracking-[0.32em] text-cyan"
         >
-          Connected by design
+          Our services
         </p>
         <p
           data-motion-statement
@@ -75,10 +76,10 @@ export function MotionChapter() {
               <div className="flex flex-col border-b border-white/10 px-6 py-6 sm:flex-row sm:items-end sm:justify-between sm:px-8">
                 <div>
                   <p className="text-xs uppercase tracking-[0.24em] text-greenglow">
-                    One connected build
+                    Services for your business
                   </p>
                   <h2 className="mt-3 text-3xl font-semibold text-white sm:text-4xl">
-                    Three layers. One direction.
+                    Practical tools for your business.
                   </h2>
                 </div>
                 <a
@@ -97,7 +98,7 @@ export function MotionChapter() {
 
               <div
                 className="motion-accordion grid min-h-[30rem] grid-cols-1 md:grid-cols-3"
-                aria-label="Connected service layers"
+                aria-label="Services"
               >
                 {layers.map((layer) => (
                   <a
@@ -135,11 +136,10 @@ export function MotionChapter() {
               <div className="h-2 w-2 rounded-full bg-electric shadow-[0_0_18px_rgba(37,120,255,0.9)]" />
               <div>
                 <h3 className="text-2xl font-semibold text-white">
-                  Motion with a job
+                  Design that guides visitors
                 </h3>
                 <p className="mt-3 max-w-sm leading-7 text-slate-300">
-                  Movement guides attention, clarifies hierarchy, and then gets
-                  out of the way.
+                  Clear layouts and thoughtful movement help visitors find what they need.
                 </p>
               </div>
             </div>
@@ -153,11 +153,10 @@ export function MotionChapter() {
               <div className="h-2 w-2 rounded-full bg-greenglow shadow-[0_0_18px_rgba(20,232,180,0.9)]" />
               <div>
                 <h3 className="text-2xl font-semibold text-white">
-                  Quiet by default
+                  Comfortable to use
                 </h3>
                 <p className="mt-3 max-w-sm leading-7 text-slate-300">
-                  Reduced-motion preferences are honored, and the ElevenLabs
-                  sound layer starts only when a visitor asks for it.
+                  A clear, comfortable experience on every screen size.
                 </p>
               </div>
             </div>

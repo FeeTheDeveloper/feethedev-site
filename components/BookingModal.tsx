@@ -76,7 +76,7 @@ export function BookingModal({
             className="mt-3 max-w-md text-sm leading-6 text-slate-300"
           >
             Choose an available time for a focused conversation about your
-            website, software, automation, or connected business systems.
+            website, software, automation, or online presence.
           </p>
           <a
             href={siteConfig.bookingUrl}

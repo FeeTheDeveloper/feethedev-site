@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import { Button, Body, H1, Section } from '@/components/ui';
 import { siteConfig } from '@/lib/site-config';
-import { SoundscapeToggle } from '@/components/SoundscapeToggle';
 import { Tilt3D } from '@/components/Tilt3D';
 import { SignalFieldLayer } from '@/components/three/SignalFieldLayer';
 import {
@@ -101,8 +100,8 @@ export function Hero() {
           data-motion-hero-support
           className="mt-7 max-w-2xl text-balance text-base leading-7 text-slate-300 sm:text-xl sm:leading-8"
         >
-          We design the site, wire the systems, strengthen the digital presence,
-          and connect the business to the tools that make it move.
+          We build websites, develop custom software, automate routine work, and
+          strengthen your online presence.
         </Body>
 
         <div
@@ -110,15 +109,11 @@ export function Hero() {
           className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
         >
           <Button href="/start" glow="gradient">
-            Build my business
+            Start a project
           </Button>
-          <Button href="#motion-system" variant="outline" glow="green">
-            See the system
+          <Button href="/services" variant="outline" glow="green">
+            Explore services
           </Button>
-        </div>
-
-        <div data-motion-hero-support className="mt-6">
-          <SoundscapeToggle />
         </div>
 
         <div
@@ -143,12 +138,11 @@ export function Hero() {
                       Web · AI · automation · presence
                     </p>
                     <p className="mt-3 max-w-xl text-2xl font-semibold leading-tight text-white sm:text-4xl">
-                      From first impression to working system.
+                      A first impression customers can trust.
                     </p>
                   </div>
                   <p className="max-w-xs text-sm leading-6 text-slate-300 sm:text-right">
-                    Technology execution with a complete digital business
-                    presence.
+                    Websites, software, and online tools for your business.
                   </p>
                 </div>
               </div>
