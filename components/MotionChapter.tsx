@@ -28,7 +28,8 @@ const layers = [
   },
   {
     title: 'Online presence',
-    description: 'Consistent business information across Google, Apple, and Yelp.',
+    description:
+      'Consistent business information across Google, Apple, and Yelp.',
     image: '/google_apple_yelp.PNG',
     href: '/services',
   },
