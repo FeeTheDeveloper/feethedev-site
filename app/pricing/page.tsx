@@ -90,11 +90,11 @@ export default function PricingPage() {
           <div>
             <p className="status-chip">Focused add-ons</p>
             <h2 className="mt-5 text-3xl font-semibold text-white">
-              Add only what moves the system forward.
+              Add only what moves the project forward.
             </h2>
             <p className="mt-4 leading-7 text-slate-300">
               Each add-on covers one defined implementation scope. Larger or
-              multi-system work is quoted after discovery.
+              multi-part projects are quoted after discovery.
             </p>
           </div>
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04]">

@@ -107,8 +107,8 @@ export default function MerchPage() {
 
       <section className="shell mt-10">
         <p className="text-sm leading-6 text-slate-400">
-          Approved color line: white, heather gray, royal blue, vivid red, and
-          sage green. Pick a color on any card to preview that colorway. Apparel
+          Available colors: white, heather gray, royal blue, vivid red, and sage
+          green. Pick a color on any card to preview that colorway. Apparel
           sizes: S, M, L, and XL. Hats are snapbacks. Availability and shipping
           destinations are confirmed before purchase.
         </p>

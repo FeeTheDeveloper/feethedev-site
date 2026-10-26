@@ -25,12 +25,12 @@ export function GoogleProductsSection() {
         <div className="mt-5 grid gap-9 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
           <div>
             <H2 className="text-3xl sm:text-4xl lg:text-5xl">
-              Google products, shaped into a working system
+              Google products connected for everyday work
             </H2>
             <Body className="mt-5 max-w-2xl text-slate-300">
-              Search, Workspace, cloud storage, collaboration, and AI are most
-              useful when they share a clear operating model. We connect the
-              tools to the way your team actually works.
+              Search, Workspace, cloud storage, collaboration, and AI are more
+              useful when they work together. We connect the tools to the way
+              your team already works.
             </Body>
             <div className="mt-8 grid gap-5 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
               {siteConfig.googleProducts.map((product) => (

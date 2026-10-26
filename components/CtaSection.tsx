@@ -11,11 +11,11 @@ export function CtaSection() {
             Build with Fee The Developer
           </p>
           <H2 className="mt-5 max-w-xl text-4xl leading-tight sm:text-5xl lg:text-6xl">
-            Your next move starts with a clear plan.
+            Ready to move your business forward?
           </H2>
           <Body className="mt-5 max-w-xl text-lg text-slate-300">
-            Tell us what you are building. We will help connect the site,
-            software, and systems needed to move it forward.
+            Tell us what your business needs. We will help with the website,
+            software, automation, and connections that support it.
           </Body>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button href="/start" glow="gradient">

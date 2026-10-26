@@ -7,17 +7,18 @@ import styles from './Presentation.module.css';
 const layers = [
   {
     title: 'Build',
-    description: 'A clear, credible home for the business.',
+    description: 'Launch a clear, credible website for the business.',
     image: '/web_software.PNG',
   },
   {
     title: 'Connect',
-    description: 'The tools and workflows behind the experience.',
+    description: 'Connect booking, payments, analytics, and everyday tools.',
     image: '/google_product_suite.PNG',
   },
   {
     title: 'Strengthen',
-    description: 'A business presence that stays consistent.',
+    description:
+      'Keep your business information consistent wherever customers look.',
     image: '/google_apple_yelp.PNG',
   },
 ];
@@ -49,7 +50,7 @@ export function PresentationJourney() {
     <div ref={root} className={styles.journey}>
       <div className={styles.stage}>
         <div className={styles.stageHeader}>
-          <span>One connected build</span>
+          <span>Services working together</span>
           <span aria-hidden="true">0{active + 1} / 03</span>
         </div>
         <div className={styles.stageMedia}>

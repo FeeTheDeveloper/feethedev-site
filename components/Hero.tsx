@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { siteConfig } from '@/lib/site-config';
-import { SoundscapeToggle } from '@/components/SoundscapeToggle';
 import { Tilt3D } from '@/components/Tilt3D';
 import styles from './Presentation.module.css';
 
@@ -17,19 +16,16 @@ export function Hero() {
           <span className={styles.outline}>CREATE. SCALE.</span>
         </h1>
         <p className={styles.intro}>
-          We design the site, wire the systems, strengthen the digital presence,
-          and connect the business to the tools that make it move.
+          We design the website, strengthen your digital presence, and connect
+          the tools your business uses every day.
         </p>
         <div className={styles.actions}>
           <a className={styles.primary} href="/start">
             Build my business <span aria-hidden="true">↗</span>
           </a>
-          <a className={styles.textLink} href="#motion-system">
-            See the system <span aria-hidden="true">↓</span>
+          <a className={styles.textLink} href="/services">
+            Explore services <span aria-hidden="true">↓</span>
           </a>
-        </div>
-        <div className={styles.sound}>
-          <SoundscapeToggle />
         </div>
       </div>
       <div className={styles.heroVisual}>
@@ -49,7 +45,7 @@ export function Hero() {
               <h2>
                 From first impression
                 <br />
-                to working system.
+                to a stronger business.
               </h2>
               <p>
                 Technology execution with a complete digital business presence.

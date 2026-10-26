@@ -17,28 +17,28 @@ export default function ServicesPage() {
   return (
     <main id="main-content" className="min-h-screen">
       <PageIntro
-        eyebrow="Services / Connected delivery"
+        eyebrow="Services"
         title={
           <>
-            One partner for the{' '}
-            <span className="ftd-gradient-text">whole system.</span>
+            Practical support for a{' '}
+            <span className="ftd-gradient-text">stronger business.</span>
           </>
         }
-        description="From the first public touchpoint to the tools behind the business, every service is planned to work with the next one. Start with what you need now and keep a clear path to scale."
+        description="Start with the service you need now. Add website, business presence, software, automation, and integrations as your business grows."
         aside={
           <div className="signal-rail rounded-3xl border border-white/10 bg-white/[0.04] p-6">
             <p className="text-xs uppercase tracking-[0.22em] text-cyan">
-              Delivery path
+              How we work
             </p>
             <ol className="mt-5 space-y-4 text-sm text-slate-200">
               <li>
-                <span>Discover the real constraint</span>
+                <span>Understand the business need</span>
               </li>
               <li>
-                <span>Build the right system</span>
+                <span>Choose the right services</span>
               </li>
               <li>
-                <span>Launch with the pieces connected</span>
+                <span>Launch and support the result</span>
               </li>
             </ol>
           </div>
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               className="h-full p-7"
             >
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan">
-                Service field {index + 1}
+                Service group {index + 1}
               </p>
               <h2 className="mt-4 text-2xl font-semibold text-white">
                 {group.name}

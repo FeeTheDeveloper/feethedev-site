@@ -2,7 +2,7 @@ import { PresentationJourney } from '@/components/PresentationJourney';
 import { Section } from '@/components/ui';
 
 const statement =
-  'A premium digital presence should feel connected before anyone has to ask how the system works.';
+  'A strong digital presence makes it easy for customers to understand your business, trust it, and take the next step.';
 
 const capabilities = [
   'Web design',
@@ -46,47 +46,9 @@ export function MotionChapter() {
         </p>
 
         <h2 className="mt-12 text-3xl font-semibold text-white sm:text-4xl">
-          Three layers. One direction.
+          Build your digital presence in three steps.
         </h2>
         <PresentationJourney />
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          <article
-            data-motion-reveal
-            className="rounded-[2rem] bg-white/[0.055] p-1.5 ring-1 ring-white/10"
-          >
-            <div className="flex h-full min-h-56 flex-col justify-between rounded-[calc(2rem-0.375rem)] bg-[radial-gradient(circle_at_78%_18%,rgba(37,120,255,0.2),transparent_42%),#0B1018] p-7 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] sm:p-8">
-              <div className="h-2 w-2 rounded-full bg-electric shadow-[0_0_18px_rgba(37,120,255,0.9)]" />
-              <div>
-                <h3 className="text-2xl font-semibold text-white">
-                  Motion with a job
-                </h3>
-                <p className="mt-3 max-w-sm leading-7 text-slate-300">
-                  Movement guides attention, clarifies hierarchy, and then gets
-                  out of the way.
-                </p>
-              </div>
-            </div>
-          </article>
-
-          <article
-            data-motion-reveal
-            className="rounded-[2rem] bg-white/[0.055] p-1.5 ring-1 ring-white/10"
-          >
-            <div className="flex h-full min-h-56 flex-col justify-between rounded-[calc(2rem-0.375rem)] bg-[radial-gradient(circle_at_20%_15%,rgba(20,232,180,0.15),transparent_45%),#0B1018] p-7 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] sm:p-8">
-              <div className="h-2 w-2 rounded-full bg-greenglow shadow-[0_0_18px_rgba(20,232,180,0.9)]" />
-              <div>
-                <h3 className="text-2xl font-semibold text-white">
-                  Quiet by default
-                </h3>
-                <p className="mt-3 max-w-sm leading-7 text-slate-300">
-                  Reduced-motion preferences are honored, and the ElevenLabs
-                  sound layer starts only when a visitor asks for it.
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-
         <div
           data-motion-reveal
           className="mt-10 overflow-hidden border-y border-white/10 py-5"

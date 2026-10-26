@@ -93,7 +93,7 @@ const pillars = [
       'Product design, implementation, data integration, deployment, and documentation under one roof.',
   },
   {
-    title: 'Systems thinking',
+    title: 'Business-focused',
     detail:
       'Web applications and AI-assisted workflows designed around how a business actually operates.',
   },
@@ -178,14 +178,14 @@ export function OwnerSection() {
               </H2>
               <Body>
                 Fee The Developer is Alfreddie Postell II, a U.S. Army veteran,
-                full-stack developer, and AI systems builder based in McKinney,
-                Texas.
+                full-stack developer, and AI automation specialist based in
+                McKinney, Texas.
               </Body>
               <Body className="text-base text-slate-400 sm:text-lg">
-                He builds web applications, AI-assisted workflows, and business
-                operating systems across business services, sports intelligence,
+                He builds web applications, AI-assisted workflows, and practical
+                business tools across business services, sports intelligence,
                 and commerce. Clients work directly with the person designing,
-                coding, connecting, deploying, and documenting their system.
+                coding, integrating, deploying, and documenting their project.
               </Body>
             </div>
 

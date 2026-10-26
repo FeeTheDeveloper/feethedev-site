@@ -66,7 +66,7 @@ export const pricingOptions = [
     ],
   },
   {
-    name: 'Full Business System',
+    name: 'Complete Business Launch',
     price: '$2,499',
     description:
       'A coordinated digital launch combining website development, business presence, automation, and integrations.',

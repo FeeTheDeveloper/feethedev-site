@@ -237,7 +237,7 @@ export function FuturisticRubiksCube({
             Fee The Developer
           </div>
           <div className="mt-3 text-2xl font-semibold text-white">
-            Systems online.
+            Ready to build.
           </div>
         </div>
       </div>

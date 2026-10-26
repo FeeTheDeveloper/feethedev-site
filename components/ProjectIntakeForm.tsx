@@ -195,9 +195,10 @@ export function ProjectIntakeForm({
             <option value="" disabled>
               Select one
             </option>
-            <option>Business Authority System</option>
-            <option>E-Commerce System</option>
-            <option>Custom Software</option>
+            <option>Website Launch</option>
+            <option>Digital Presence Bundle</option>
+            <option>E-Commerce Website</option>
+            <option>Custom Software & Automation</option>
             <option>AI Automation & Integration</option>
             <option>Website Redesign</option>
           </select>
@@ -224,7 +225,7 @@ export function ProjectIntakeForm({
         </label>
       </div>
       <label className="space-y-2 text-sm text-slate-200">
-        What must this system accomplish? *
+        What does this project need to accomplish? *
         <textarea
           className={fieldClass}
           name="goals"
@@ -253,8 +254,8 @@ export function ProjectIntakeForm({
           id="promotion-code-help"
           className="block text-xs leading-5 text-slate-400"
         >
-          Enter YOBUL if you are a Philadelphia 76ers fan. The code is
-          attached to your quote request.
+          Enter YOBUL if you are a Philadelphia 76ers fan. The code is attached
+          to your quote request.
         </span>
         <span
           id="promotion-code-error"
