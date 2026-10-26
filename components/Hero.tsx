@@ -109,7 +109,7 @@ export function Hero() {
           className="mt-8 flex flex-col items-center gap-4 sm:flex-row"
         >
           <Button href="/start" glow="gradient">
-            Build my business
+            Start a project
           </Button>
           <Button href="/services" variant="outline" glow="green">
             Explore services
